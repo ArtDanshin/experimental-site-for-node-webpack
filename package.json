@@ -4,8 +4,8 @@
   "description": "Template for developing with Gulp + Webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "",
-    "build": "rm -rf dist/* && NODE_ENV=production gulp"
+    "dev": "rm -rf dist && NODE_ENV=development ./node_modules/.bin/gulp",
+    "build": "rm -rf dist && NODE_ENV=production ./node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,13 @@
   "homepage": "https://github.com/ArtDanshin/gulp-webpack-boilerplate#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-if": "^2.0.2",
     "gulp-pug": "^3.2.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-stylus": "^2.6.0",
     "pug": "^2.0.0-beta11",
-    "require-dir": "^0.3.1"
+    "require-dir": "^0.3.1",
+    "stylus": "^0.54.5"
   }
 }

@@ -1,8 +1,5 @@
 'use strict';
 
-const _root = global._settings.rootFolder;
-
-
 module.exports = {
 
   /* -----  paths ----- */
@@ -14,8 +11,10 @@ module.exports = {
     },
 
     stylus : {
-      location	: 'app/scss/**/*scss',
-      entryPoint	: 'app/css/main.css',
+      entryPoints	: [
+        'app/assets/stylesheets/application.styl'
+      ],
+      destination	: 'dist/assets/css/'
     },
 
     browserSync : {

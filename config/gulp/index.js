@@ -5,4 +5,4 @@ const gulp = require('gulp');
 
 requireDir('./tasks');
 
-gulp.task('default', ['views']);
+gulp.task('default', ['views', 'styles']);
