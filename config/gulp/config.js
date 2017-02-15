@@ -5,8 +5,8 @@ module.exports = {
   /* -----  paths ----- */
   paths: {
     pug : {
+      entryPoints	: 'app/views/pages/*.pug',
       location	: 'app/views/**/*.pug',
-      compiled	: 'app/views/pages/*.pug',
       destination	: 'dist'
     },
 
@@ -14,6 +14,7 @@ module.exports = {
       entryPoints	: [
         'app/assets/stylesheets/application.styl'
       ],
+      location  : 'app/assets/stylesheets/**/*.styl',
       destination	: 'dist/assets/css/'
     },
 

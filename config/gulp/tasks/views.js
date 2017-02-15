@@ -5,7 +5,7 @@ const pug = require('gulp-pug');
 const config = require('../config').paths.pug;
 
 gulp.task('views', function() {
-  return gulp.src(config.compiled)
+  return gulp.src(config.entryPoints)
     .pipe(pug())
     .pipe(gulp.dest(config.destination))
 });
