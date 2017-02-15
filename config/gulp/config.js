@@ -19,8 +19,7 @@ module.exports = {
     },
 
     browserSync : {
-      baseDir		: 'app',
-      watchPaths 	: ['app/*.html', 'app/css/*.css', 'app/js/*.js']
+      baseDir		: 'dist'
     }
   }
 };

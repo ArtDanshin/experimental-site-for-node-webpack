@@ -5,6 +5,8 @@ const gulp = require('gulp');
 
 requireDir('./tasks');
 
-gulp.task('default', ['views', 'styles']);
+gulp.task('build', gulp.parallel('views', 'styles'));
 
-gulp.task('dev', ['views', 'styles', 'watch']);
+gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'serve')));
+
+gulp.task('default', gulp.series('build'));
