@@ -1,0 +1,27 @@
+{
+  "name": "gulp-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Template for developing with Gulp + Webpack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "",
+    "build": "rm -rf dist/* && NODE_ENV=production gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtDanshin/gulp-webpack-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtDanshin/gulp-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ArtDanshin/gulp-webpack-boilerplate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.2.0",
+    "pug": "^2.0.0-beta11",
+    "require-dir": "^0.3.1"
+  }
+}
