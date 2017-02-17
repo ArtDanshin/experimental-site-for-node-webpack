@@ -20,16 +20,7 @@
   "homepage": "https://github.com/ArtDanshin/gulp-webpack-boilerplate#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
-    "gulp": "gulpjs/gulp#4.0",
-    "gulp-debug": "^3.1.0",
-    "gulp-if": "^2.0.2",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^3.2.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-stylus": "^2.6.0",
     "pug": "^2.0.0-beta11",
-    "require-dir": "^0.3.1",
     "stylus": "^0.54.5"
   }
 }
