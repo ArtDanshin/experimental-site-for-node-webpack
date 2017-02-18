@@ -16,7 +16,7 @@ const HtmlPlugin   = require('html-webpack-plugin');
 module.exports = function(_path) {
   // define local variables
   const npmPackages = require(_path + '/package');
-  const dependencies  = (npmPackages.dependencies) ? Object.keys(npmPackages.dependencies) : [];
+  const dependencies  = (npmPackages.dependencies) ? Object.keys(npmPackages.dependencies) : false;
   const rootAssetPath = _path + 'app';
 
   // define entry points
@@ -24,7 +24,7 @@ module.exports = function(_path) {
     application: _path + '/app/app.js'
   };
   // check vendors
-  if (dependencies.length !== 0) {
+  if (dependencies) {
     entryPoints.vendors = dependencies
   }
 
@@ -84,7 +84,7 @@ module.exports = function(_path) {
     plugins: [
       function() {
         // run plugin if there is a vendors
-        if (dependencies.length !== 0) {
+        if (dependencies) {
           return new webpack.optimize.CommonsChunkPlugin({
             name: 'vendors',
             filename: 'assets/js/vendors.[hash].js'
