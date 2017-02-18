@@ -42,3 +42,6 @@ jspm_packages
 
 # Compiled files
 dist
+
+# Build files info
+/config/manifest.json
