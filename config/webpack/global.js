@@ -107,7 +107,7 @@ module.exports = function(_path) {
       new BrowserSync({
         host: 'localhost',
         port: 8090,
-        server: { baseDir: ['dist'] }
+        proxy: 'http://localhost:8080/'
       }),
 
       // create instance for entrypoint index.html building
