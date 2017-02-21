@@ -7,6 +7,7 @@ const Manifest     = require('manifest-revision-webpack-plugin');
 const TextPlugin   = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const HtmlPlugin   = require('html-webpack-plugin');
+const BrowserSync  = require('browser-sync-webpack-plugin');
 
 /**
  * Global webpack config
@@ -102,6 +103,11 @@ module.exports = function(_path) {
       new Manifest(path.join(_path + '/config', 'manifest.json'), {
         rootAssetPath: rootAssetPath,
         ignorePaths: ['.DS_Store']
+      }),
+      new BrowserSync({
+        host: 'localhost',
+        port: 8090,
+        server: { baseDir: ['dist'] }
       }),
 
       // create instance for entrypoint index.html building
