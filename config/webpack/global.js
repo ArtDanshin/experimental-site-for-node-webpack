@@ -60,7 +60,10 @@ module.exports = function(_path) {
       rules: [
         {
           test: /\.pug$/,
-          use: 'pug-loader'
+          use: {
+            loader: 'pug-loader',
+            options: { root: _path + '/app/views' }
+          }
         },
         {
           test: /\.styl$/,
