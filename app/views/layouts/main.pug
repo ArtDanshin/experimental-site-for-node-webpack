@@ -7,4 +7,8 @@ html(lang="ru-Ru")
     title
       block title
   body
-    block content
+    .g-wrapper
+      include //shared/header
+      .g-content
+        block content
+      include //shared/footer
