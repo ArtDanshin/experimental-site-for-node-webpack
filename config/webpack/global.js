@@ -7,6 +7,7 @@ const Manifest     = require('manifest-revision-webpack-plugin');
 const TextPlugin   = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const HtmlPlugin   = require('html-webpack-plugin');
+const SvgStore     = require('webpack-svgstore-plugin');
 const BrowserSync  = require('browser-sync-webpack-plugin');
 
 /**
@@ -101,6 +102,13 @@ module.exports = function(_path) {
           postcss: [
             autoprefixer({ browsers: ['last 5 versions'] })
           ]
+        }
+      }),
+      new SvgStore({
+        prefix: '',
+        svg: {
+          style: '',
+          class: 'g-svg-sprite'
         }
       }),
       new Manifest(path.join(_path + '/config', 'manifest.json'), {
