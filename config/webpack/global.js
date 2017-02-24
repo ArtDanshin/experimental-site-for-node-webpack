@@ -124,7 +124,23 @@ module.exports = function(_path) {
       // create instance for entrypoint index.html building
       new HtmlPlugin({
         chunks: ['application', 'vendors'],
+        filename: 'index.html',
         template: path.join(_path, 'app', 'views', 'home', 'index.pug')
+      }),
+      new HtmlPlugin({
+        chunks: ['application', 'vendors'],
+        filename: 'portfolio.html',
+        template: path.join(_path, 'app', 'views', 'portfolio', 'index.pug')
+      }),
+      new HtmlPlugin({
+        chunks: ['application', 'vendors'],
+        filename: 'blog.html',
+        template: path.join(_path, 'app', 'views', 'blog', 'index.pug')
+      }),
+      new HtmlPlugin({
+        chunks: ['application', 'vendors'],
+        filename: 'about.html',
+        template: path.join(_path, 'app', 'views', 'about', 'index.pug')
       })
     ]
   };
