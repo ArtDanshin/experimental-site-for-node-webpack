@@ -1,0 +1,29 @@
+extends //layouts/main
+
+block title
+  | Страница проекта
+
+block content
+  .project-page
+    .project-page__title
+      .page-title-block(style='background-color:black')
+        .page-title-block__img-block
+          img.page-title-block__img-left(src=require('_images/project-banner-left.gif'))
+          img.page-title-block__img-right(src=require('_images/project-banner-right.gif'))
+    .project-page__content
+      .project-content
+        .project-content__title
+          | Проект - Silver Dragoon "От заката до рассвета"(Персональный сайт Silver Dragoon Версия 2)
+        .project-content__body
+          img.project-content__img(src=require('_images/project-screen.png'))
+          .project-content__info
+            .project-content__date Дата начала проекта: 2 января 2008 года
+            .project-content__link-to Ссылка на проект: http://silver-dragoon.ucoz.ru
+            .project-content__status Состояние проекта: Разрабатывается, обновляется, действующий проект
+            .project-content__description
+              | Чему посвящен проект: Аниме Shakugan no Shana, игре Legend of Dragoon,
+              |  а так же некоторым моим темам, таким как "Мои фотографии"
+            .project-content__tech Технологический стек проекта:
+              ul.project-content__tech-list
+                li.project-content__tech-item Табличная верстка
+                li.project-content__tech-item CMS Ucoz

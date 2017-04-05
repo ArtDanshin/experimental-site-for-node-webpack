@@ -134,6 +134,11 @@ module.exports = function(_path) {
       }),
       new HtmlPlugin({
         chunks: ['application', 'vendors'],
+        filename: 'project.html',
+        template: path.join(_path, 'app', 'views', 'project', 'index.pug')
+      }),
+      new HtmlPlugin({
+        chunks: ['application', 'vendors'],
         filename: 'blog.html',
         template: path.join(_path, 'app', 'views', 'blog', 'index.pug')
       }),
