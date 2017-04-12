@@ -37,7 +37,7 @@ module.exports = function(_path) {
 
     // output system
     output: {
-      path: path.join(_path, 'dist'),
+      path: path.join(_path, 'public'),
       filename: path.join('assets', 'js', '[name].[hash].js'),
       chunkFilename: '[id].bundle.[chunkhash].js',
       publicPath: '/'

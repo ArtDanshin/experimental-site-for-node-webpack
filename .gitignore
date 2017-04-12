@@ -41,7 +41,7 @@ jspm_packages
 .idea
 
 # Compiled files
-dist
+public/assets
 
 # Build files info
 /config/manifest.json
