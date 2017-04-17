@@ -6,7 +6,6 @@ const webpack      = require('webpack');
 const Manifest     = require('manifest-revision-webpack-plugin');
 const TextPlugin   = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const HtmlPlugin   = require('html-webpack-plugin');
 const SvgStore     = require('webpack-svgstore-plugin');
 const BrowserSync  = require('browser-sync-webpack-plugin');
 
@@ -119,33 +118,6 @@ module.exports = function(_path) {
         host: 'localhost',
         port: 8090,
         proxy: 'http://localhost:8080/'
-      }),
-
-      // create instance for entrypoint index.html building
-      new HtmlPlugin({
-        chunks: ['application', 'vendors'],
-        filename: 'index.html',
-        template: path.join(_path, 'app', 'views', 'home', 'index.pug')
-      }),
-      new HtmlPlugin({
-        chunks: ['application', 'vendors'],
-        filename: 'portfolio.html',
-        template: path.join(_path, 'app', 'views', 'portfolio', 'index.pug')
-      }),
-      new HtmlPlugin({
-        chunks: ['application', 'vendors'],
-        filename: 'project.html',
-        template: path.join(_path, 'app', 'views', 'project', 'index.pug')
-      }),
-      new HtmlPlugin({
-        chunks: ['application', 'vendors'],
-        filename: 'blog.html',
-        template: path.join(_path, 'app', 'views', 'blog', 'index.pug')
-      }),
-      new HtmlPlugin({
-        chunks: ['application', 'vendors'],
-        filename: 'about.html',
-        template: path.join(_path, 'app', 'views', 'about', 'index.pug')
       })
     ]
   };
