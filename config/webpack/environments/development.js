@@ -10,9 +10,12 @@ module.exports = function(_path) {
     context: _path,
     devtool: 'eval',
     devServer: {
-      contentBase: './dist',
       hot: false,
-      inline: true
+      inline: true,
+      port: 8080,
+      proxy: {
+        '**': 'http://localhost:3000'
+      }
     },
     module: {
       rules: [
