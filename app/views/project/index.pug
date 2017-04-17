@@ -1,4 +1,4 @@
-extends //layouts/main
+extends ../layouts/main
 
 block title
   | Страница проекта
@@ -8,14 +8,14 @@ block content
     .project-page__title
       .page-title-block(style='background-color:black')
         .page-title-block__img-block
-          img.page-title-block__img-left(src=require('_images/project-banner-left.gif'))
-          img.page-title-block__img-right(src=require('_images/project-banner-right.gif'))
+          img.page-title-block__img-left(src='/images/project-banner-left.gif')
+          img.page-title-block__img-right(src='/images/project-banner-right.gif')
     .project-page__content
       .project-content
         .project-content__title
           | Проект - Silver Dragoon "От заката до рассвета"(Персональный сайт Silver Dragoon Версия 2)
         .project-content__body
-          img.project-content__img(src=require('_images/project-screen.png'))
+          img.project-content__img(src='/images/project-screen.png')
           .project-content__info
             .project-content__date Дата начала проекта: 2 января 2008 года
             .project-content__link-to Ссылка на проект: http://silver-dragoon.ucoz.ru
