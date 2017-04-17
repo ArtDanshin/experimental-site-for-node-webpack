@@ -25,9 +25,9 @@ module.exports = function(_path) {
     application: _path + '/app/app.js'
   };
   // check vendors
-  if (dependencies) {
-    entryPoints.vendors = dependencies
-  }
+  // if (dependencies) {
+  //   entryPoints.vendors = dependencies
+  // }
 
   // return objecy
   return {
