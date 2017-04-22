@@ -1,6 +1,7 @@
 const express = require('express');
 const path    = require('path');
 const fs      = require('fs');
+const morgan  = require('morgan');
 
 const app = express();
 const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'config', 'manifest.json'), 'utf8'));
@@ -9,6 +10,8 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'app', 'views'));
 
 app.set('port', process.env.PORT || 3000);
+
+app.use(morgan('dev'));
 
 app.use((req, res, next) => {
   res.locals.assets = manifest.assets;
