@@ -4,7 +4,9 @@ const fs      = require('fs');
 const morgan  = require('morgan');
 
 const app = express();
-const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'config', 'manifest.json'), 'utf8'));
+global.appRoot = path.resolve(__dirname);
+
+const manifest = JSON.parse(fs.readFileSync(path.join(appRoot, 'config', 'manifest.json'), 'utf8'));
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'app', 'views'));
