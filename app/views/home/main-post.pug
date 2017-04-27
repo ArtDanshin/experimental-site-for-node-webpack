@@ -1,7 +1,7 @@
 .main-post
   .main-post__img-block
-    img.main-post__img(src='/images/main-post.jpg')
+    img.main-post__img(src=`${last_materials.topics[0].image}`)
   .main-post__titles-wrapper
     .main-post__titles-block
-      .main-post__title Супер опупенский заголовок
-      .main-post__description А тут будет описание для данного поста
+      .main-post__title= last_materials.topics[0].title
+      .main-post__description= last_materials.topics[0].description
