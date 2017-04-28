@@ -6,12 +6,13 @@ const morgan  = require('morgan');
 const app = express();
 global.appRoot = path.resolve(__dirname);
 
+const settings = JSON.parse(fs.readFileSync(path.join(appRoot, 'config', 'settings.json'), 'utf8'));
 const manifest = JSON.parse(fs.readFileSync(path.join(appRoot, 'config', 'manifest.json'), 'utf8'));
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'app', 'views'));
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', settings.server.port);
 
 app.use(morgan('dev'));
 
