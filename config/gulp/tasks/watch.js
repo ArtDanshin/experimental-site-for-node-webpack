@@ -9,7 +9,8 @@ require('./lint');
 gulp.task('watch', done => {
   const stream = nodemon({
     script: config.entry,
-    ext: 'jade js',
+    ext: config.ext,
+    ignore: config.ignore,
     tasks: ['lint']
   });
 

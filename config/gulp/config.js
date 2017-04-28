@@ -4,13 +4,20 @@ module.exports = {
 
   /* -----  paths ----- */
   paths: {
-    eslint : {
+    eslint: {
       checkPath	  : ['app/**/*.js'],
       ignorePath	: ['!app/assets/**'],
     },
 
-    nodemon : {
-      entry: 'app.js'
+    nodemon: {
+      entry: 'app.js',
+      ext: 'js json jade',
+      ignore: [
+        'app/assets/',
+        'config/',
+        'db/',
+        'node_modules/'
+      ]
     }
   }
 };
