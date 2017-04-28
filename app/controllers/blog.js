@@ -1,3 +1,3 @@
 exports.show = (req, res) => {
-  res.render('blog')
-}
+  res.render('blog');
+};
