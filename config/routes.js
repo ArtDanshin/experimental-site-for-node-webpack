@@ -1,6 +1,7 @@
 const main      = require('../app/controllers/application');
 const portfolio = require('../app/controllers/portfolio');
 const blog      = require('../app/controllers/blog');
+const topic     = require('../app/controllers/topic');
 const about     = require('../app/controllers/about');
 
 module.exports = app => {
@@ -10,6 +11,8 @@ module.exports = app => {
   app.get('/portfolio/:item', portfolio.item);
 
   app.get('/blog', blog.show);
+
+  app.get('/topic/:id', topic.show);
 
   app.get('/about', about.show);
 };

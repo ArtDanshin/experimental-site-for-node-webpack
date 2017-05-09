@@ -7,7 +7,7 @@
       "image": "/images/main-post.jpg",
       "published_at": "",
       "category": "Frontend",
-      "url": "/topic"
+      "url": "/topic/1"
     },
     {
       "title": "Космос уже близко",
@@ -15,7 +15,7 @@
       "image": "/images/last-post1.png",
       "published_at": "23 февраля 2017",
       "category": "Backend",
-      "url": "/topic"
+      "url": "/topic/2"
     },
     {
       "title": "Тут какой-то код",
@@ -23,7 +23,7 @@
       "image": "/images/last-post2.jpg",
       "published_at": "23 февраля 2017",
       "category": "Дизайн",
-      "url": "/topic"
+      "url": "/topic/3"
     },
     {
       "title": "Ну а тут какой-то скриншот",
@@ -31,7 +31,7 @@
       "image": "/images/last-post3.png",
       "published_at": "23 февраля 2017",
       "category": "Карьера",
-      "url": "/topic"
+      "url": "/topic/4"
     }
   ]
 }
