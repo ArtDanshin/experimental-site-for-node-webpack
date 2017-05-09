@@ -1,34 +1,10 @@
 ul.blog-list
-  li.blog-list__item
-    .blog-list__img-block
-      img.blog-list__img(src='/images/last-post1.png' alt='')
-    .blog-list__title Заголовочек
-    .blog-list__infosection
-      .blog-list__date Май 15, 2017
-      .blog-list__category Категория
-    .blog-list__description
-      | Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов)
-      |  участие в формировании модели развития. Повседневная практика показывает, что укрепление и развитие структуры
-      |  обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
-  li.blog-list__item
-    .blog-list__img-block
-      img.blog-list__img(src='/images/last-post1.png' alt='')
-    .blog-list__title Заголовочек
-    .blog-list__infosection
-      .blog-list__date Май 15, 2017
-      .blog-list__category Категория
-    .blog-list__description
-      | Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов)
-      |  участие в формировании модели развития. Повседневная практика показывает, что укрепление и развитие структуры
-      |  обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
-  li.blog-list__item
-    .blog-list__img-block
-      img.blog-list__img(src='/images/last-post1.png' alt='')
-    .blog-list__title Заголовочек
-    .blog-list__infosection
-      .blog-list__date Май 15, 2017
-      .blog-list__category Категория
-    .blog-list__description
-      | Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов)
-      |  участие в формировании модели развития. Повседневная практика показывает, что укрепление и развитие структуры
-      |  обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
+  each topic in topics
+    li.blog-list__item
+      a.blog-list__img-block(href=`${topic.url}`)
+        img.blog-list__img(src=`${topic.image}` alt='')
+      a.blog-list__title(href=`${topic.url}`)= topic.title
+      .blog-list__infosection
+        .blog-list__date= topic.published_at
+        .blog-list__category= topic.category
+      .blog-list__description= topic.description
