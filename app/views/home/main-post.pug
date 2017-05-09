@@ -3,5 +3,5 @@
     img.main-post__img(src=`${lastMaterials.topics[0].image}`)
   .main-post__titles-wrapper
     .main-post__titles-block
-      .main-post__title= lastMaterials.topics[0].title
+      a.main-post__title(href=`${lastMaterials.topics[0].url}`)= lastMaterials.topics[0].title
       .main-post__description= lastMaterials.topics[0].description
