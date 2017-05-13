@@ -1,0 +1,14 @@
+each item in body
+  case item.type
+    when "code"
+      include widgets/code
+    when "gallery"
+      include widgets/gallery
+    when "image"
+      include widgets/image
+    when "read-more"
+      include widgets/read-more
+    when "text"
+      include widgets/text
+    default
+      include widgets/snippet
