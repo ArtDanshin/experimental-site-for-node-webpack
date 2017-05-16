@@ -106,7 +106,7 @@
     },
     {
       "type": "snippet",
-      "content": ""
+      "content": "<script>console.log('Snippet Work!')</script>"
     }
   ]
 }
