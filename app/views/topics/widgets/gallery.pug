@@ -1,0 +1,5 @@
+.widget-gallery
+  each image in item.images
+    .widget-gallery__item
+      img.widget-gallery__image(src=`${image.url}` alt="")
+      widget-gallery__title= image.title
