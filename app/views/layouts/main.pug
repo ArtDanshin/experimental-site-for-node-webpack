@@ -8,7 +8,7 @@ html(lang="ru-Ru")
     meta(name="vieport" content="device-width")
     title
       block title
-    link(rel="stylesheet" media="all" href=`/${locals.assets['application.css']}`)
+    link(rel="stylesheet" media="all" href=`${locals.assets.application.css}`)
   body
     .g-wrapper
       .g-header
@@ -17,4 +17,5 @@ html(lang="ru-Ru")
         block content
       .g-footer
         include ../shared/footer
-    script(src=`/${locals.assets['application.js']}` async)
+    script(src=`${locals.assets.vendors.js}` defer)
+    script(src=`${locals.assets.application.js}` defer)
