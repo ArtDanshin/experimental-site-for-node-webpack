@@ -17,7 +17,7 @@ app.set('port', settings.server.port);
 app.use(morgan('dev'));
 
 app.use((req, res, next) => {
-  res.locals.assets = manifest.assets;
+  res.locals.assets = manifest;
   next();
 });
 
