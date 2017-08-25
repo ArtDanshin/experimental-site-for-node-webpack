@@ -1,3 +1,3 @@
-exports.show = (req, res) => {
-  res.render('about');
+exports.show = async ctx => {
+  await ctx.render('about');
 };

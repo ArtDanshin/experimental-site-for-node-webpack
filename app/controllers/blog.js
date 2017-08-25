@@ -1,5 +1,5 @@
 const listModel = require('../models/list');
 
-exports.show = (req, res) => {
-  res.render('blog', listModel('blog_items'));
+exports.show = async ctx => {
+  await ctx.render('blog', listModel('blog_items'));
 };

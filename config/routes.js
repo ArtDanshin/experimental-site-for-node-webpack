@@ -1,18 +1,21 @@
+const router    = require('koa-router')();
+
 const main      = require('../app/controllers/application');
 const portfolio = require('../app/controllers/portfolio');
 const blog      = require('../app/controllers/blog');
 const topic     = require('../app/controllers/topic');
 const about     = require('../app/controllers/about');
 
-module.exports = app => {
-  app.get('/', main.home);
+router
+  .get('/', main.home)
 
-  app.get('/portfolio', portfolio.show);
-  app.get('/portfolio/:item', portfolio.item);
+  .get('/portfolio', portfolio.show)
+  .get('/portfolio/:item', portfolio.item)
 
-  app.get('/blog', blog.show);
+  .get('/blog', blog.show)
 
-  app.get('/topic/:id', topic.show);
+  .get('/topic/:id', topic.show)
 
-  app.get('/about', about.show);
-};
+  .get('/about', about.show);
+
+module.exports = router;

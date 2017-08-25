@@ -1,10 +1,10 @@
 # Проект для испытаний - персональный сайт/блог
-- Node.js 8.2+
-- Express
-- Webpack 3.4
+- Node.js 8.4+
+- Koa
+- Webpack 3.5+
 - Pug
 - Stylus
-- ES6
+- ES7
 - and other...
 
 ### Инструкция для запуска сервера:
