@@ -1,30 +1,31 @@
-const express = require('express');
-const path    = require('path');
 const fs      = require('fs');
-const morgan  = require('morgan');
+const path    = require('path');
+const Koa     = require('koa');
+const views   = require('koa-views');
+const serve   = require('koa-static');
+const logger  = require('koa-logger');
 
-const app = express();
+const router = require('./config/routes.js');
+const settings = JSON.parse(fs.readFileSync(path.join(__dirname, 'config', 'settings.json'), 'utf8'));
+const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'config', 'manifest.json'), 'utf8'));
+
 global.appRoot = path.resolve(__dirname);
 
-const settings = JSON.parse(fs.readFileSync(path.join(appRoot, 'config', 'settings.json'), 'utf8'));
-const manifest = JSON.parse(fs.readFileSync(path.join(appRoot, 'config', 'manifest.json'), 'utf8'));
+const app = new Koa();
 
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'app', 'views'));
+app.use(views(__dirname + '/app/views', {
+  extension: 'pug',
+  options: {
+    assets: manifest
+  }
+}));
 
-app.set('port', settings.server.port);
+app.use(logger());
 
-app.use(morgan('dev'));
+app.use(serve(path.join(__dirname, 'public')));
 
-app.use((req, res, next) => {
-  res.locals.assets = manifest;
-  next();
-});
+app.use(router.routes());
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-require('./config/routes.js')(app);
-
-app.listen(app.get('port'), () => {
-  console.log('Express запущен на http://localhost:' + app.get('port') + ' ; нажмите Ctrl + C для завершения');
+app.listen(settings.server.port, () => {
+  console.log('KoaJS запущен на http://localhost:' + settings.server.port + ' ; нажмите Ctrl + C для завершения');
 });

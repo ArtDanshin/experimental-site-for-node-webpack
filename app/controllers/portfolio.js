@@ -1,9 +1,9 @@
 const listModel = require('../models/list');
 
-exports.show = (req, res) => {
-  res.render('portfolio', listModel('portfolio_items'));
+exports.show = async ctx => {
+  await ctx.render('portfolio', listModel('portfolio_items'));
 };
 
-exports.item = (req, res) => {
-  res.render('project');
+exports.item = async ctx => {
+  await ctx.render('project');
 };
