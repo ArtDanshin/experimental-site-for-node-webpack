@@ -1,4 +1,4 @@
-const fs         = require('fs');
+const fs         = require('fs-extra');
 const path       = require('path');
 const topicModel = require('../models/topic');
 
@@ -8,12 +8,18 @@ exports.show = async ctx => {
   await ctx.render('topics', topic);
 };
 
-exports.add = async () => {
-  topicModel.create(JSON.parse(fs.readFileSync(path.join(appRoot, 'db', 'topics', '1.json'), 'utf8')))
-    .then(message => {
-      console.log("done", message);
-    })
-    .catch(error => {
-      console.log("error", message);
-    })
+exports.create = async ctx => {
+  const topicFiles = await fs.readdir(path.join(appRoot, 'db', 'topics'));
+
+  await topicFiles.map(file => {
+    return topicModel.create(JSON.parse(fs.readFileSync(path.join(appRoot, 'db', 'topics', file), 'utf8')));
+  });
+
+  await ctx.redirect('/');
+};
+
+exports.destroy = async ctx => {
+  await topicModel.collection.drop();
+
+  await ctx.redirect('/');
 };

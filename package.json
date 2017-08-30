@@ -66,12 +66,14 @@
     "webpack-svgstore-plugin": "4.0"
   },
   "dependencies": {
+    "fs-extra": "4.0.1",
     "koa": "2.3.0",
     "koa-logger": "3.0.1",
     "koa-router": "7.2.1",
     "koa-static": "4.0.1",
     "koa-views": "6.0.2",
     "mongoose": "4.11.8",
+    "mongoose-beautiful-unique-validation": "^7.0.0",
     "pug": "2.0.0-rc.3"
   }
 }
