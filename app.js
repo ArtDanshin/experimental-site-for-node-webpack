@@ -1,9 +1,10 @@
-const fs      = require('fs');
-const path    = require('path');
-const Koa     = require('koa');
-const views   = require('koa-views');
-const serve   = require('koa-static');
-const logger  = require('koa-logger');
+const fs       = require('fs');
+const path     = require('path');
+const Koa      = require('koa');
+const views    = require('koa-views');
+const serve    = require('koa-static');
+const logger   = require('koa-logger');
+const mongoose = require('mongoose');
 
 const router = require('./config/routes.js');
 const settings = JSON.parse(fs.readFileSync(path.join(__dirname, 'config', 'settings.json'), 'utf8'));
@@ -21,6 +22,16 @@ app.use(views(__dirname + '/app/views', {
 }));
 
 app.use(logger());
+
+mongoose.Promise = Promise;
+mongoose.connect('mongodb://localhost/test', {
+  server: {
+    socketOptions: {
+      keepAlive: 1
+    },
+    poolSize: 5
+  }
+});
 
 app.use(serve(path.join(__dirname, 'public')));
 
