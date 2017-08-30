@@ -1,7 +1,7 @@
-const listModel = require('../models/list');
+const topicModel = require('../models/topic');
 
-module.exports = () => {
-  let lastMaterials = listModel('home_last_materials');
+module.exports = async () => {
+  const lastMaterials = await topicModel.find().sort({_id: 1}).limit(4);
 
   return {
     lastMaterials
