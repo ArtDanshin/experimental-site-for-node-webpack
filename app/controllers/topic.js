@@ -3,7 +3,7 @@ const path       = require('path');
 const topicModel = require('../models/topic');
 
 exports.show = async ctx => {
-  const topic = await topicModel.findOne({slug: ctx.params.slug});
+  const topic = await topicModel.findOne({ slug: ctx.params.slug });
 
   await ctx.render('topics', topic);
 };
