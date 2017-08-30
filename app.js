@@ -25,12 +25,9 @@ app.use(logger());
 
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/test', {
-  server: {
-    socketOptions: {
-      keepAlive: 1
-    },
-    poolSize: 5
-  }
+  keepAlive: 1,
+  poolSize: 5,
+  useMongoClient: true
 });
 
 app.use(serve(path.join(__dirname, 'public')));

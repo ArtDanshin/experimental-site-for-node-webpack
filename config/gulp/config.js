@@ -11,10 +11,9 @@ module.exports = {
 
     nodemon: {
       entry: 'app.js',
-      ext: 'js json jade',
+      ext: 'js json pug',
       ignore: [
         'app/assets/',
-        'config/',
         'db/',
         'node_modules/'
       ]
