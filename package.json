@@ -6,6 +6,7 @@
   "scripts": {
     "server": "node app.js",
     "server:dev": "node_modules/.bin/gulp dev",
+    "server:debug": "node --inspect app.js",
     "front:build": "rm -rf public/assets/* && NODE_ENV=global:production webpack --progress --colors",
     "front:dev": "NODE_ENV=global:development webpack-dev-server --progress"
   },
@@ -65,13 +66,12 @@
     "webpack-svgstore-plugin": "4.0"
   },
   "dependencies": {
-    "express": "4.15.4",
     "koa": "2.3.0",
-    "koa-logger": "^3.0.1",
+    "koa-logger": "3.0.1",
     "koa-router": "7.2.1",
     "koa-static": "4.0.1",
     "koa-views": "6.0.2",
-    "morgan": "1.8.2",
+    "mongoose": "4.11.8",
     "pug": "2.0.0-rc.3"
   }
 }

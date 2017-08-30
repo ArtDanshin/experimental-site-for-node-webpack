@@ -2,9 +2,9 @@
   "title": "Супер опупенский заголовок",
   "description": "А тут будет описание для данного поста",
   "image": "/images/main-post.jpg",
-  "published_at": "23 февраля 2017",
   "category": "Frontend",
   "url": "/topic/1",
+  "slug": "1",
   "tags": [
     {
       "title": "HTML",

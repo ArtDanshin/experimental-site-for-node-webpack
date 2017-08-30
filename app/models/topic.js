@@ -1,6 +1,22 @@
-const fs   = require('fs');
-const path = require('path');
+const mongoose = require('mongoose');
 
-module.exports = id => {
-  return JSON.parse(fs.readFileSync(path.join(appRoot, 'db', 'topics', `${id}.json`), 'utf8'));
-};
+const topicSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  image: String,
+  published_at: {
+    type: Date,
+    default: Date.now()
+  },
+  category: String,
+  slug: {
+    type: String,
+    unique: true
+  },
+  url: String,
+  tags: Array,
+  read_more: Array,
+  body: Array
+});
+
+module.exports = mongoose.model('Topic', topicSchema);
