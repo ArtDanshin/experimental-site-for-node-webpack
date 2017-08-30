@@ -1,5 +1,7 @@
 const homePresenter = require('../presenter/home');
 
 exports.home = async ctx => {
-  await ctx.render('home', homePresenter());
+  const homeData = await homePresenter();
+
+  await ctx.render('home', homeData);
 };

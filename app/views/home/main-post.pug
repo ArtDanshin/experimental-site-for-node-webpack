@@ -1,7 +1,7 @@
 .main-post
   .main-post__img-block
-    img.main-post__img(src=`${lastMaterials.topics[0].image}`)
+    img.main-post__img(src=`${lastMaterials[0].image}`)
   .main-post__titles-wrapper
     .main-post__titles-block
-      a.main-post__title(href=`${lastMaterials.topics[0].url}`)= lastMaterials.topics[0].title
-      .main-post__description= lastMaterials.topics[0].description
+      a.main-post__title(href=`${lastMaterials[0].url}`)= lastMaterials[0].title
+      .main-post__description= lastMaterials[0].description
