@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const beautifyUnique = require('mongoose-beautiful-unique-validation');
 
 const topicSchema = new mongoose.Schema({
   title: String,
@@ -18,5 +19,7 @@ const topicSchema = new mongoose.Schema({
   read_more: Array,
   body: Array
 });
+
+topicSchema.plugin(beautifyUnique);
 
 module.exports = mongoose.model('Topic', topicSchema);

@@ -15,7 +15,8 @@ router
   .get('/blog', blog.show)
 
   .get('/topic/:slug', topic.show)
-  .post('/topic/add', topic.add)
+  .post('/topic/create', topic.create)
+  .delete('/topic/destroy', topic.destroy)
 
   .get('/about', about.show);
 
