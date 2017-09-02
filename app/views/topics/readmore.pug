@@ -1,5 +1,5 @@
 .topic-readmore
   each item in read_more
-    a.topic-readmore__item(href=`${item.url}`)
-      img.topic-readmore__img(src=`${item.image}`)
-      .topic-readmore__title= item.title
+    a.topic-readmore__item(href=(item.url) ? item.url : '')
+      img.topic-readmore__img(src=(item.image) ? item.image : '')
+      .topic-readmore__title= (item.title) ? item.title : ''
