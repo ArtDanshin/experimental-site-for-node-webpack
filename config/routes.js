@@ -10,7 +10,9 @@ router
   .get('/', main.home)
 
   .get('/portfolio', portfolio.show)
-  .get('/portfolio/:item', portfolio.item)
+  .get('/portfolio/:slug', portfolio.item)
+  .post('/portfolio/create', portfolio.create)
+  .delete('/portfolio/destroy', portfolio.destroy)
 
   .get('/blog', blog.show)
 
