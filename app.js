@@ -4,6 +4,7 @@ const Koa      = require('koa');
 const views    = require('koa-views');
 const serve    = require('koa-static');
 const logger   = require('koa-logger');
+const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
 
 const router = require('./config/routes.js');
@@ -22,6 +23,8 @@ app.use(views(__dirname + '/app/views', {
 }));
 
 app.use(logger());
+
+app.use(bodyParser());
 
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/test', {

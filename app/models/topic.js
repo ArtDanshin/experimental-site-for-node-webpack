@@ -15,9 +15,18 @@ const topicSchema = new mongoose.Schema({
     unique: true
   },
   url: String,
-  tags: Array,
-  read_more: Array,
-  body: Array
+  tags: {
+    type: Array,
+    default: []
+  },
+  read_more: {
+    type: Array,
+    default: []
+  },
+  body: {
+    type: Array,
+    default: []
+  }
 });
 
 topicSchema.plugin(beautifyUnique);
