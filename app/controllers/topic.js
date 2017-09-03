@@ -21,15 +21,28 @@ exports.create = async ctx => {
   await ctx.redirect(`/topic/${topic.slug}`);
 };
 
+exports.edit = async ctx => {
+  const topic = await topicModel.findOne({ slug: ctx.params.slug });
+
+  if (!topic) ctx.throw(404);
+
+  await ctx.render('editor/topics/edit', topic)
+};
+
 exports.delete = async ctx => {
   await ctx.render('editor/topics/new')
 };
 
 exports.update = async ctx => {
-  await ctx.render('editor/topics/new')
+  const topic = ctx.request.body;
+
+  await topicModel.update({ slug: topic.slug }, topic);
+
+  ctx.body = {
+    status: 200,
+    topic
+  };
 };
-
-
 
 exports.fill = async ctx => {
   const topicFiles = await fs.readdir(path.join(appRoot, 'db', 'topics'));
