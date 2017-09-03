@@ -9,3 +9,6 @@ require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
 
 // Stylesheet entrypoint
 require('_stylesheets/application.styl');
+
+// Client JavaScript Modules
+require('_js/editor')();

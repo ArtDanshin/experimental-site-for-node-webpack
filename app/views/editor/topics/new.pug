@@ -35,13 +35,10 @@ block content
           .editor__label Тело статьи
           .editor__body
             .editor__body-item
+              - options = [{type: 'text', text: 'Текст'}, {type: 'image',text: 'Картинка'}, {type: 'gallery',text: 'Галерея'}, {type: 'read_more',text: 'Читайте так же'}, {type: 'code',text: 'Код'}, {type: 'snippet',text: 'Сниппет'}]
               select.editor__select(size='1' name='body[0][type]')
-                option.editor__option(value='text' selected) Текст
-                option.editor__option(value='image') Картинка
-                option.editor__option(value='gallery') Галерея
-                option.editor__option(value='read_more') Читайте так же
-                option.editor__option(value='code') Код
-                option.editor__option(value='snippet') Сниппет
+                for option in options
+                  option.editor__option(value=option.type)=option.text
               textarea.editor__textarea(name='body[0][content]' rows='5')
         .editor__field
           .editor__label Тэги

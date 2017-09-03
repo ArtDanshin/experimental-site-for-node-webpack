@@ -18,6 +18,7 @@ router
 
   .get('/topic/new', topic.new)
   .get('/topic/:slug', topic.show)
+  .get('/topic/:slug/edit', topic.edit)
   .put('/topic/:slug', topic.update)
   .delete('/topic/:slug', topic.delete)
   .post('/topic', topic.create)
