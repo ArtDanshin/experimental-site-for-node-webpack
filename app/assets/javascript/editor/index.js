@@ -12,6 +12,8 @@ module.exports = function() {
       const url = location.href.replace('/edit', '');
       const data = serializer(form, { hash: true });
 
+      /* eslint-disable compat/compat, no-alert */
+
       fetch(url, {
         method: 'PUT',
         headers: {
@@ -21,6 +23,8 @@ module.exports = function() {
       }).then(() => {
         alert('Топик успешно сохранен');
       });
+
+      /* eslint-enable compat/compat, no-alert */
     });
   }
 };

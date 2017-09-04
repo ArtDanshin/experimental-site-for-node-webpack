@@ -11,7 +11,7 @@ exports.show = async ctx => {
 };
 
 exports.new = async ctx => {
-  await ctx.render('editor/topics/new')
+  await ctx.render('editor/topics/new');
 };
 
 exports.create = async ctx => {
@@ -26,11 +26,11 @@ exports.edit = async ctx => {
 
   if (!topic) ctx.throw(404);
 
-  await ctx.render('editor/topics/edit', topic)
+  await ctx.render('editor/topics/edit', topic);
 };
 
 exports.delete = async ctx => {
-  await ctx.render('editor/topics/new')
+  await ctx.render('editor/topics/new');
 };
 
 exports.update = async ctx => {
