@@ -125,13 +125,13 @@ module.exports = function(_path) {
         path: path.join(_path, 'config'),
         filename: 'manifest.json',
         prettyPrint: true
-      }),
-
-      new BrowserSync({
-        host: 'localhost',
-        port: 8090,
-        proxy: 'http://localhost:8080/'
       })
+
+      // new BrowserSync({
+      //   host: 'localhost',
+      //   port: 8090,
+      //   proxy: 'http://localhost:8080/'
+      // })
     ]
   };
 };
