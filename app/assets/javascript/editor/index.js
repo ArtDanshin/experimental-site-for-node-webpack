@@ -6,10 +6,12 @@ module.exports = function() {
   const form = document.querySelector('.js-editor-form');
 
   if (form) {
+    const deleteButton = document.querySelector('.js-delete-topic');
+    const url = location.href.replace('/edit', '');
+
     form.addEventListener('submit', e => {
       e.preventDefault();
 
-      const url = location.href.replace('/edit', '');
       const data = serializer(form, { hash: true });
 
       /* eslint-disable compat/compat, no-alert */
@@ -26,5 +28,13 @@ module.exports = function() {
 
       /* eslint-enable compat/compat, no-alert */
     });
+
+    deleteButton.addEventListener('click', () => {
+      fetch(url, {
+        method: 'DELETE'
+      }).then(() => {
+        alert('Топик успешно удален')
+      })
+    })
   }
 };
