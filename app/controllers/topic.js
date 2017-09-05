@@ -30,7 +30,12 @@ exports.edit = async ctx => {
 };
 
 exports.delete = async ctx => {
-  await ctx.render('editor/topics/new');
+  await topicModel.deleteOne({ slug: ctx.params.slug });
+
+  ctx.body = {
+    status: 200,
+    removed: true
+  };
 };
 
 exports.update = async ctx => {
@@ -51,11 +56,11 @@ exports.fill = async ctx => {
     return topicModel.create(JSON.parse(fs.readFileSync(path.join(appRoot, 'db', 'topics', file), 'utf8')));
   });
 
-  await ctx.redirect('/');
+  ctx.body = 'Database fill complete';
 };
 
 exports.destroy = async ctx => {
   await topicModel.collection.drop();
 
-  await ctx.redirect('/');
+  ctx.body = 'Database destroy';
 };
