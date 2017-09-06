@@ -16,6 +16,8 @@ middlewares.forEach(middleware => {
 });
 
 mongoose.Promise = Promise;
+mongoose.set('debug', true);
+
 mongoose.connect('mongodb://localhost/test', {
   keepAlive: 1,
   poolSize: 5,
