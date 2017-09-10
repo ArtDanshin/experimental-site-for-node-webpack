@@ -4,6 +4,7 @@
   "description": "Repository for experiments (NodeJS, Webpack, Gulp...)",
   "main": "app.js",
   "scripts": {
+    "filldb": "node db/filldb.js",
     "server": "node app.js",
     "server:dev": "node_modules/.bin/gulp dev",
     "server:debug": "node --inspect app.js",
