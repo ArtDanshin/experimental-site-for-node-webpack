@@ -11,8 +11,6 @@ router
 
   .get('/portfolio', portfolio.show)
   .get('/portfolio/:slug', portfolio.item)
-  .post('/portfolio/create', portfolio.create)
-  .delete('/portfolio/destroy', portfolio.destroy)
 
   .get('/blog', blog.show)
 
@@ -22,9 +20,6 @@ router
   .put('/topic/:slug', topic.update)
   .delete('/topic/:slug', topic.delete)
   .post('/topic', topic.create)
-
-  .post('/topic/fill', topic.fill)
-  .delete('/topic/destroy', topic.destroy)
 
   .get('/about', about.show);
 

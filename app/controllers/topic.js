@@ -1,5 +1,3 @@
-const fs         = require('fs-extra');
-const path       = require('path');
 const topicModel = require('../models/topic');
 
 exports.show = async ctx => {
@@ -47,20 +45,4 @@ exports.update = async ctx => {
     status: 200,
     topic
   };
-};
-
-exports.fill = async ctx => {
-  const topicFiles = await fs.readdir(path.join(appRoot, 'db', 'topics'));
-
-  await topicFiles.map(file => {
-    return topicModel.create(JSON.parse(fs.readFileSync(path.join(appRoot, 'db', 'topics', file), 'utf8')));
-  });
-
-  ctx.body = 'Database fill complete';
-};
-
-exports.destroy = async ctx => {
-  await topicModel.collection.drop();
-
-  ctx.body = 'Database destroy';
 };
