@@ -25,15 +25,25 @@ mongoose.connect('mongodb://localhost/test', {
 
   await Promise.all(categoryFiles.map(file => {
     return categoryModel.create(JSON.parse(fs.readFileSync(path.join('db', 'categories', file), 'utf8')))
-      .then(e => console.log(e));
   }));
 
   await Promise.all(tagFiles.map(file => {
     return tagModel.create(JSON.parse(fs.readFileSync(path.join('db', 'tags', file), 'utf8')));
   }));
 
-  await Promise.all(topicFiles.map(file => {
-    return topicModel.create(JSON.parse(fs.readFileSync(path.join('db', 'topics', file), 'utf8')));
+  await Promise.all(topicFiles.map(async file => {
+    let innerFile = JSON.parse(fs.readFileSync(path.join('db', 'topics', file), 'utf8'));
+
+    if (innerFile.tags.length) {
+      innerFile.tags = await Promise.all(innerFile.tags.map(tag => {
+        return tagModel.findOne({ title: tag })
+      }))
+    }
+    if (innerFile.category) {
+      innerFile.category = await categoryModel.findOne({ title: innerFile.category })
+    }
+
+    return topicModel.create(innerFile);
   }));
 
   await Promise.all(projectFiles.map(file => {

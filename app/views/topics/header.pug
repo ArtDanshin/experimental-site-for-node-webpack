@@ -3,6 +3,6 @@
     .topic-header__title= title
     .topic-header__description= description
     .topic-header__infobar
-      .topic-header__category= category
+      a.topic-header__category(href=`/category/${category.slug}`)= category.title
       .topic-header__date= published_at
       .topic-header__sharing
