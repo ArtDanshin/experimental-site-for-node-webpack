@@ -26,8 +26,8 @@ block content
           .form-label.editor__label Рубрика
           .editor__select-wrap
             select.form-select(size='1' name='category')
-              option(value='Frontend') Frontend
-              option(value='Backend') Backend
+              for category in categories
+                option(value=category.title)= category.title
         .editor__field
           label.form-label.editor__label(for='slug') Url заголовок
           input.form-text(type='text' name='slug' id='slug')
@@ -38,7 +38,8 @@ block content
               .editor__field
                 .form-label.editor__label Тип вреза:
                 - options = [{type: 'text', text: 'Текст'}, {type: 'image',text: 'Картинка'}, {type: 'gallery',text: 'Галерея'}, {type: 'read_more',text: 'Читайте так же'}, {type: 'code',text: 'Код'}, {type: 'snippet',text: 'Сниппет'}]
-                select.form-select(size='1' name='body[0][type]ption in options
+                select.form-select(size='1' name='body[0][type]')
+                  for option in options
                     option.editor__option(value=option.type)=option.text
               textarea.form-text(name='body[0][content]' rows='5')
         .editor__field

@@ -1,7 +1,11 @@
 const topicModel = require('../models/topic');
+const tagModel = require('../models/tag');
+const categoryModel = require('../models/category');
 
 exports.show = async ctx => {
-  const topic = await topicModel.findOne({ slug: ctx.params.slug });
+  const topic = await topicModel.findOne({ slug: ctx.params.slug })
+    .populate('tags')
+    .populate('category');
 
   if (!topic) ctx.throw(404);
 
@@ -9,22 +13,36 @@ exports.show = async ctx => {
 };
 
 exports.new = async ctx => {
-  await ctx.render('editor/topics/new');
+  const categories = await categoryModel.find();
+
+  await ctx.render('editor/topics/new', { categories });
 };
 
 exports.create = async ctx => {
-  const topic = ctx.request.body;
+  let topic = ctx.request.body;
+
+  if (topic.tags.length) {
+    topic.tags = await Promise.all(topic.tags.map(tag => {
+      return tagModel.findOne({ title: tag });
+    }));
+  }
+  if (topic.category) {
+    topic.category = await categoryModel.findOne({ title: topic.category });
+  }
 
   await topicModel.create(topic);
   await ctx.redirect(`/topic/${topic.slug}`);
 };
 
 exports.edit = async ctx => {
-  const topic = await topicModel.findOne({ slug: ctx.params.slug });
+  const topic = await topicModel.findOne({ slug: ctx.params.slug })
+    .populate('tags')
+    .populate('category');
+  const categories = await categoryModel.find();
 
   if (!topic) ctx.throw(404);
 
-  await ctx.render('editor/topics/edit', topic);
+  await ctx.render('editor/topics/edit', { topic, categories });
 };
 
 exports.delete = async ctx => {
@@ -38,6 +56,15 @@ exports.delete = async ctx => {
 
 exports.update = async ctx => {
   const topic = ctx.request.body;
+
+  if (topic.tags.length) {
+    topic.tags = await Promise.all(topic.tags.map(tag => {
+      return tagModel.findOne({ title: tag });
+    }));
+  }
+  if (topic.category) {
+    topic.category = await categoryModel.findOne({ title: topic.category });
+  }
 
   await topicModel.update({ slug: topic.slug }, topic);
 

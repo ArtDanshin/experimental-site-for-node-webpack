@@ -1,4 +1,4 @@
 .topic-footer
   .topic-footer__tags
     each tag in tags
-      a.topic-footer__tags-item(href=(tag.url) ? tag.url : '')= (tag.title) ? tag.title : ''
+      a.topic-footer__tags-item(href=`/tags/${tag.slug}`)= tag.title

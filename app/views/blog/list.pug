@@ -6,5 +6,5 @@ ul.blog-list
       a.blog-list__title(href=`${topic.url}`)= topic.title
       .blog-list__infosection
         .blog-list__date= topic.published_at
-        .blog-list__category= topic.category
+        a.blog-list__category(href=`/category/${topic.category.slug}`)= topic.category.title
       .blog-list__description= topic.description

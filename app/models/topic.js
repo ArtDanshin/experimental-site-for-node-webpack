@@ -9,16 +9,19 @@ const topicSchema = new mongoose.Schema({
     type: Date,
     default: Date.now()
   },
-  category: String,
+  category: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Category'
+  },
   slug: {
     type: String,
     unique: true
   },
   url: String,
-  tags: {
-    type: Array,
-    default: []
-  },
+  tags: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Tag'
+  }],
   read_more: {
     type: Array,
     default: []
