@@ -6,5 +6,5 @@ exports.show = async ctx => {
     .limit(6)
     .populate('category');
 
-  await ctx.render('blog', { topics });
+  await ctx.render('blog', { title: 'Блог', topics });
 };

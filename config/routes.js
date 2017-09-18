@@ -3,6 +3,8 @@ const router    = require('koa-router')();
 const main      = require('../app/controllers/application');
 const portfolio = require('../app/controllers/portfolio');
 const blog      = require('../app/controllers/blog');
+const category  = require('../app/controllers/category');
+const tag       = require('../app/controllers/tag');
 const topic     = require('../app/controllers/topic');
 const about     = require('../app/controllers/about');
 
@@ -21,6 +23,10 @@ router
   .delete('/topic/:slug', topic.delete)
   .post('/topic', topic.create)
 
-  .get('/about', about.show);
+  .get('/about', about.show)
+
+  .get('/category/:slug', category.show)
+
+  .get('/tag/:slug', tag.show);
 
 module.exports = router;

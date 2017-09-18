@@ -1,7 +1,7 @@
 extends ../layouts/main
 
 block title
-  | Блог
+  | `#{title}`
 
 block content
   .blog-page
@@ -10,6 +10,6 @@ block content
         .page-title-block__img-block
           img.page-title-block__img(src='/images/polygon-background-blog.png')
         .page-title-block__content
-          .page-title-block__title Блог
+          .page-title-block__title= title
     .blog-page__content
       include list
