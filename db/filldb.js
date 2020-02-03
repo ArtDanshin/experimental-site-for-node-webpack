@@ -11,11 +11,10 @@ mongoose.set('debug', true);
 
 mongoose.connect('mongodb://localhost/test', {
   keepAlive: 1,
-  poolSize: 5,
-  useMongoClient: true
+  poolSize: 5
 });
 
-(async () => {
+(async() => {
   const categoryFiles = await fs.readdir(path.join('db', 'categories'));
   const tagFiles = await fs.readdir(path.join('db', 'tags'));
   const topicFiles = await fs.readdir(path.join('db', 'topics'));
@@ -24,7 +23,7 @@ mongoose.connect('mongodb://localhost/test', {
   await mongoose.connection.db.dropDatabase();
 
   await Promise.all(categoryFiles.map(file => {
-    return categoryModel.create(JSON.parse(fs.readFileSync(path.join('db', 'categories', file), 'utf8')))
+    return categoryModel.create(JSON.parse(fs.readFileSync(path.join('db', 'categories', file), 'utf8')));
   }));
 
   await Promise.all(tagFiles.map(file => {
@@ -36,8 +35,8 @@ mongoose.connect('mongodb://localhost/test', {
 
     if (innerFile.tags.length) {
       innerFile.tags = await Promise.all(innerFile.tags.map(tag => {
-        return tagModel.findOne({ title: tag })
-      }))
+        return tagModel.findOne({ title: tag });
+      }));
     }
     if (innerFile.category) {
       innerFile.category = await categoryModel.findOne({ title: innerFile.category })

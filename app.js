@@ -20,8 +20,7 @@ mongoose.set('debug', true);
 
 mongoose.connect('mongodb://localhost/test', {
   keepAlive: 1,
-  poolSize: 5,
-  useMongoClient: true
+  poolSize: 5
 });
 
 app.use(router.routes());
