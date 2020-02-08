@@ -17,5 +17,6 @@ html(lang="ru-Ru")
         block content
       .g-footer
         include ../shared/footer
-    script(src=`${locals.assets.vendors.js}` defer)
+    if locals.assets.vendors
+      script(src=`${locals.assets.vendors.js}` defer)
     script(src=`${locals.assets.application.js}` defer)
