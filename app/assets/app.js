@@ -2,8 +2,8 @@
 
 // Initial webpack-svg-store plugin
 const __svg__ = {
-  path: './assets/svg/**/*.svg',
-  name: 'static/svg/[hash].sprite.svg'
+  path: './svg/**/*.svg',
+  name: 'static/svg/sprite.[hash].svg'
 };
 require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
 

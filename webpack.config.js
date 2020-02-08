@@ -1,49 +1,82 @@
-'use strict';
+const path = require('path');
+const { isProduction } = require('./config/webpack/utils/helper');
 
-// Depends
-const merge = require('webpack-merge');
+module.exports = {
+  mode: isProduction() ? 'production' : 'development',
 
-/**
- * [config description]
- * @type {Object}
- */
-const _configs = {
-  global: {
-    common: require(__dirname + '/config/webpack/global/common'),
-    production: require(__dirname + '/config/webpack/global/env/production'),
-    development: require(__dirname + '/config/webpack/global/env/development'),
-  }
-};
+  entry: {
+    application: path.resolve('app', 'assets', 'app')
+  },
 
-/**
- * Load webpack config via enviroments
- * @param  {[type]} enviroment [description]
- * @return {[type]}            [description]
- */
-const _load = function(enviroment) {
-  if (enviroment) {
-    // parse environment variable
-    const envParams = enviroment.split(':');
-    const commonConfig = envParams[0];
-    const modifyConfig = envParams[1];
+  output: {
+    path: path.resolve('public', 'assets'),
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[chunkhash:8].js',
+    publicPath: '/assets/'
+  },
 
-    // check environments
-    if (!_configs[commonConfig] || (modifyConfig && !_configs[commonConfig][modifyConfig])) throw 'Can\'t find enviroments see _congigs object';
-
-    if (modifyConfig) {
-      return merge(
-        _configs[commonConfig][modifyConfig](__dirname),
-        _configs[commonConfig]['common'](__dirname))
+  resolve: {
+    extensions: ['.js'],
+    modules: ['node_modules'],
+    alias: {
+      _svg: path.resolve('app', 'assets', 'svg'),
+      _fonts: path.resolve('app', 'assets', 'fonts'),
+      _js: path.resolve('app', 'assets', 'javascript'),
+      _images: path.resolve('app', 'assets', 'images'),
+      _stylesheets: path.resolve('app', 'assets', 'stylesheets')
     }
+  },
 
-    return _configs[commonConfig]['common'](__dirname)
-  } else {
-    throw 'Can\'t find local enviroment variable via process.env.NODE_ENV';
-  }
+  module: {
+    rules: [
+      isProduction() ? {} : require('./config/webpack/rules/jsPre')(),
+      require('./config/webpack/rules/js')(),
+      require('./config/webpack/rules/styl')(),
+      require('./config/webpack/rules/css')(),
+      require('./config/webpack/rules/pug')(),
+    ]
+  },
+
+  plugins: [
+    require('./config/webpack/plugins/extractPlugin')(),
+    require('./config/webpack/plugins/assetsPlugin')(),
+    require('./config/webpack/plugins/svgStore')(),
+    require('./config/webpack/plugins/caseSensitivePathsPlugin')()
+  ],
+
+  optimization: {
+    minimizer: [
+      require('./config/webpack/plugins/terser')(),
+      require('./config/webpack/plugins/optimizeCssAssets')()
+    ],
+    splitChunks: {
+      name: 'vendors',
+      chunks: 'all',
+      cacheGroups: {
+        vendors: {
+          reuseExistingChunk: true,
+          test: module => /node_modules/.test(module.resource) && !/.css/.test(module.resource)
+        }
+      }
+    }
+  },
+
+  devServer: {
+    contentBase: path.resolve('public'),
+    compress: true,
+    hot: false,
+    inline: true,
+    clientLogLevel: 'warn',
+    port: 8080,
+    proxy: {
+      '*': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      }
+    }
+  },
+
+  devtool: isProduction() ? 'cheap-source-map' : 'cheap-module-source-map',
+  bail: true,
+  cache: true
 };
-
-/**
- * Export WebPack config
- * @type {[type]}
- */
-module.exports = _load(process.env.NODE_ENV);

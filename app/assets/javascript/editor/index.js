@@ -33,8 +33,8 @@ module.exports = function() {
       fetch(url, {
         method: 'DELETE'
       }).then(() => {
-        alert('Топик успешно удален')
-      })
-    })
+        alert('Топик успешно удален');
+      });
+    });
   }
 };
