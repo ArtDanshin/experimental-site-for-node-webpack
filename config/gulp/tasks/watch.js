@@ -2,15 +2,18 @@
 
 const gulp    = require('gulp');
 const nodemon = require('gulp-nodemon');
-const config = require('../config').paths.nodemon;
 
 require('./lint');
 
 gulp.task('watch', done => {
-  const stream = nodemon({
-    script: config.entry,
-    ext: config.ext,
-    ignore: config.ignore,
+  nodemon({
+    script: 'app.js',
+    ext: 'js json pug',
+    ignore: [
+      'app/assets/',
+      'db/',
+      'node_modules/'
+    ],
     tasks: ['lint']
   });
 
