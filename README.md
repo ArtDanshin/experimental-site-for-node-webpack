@@ -1,7 +1,7 @@
 # Проект для испытаний - персональный сайт/блог
 - Node.js 12.13+
 - Koa
-- Webpack 3.5+
+- Webpack 4.41
 - Pug
 - Stylus
 - ES7
