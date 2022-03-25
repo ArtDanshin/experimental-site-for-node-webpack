@@ -1,80 +1,8 @@
 {
   "name": "JSExperiments",
-  "version": "1.0.0",
   "description": "Repository for experiments (NodeJS, Webpack, Gulp...)",
-  "main": "app.js",
-  "scripts": {
-    "filldb": "node db/filldb.js",
-    "server": "node app.js",
-    "server:dev": "node_modules/.bin/gulp dev",
-    "server:debug": "node --inspect app.js",
-    "front:build": "rm -rf public/assets/* && NODE_ENV=production webpack --progress --colors",
-    "front:dev": "NODE_ENV=development webpack-dev-server --progress"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
-  "browserslist": [
-    "Edge >= 18",
-    "last 3 Chrome versions",
-    "last 3 Firefox versions",
-    "last 3 ChromeAndroid versions",
-    "Safari >= 12"
-  ],
+  "private": true,
   "devDependencies": {
-    "@babel/core": "7.8.4",
-    "@babel/preset-env": "7.8.4",
-    "assets-webpack-plugin": "4.0.0",
-    "babel-loader": "8.0.6",
-    "case-sensitive-paths-webpack-plugin": "2.3.0",
-    "compression-webpack-plugin": "3.1.0",
-    "css-loader": "3.4.2",
-    "eslint": "6.8.0",
-    "eslint-config-rambler": "^0.3.1",
-    "eslint-loader": "3.0.3",
-    "gulp": "4.0.2",
-    "gulp-eslint": "6.0.0",
-    "gulp-nodemon": "2.4.2",
-    "mini-css-extract-plugin": "0.9.0",
-    "optimize-css-assets-webpack-plugin": "5.0.3",
-    "postcss-loader": "3.0.0",
-    "postcss-preset-env": "6.7.0",
-    "postcss-safe-parser": "4.0.2",
-    "pug-loader": "2.4.0",
-    "require-dir": "1.2.0",
-    "stylus": "0.54.7",
-    "stylus-loader": "3.0.2",
-    "terser-webpack-plugin": "2.3.4",
-    "webpack": "4.41.5",
-    "webpack-cli": "3.3.10",
-    "webpack-dev-server": "3.10.3",
-    "webpack-svgstore-plugin": "4.1.0"
-  },
-  "dependencies": {
-    "form-serialize": "0.7.2",
-    "fs-extra": "8.1.0",
-    "koa": "2.11.0",
-    "koa-bodyparser": "4.2.1",
-    "koa-favicon": "2.0.1",
-    "koa-logger": "3.2.1",
-    "koa-router": "7.4.0",
-    "koa-static": "4.0.3",
-    "koa-views": "6.2.1",
-    "mongoose": "5.8.11",
-    "mongoose-beautiful-unique-validation": "7.1.1",
-    "pug": "2.0.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ArtDanshin/experimental-site-for-node-webpack.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ArtDanshin/experimental-site-for-node-webpack/issues"
-  },
-  "homepage": "https://github.com/ArtDanshin/experimental-site-for-node-webpack#readme"
+    "lerna": "^4.0.0"
+  }
 }
