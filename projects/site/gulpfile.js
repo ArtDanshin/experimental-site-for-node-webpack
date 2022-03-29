@@ -1,1 +1,1 @@
-require('./config/gulp/index.js');
+require('./config/gulp');

@@ -2,8 +2,7 @@
   "name": "admin-back",
   "version": "0.0.1",
   "description": "",
-  "author": "",
-  "private": true,
+  "author": "Artem Danshin <silvir007@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
