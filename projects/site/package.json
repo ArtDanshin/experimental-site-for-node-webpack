@@ -1,6 +1,6 @@
 {
-  "name": "personal-site",
-  "version": "1.0.0",
+  "name": "site",
+  "version": "0.0.1",
   "description": "Персональный сайт",
   "main": "app.js",
   "scripts": {
@@ -31,8 +31,6 @@
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "compression-webpack-plugin": "3.1.0",
     "css-loader": "3.4.2",
-    "eslint": "6.8.0",
-    "eslint-config-rambler": "^0.3.1",
     "eslint-loader": "3.0.3",
     "gulp": "4.0.2",
     "gulp-eslint": "6.0.0",

@@ -55,7 +55,7 @@ module.exports = {
       cacheGroups: {
         vendors: {
           reuseExistingChunk: true,
-          test: module => /node_modules/.test(module.resource) && !/.css/.test(module.resource)
+          test: (module) => /node_modules/.test(module.resource) && !/.css/.test(module.resource)
         }
       }
     }
