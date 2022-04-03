@@ -1,5 +1,5 @@
 {
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "plugins": [
     "unicorn",
     "jsdoc"
@@ -10,7 +10,9 @@
     "plugin:unicorn/recommended"
   ],
   "parserOptions": {
-    "requireConfigFile": false
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "tsconfigRootDir": "."
   },
   "ignorePatterns": [
     "**/dist/*.*"
@@ -64,13 +66,13 @@
       "minProperties": 5,
       "consistent": true
     }],
-    "space-before-function-paren": [2, "never"], // Между function и скобками не должно быть пробела
-    "import/no-unresolved": [2, {
-      "ignore": [
-        "_images/",
-        "_stylesheets/"
-      ]
-    }], // Проверка, что импортируемый модуль существует. Есть проблемы с разрешением webpack алиасов, поэтому добавлен лист исключений
+
+    /* Изменение/добавление стилей Import плагина */
+    "import/order": [2, {
+      "groups": [["builtin", "external"], "type", "internal", "parent", ["sibling", "index"], "unknown"],
+      "newlines-between": "always",
+      "warnOnUnassignedImports": true
+    }], // Порядок импортов модулей и объединение их в группы
 
     /* Изменение/добавление стилей касающихся реакта */
     "jsx-quotes": [2, "prefer-single"], // В JSX в атрибутах используются только одинарные кавычки
@@ -91,22 +93,16 @@
         "render"
       ]
     }], // Возвращаем к изначальному правилу проверку порядка методов компонента. Правило от Airbnb конечно крутое, но слишком крутое
-    "react/jsx-tag-spacing": [2, {
-      "closingSlash": "never",
-      "beforeSelfClosing": "never",
-      "afterOpening": "never",
-      "beforeClosing": "never"
-    }], // В каких местах перед закрыващимися и открывающимися скобками ставить пробел
+    "react/function-component-definition": [2, {
+      "namedComponents": "arrow-function"
+    }], // Допустимые стили написания функциональных компонентов
 
     /* Настройки плагина линтера Unicor */
     "unicorn/filename-case": [2, {
       "cases": {
         "kebabCase": true,
         "pascalCase": true // Только для React компонентов
-      },
-      "ignore": [
-        "__story__.js"
-      ]
+      }
     }], // Проверка стиля наименования файлов
     "unicorn/prevent-abbreviations": [0], // Отключает - Проверка читаемости имени переменной. Штука крутая, но мы слишком часто осмысленно их сокращаем, чтобы код лучше читался
     "unicorn/no-null": [0], // Отключает - Всегда писать undefined вместо null. Спорная штука, особенно в контексте реакта
@@ -148,6 +144,19 @@
     "jsdoc/require-returns": 0, // По хорошему нужно включить, но сейчас есть проблема, что тогда идет конфликт с простыми блочными комментариями. Они начинают считаться JSDoc комментариями
     "jsdoc/require-returns-check": 2,
     "jsdoc/require-returns-type": 2,
-    "jsdoc/valid-types": 2,
-  }
+    "jsdoc/valid-types": 2
+  },
+  "overrides": [{
+    "files": ["*.ts", "*.tsx"],
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "airbnb-typescript"
+    ],
+    "rules": {
+      /* Отключение Airbnb стилей для Typescript файлов */
+      "@typescript-eslint/comma-dangle": [0] // Отключает - В конце объекта нужно всегда ставить ,
+    }
+  }]
 }

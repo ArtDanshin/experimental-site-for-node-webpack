@@ -1,0 +1,9 @@
+{
+  "parserOptions": {
+    "tsconfigRootDir": ".",
+    "project": "./projects/admin-front/tsconfig.eslint.json",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}
