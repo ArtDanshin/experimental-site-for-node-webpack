@@ -1,4 +1,10 @@
 {
+  "extends": [
+    "plugin:@next/next/core-web-vitals"
+  ],
+  "plugins": [
+    "@next/next"
+  ],
   "parserOptions": {
     "tsconfigRootDir": ".",
     "project": "./projects/admin-front/tsconfig.eslint.json",
