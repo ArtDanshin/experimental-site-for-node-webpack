@@ -1,12 +1,13 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { Button } from 'antd';
-import 'antd/dist/antd.css';
+
+import { LayoutPage } from '../components';
 
 const Home: NextPage = () => (
-  <div className='App'>
-    <Button type='primary'>Button</Button>
-  </div>
+  <LayoutPage>
+    <Button type='primary'>Content</Button>
+  </LayoutPage>
 );
 
 export default Home;
