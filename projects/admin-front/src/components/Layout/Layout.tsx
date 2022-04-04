@@ -1,55 +1,57 @@
 import React, { FC, useCallback, useState } from 'react';
 import { Layout, Menu } from 'antd';
 import {
+  DingtalkOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
+  ReadOutlined,
   UserOutlined,
-  VideoCameraOutlined,
 } from '@ant-design/icons';
+import Link from 'next/link';
+
+import styles from './Layout.module.scss';
 
 const { Header, Sider, Content } = Layout;
 
 export const LayoutPage: FC = ({ children }) => {
-  const [visibleMenu, setVisibleMenu] = useState<boolean>(true);
+  const [visibleMenu, setVisibleMenu] = useState<boolean>(false);
 
   const viewMenu = useCallback(() => {
     setVisibleMenu(!visibleMenu);
   }, [visibleMenu]);
 
   return (
-    <Layout id='components-layout-demo-custom-trigger'>
+    <Layout className={styles.container}>
       <Sider
         trigger={null}
         collapsible
         collapsed={visibleMenu}
       >
-        <div className='logo' />
+        <div className={styles.logo} />
         <Menu
           theme='dark'
           mode='inline'
-          defaultSelectedKeys={['1']}
         >
-          <Menu.Item key='1' icon={<UserOutlined />}>
-            nav 1
+          <Menu.Item key='about' icon={<UserOutlined />}>
+            <Link href='/about'>Об авторе</Link>
           </Menu.Item>
-          <Menu.Item key='2' icon={<VideoCameraOutlined />}>
-            nav 2
+          <Menu.Item key='articles' icon={<ReadOutlined />}>
+            <Link href='/articles'>Статьи</Link>
           </Menu.Item>
-          <Menu.Item key='3' icon={<UploadOutlined />}>
-            nav 3
+          <Menu.Item key='portfolio' icon={<DingtalkOutlined />}>
+            <Link href='/portfolio'>Портфолио</Link>
           </Menu.Item>
         </Menu>
       </Sider>
-      <Layout className='site-layout'>
-        <Header className='site-layout-background' style={{ padding: 0 }}>
+      <Layout>
+        <Header className={styles.header}>
           {React.createElement(visibleMenu ? MenuUnfoldOutlined : MenuFoldOutlined, {
-            className: 'trigger',
+            className: styles.trigger,
             onClick: viewMenu,
           })}
         </Header>
         <Content
-          className='site-layout-background'
+          className={styles.content}
           style={{
             margin: '24px 16px',
             padding: 24,
