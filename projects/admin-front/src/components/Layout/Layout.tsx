@@ -2,6 +2,7 @@ import React, { FC, useCallback, useState } from 'react';
 import { Layout, Menu } from 'antd';
 import {
   DingtalkOutlined,
+  HddOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   ReadOutlined,
@@ -40,6 +41,12 @@ export const LayoutPage: FC = ({ children }) => {
           </Menu.Item>
           <Menu.Item key='portfolio' icon={<DingtalkOutlined />}>
             <Link href='/portfolio'>Портфолио</Link>
+          </Menu.Item>
+          <Menu.Item key='categories' icon={<HddOutlined />}>
+            <Link href='/categories'>Категории</Link>
+          </Menu.Item>
+          <Menu.Item key='tags' icon={<HddOutlined />}>
+            <Link href='/tags'>Тэги</Link>
           </Menu.Item>
         </Menu>
       </Sider>

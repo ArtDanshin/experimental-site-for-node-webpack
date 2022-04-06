@@ -1,17 +1,16 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { Typography, Button } from 'antd';
+import { Typography } from 'antd';
 
 // eslint-disable-next-line import/extensions
 import { LayoutPage } from '@/components';
 
 const { Title } = Typography;
 
-const Articles: NextPage = () => (
+const Tags: NextPage = () => (
   <LayoutPage>
-    <Title>Статьи</Title>
-    <Button href='/articles/create'>Создать</Button>
+    <Title>Тэги</Title>
   </LayoutPage>
 );
 
-export default Articles;
+export default Tags;
