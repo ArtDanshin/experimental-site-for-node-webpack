@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { Typography, Button } from 'antd';
+import { Button, Typography } from 'antd';
 
 // eslint-disable-next-line import/extensions
 import { LayoutPage } from '@/components';

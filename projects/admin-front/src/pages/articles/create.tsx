@@ -17,11 +17,11 @@ const { Title } = Typography;
 const { Option } = Select;
 
 const onFinish = (values: any) => {
-  console.log('Success:', values);
+  console.log('Success:', values); // eslint-disable-line no-console
 };
 
 const onFinishFailed = (errorInfo: any) => {
-  console.log('Failed:', errorInfo);
+  console.log('Failed:', errorInfo); // eslint-disable-line no-console
 };
 
 const CreateArticle: NextPage = () => (
