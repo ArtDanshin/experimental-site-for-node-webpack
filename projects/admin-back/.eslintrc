@@ -1,0 +1,19 @@
+{
+  "parserOptions": {
+    "tsconfigRootDir": "./projects/admin-back/",
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.ts", "*.e2e-spec.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": [0]
+      }
+    }
+  ]
+}
