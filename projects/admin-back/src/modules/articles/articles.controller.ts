@@ -15,28 +15,28 @@ import { ArticlesDto } from './dto/articles.dto';
 export class ArticlesController {
   @HttpStatus(200)
   @Get()
-  async getAll() {
+  static async getAll() {
 
   }
 
   @HttpStatus(200)
   @Get(':id')
-  async getOne(@Param('id') id: string) {
+  static async getOne(@Param('id') id: string) {
 
   }
 
   @Post()
-  async create(@Body() dto: Omit<ArticlesDto, '_id'>) {
+  static async create(@Body() dto: Omit<ArticlesDto, '_id'>) {
 
   }
 
   @Patch()
-  async update(@Body() dto: ArticlesDto) {
+  static async update(@Body() dto: ArticlesDto) {
 
   }
 
   @Delete(':id')
-  async delete(@Param('id') id: string) {
+  static async delete(@Param('id') id: string) {
 
   }
 }
