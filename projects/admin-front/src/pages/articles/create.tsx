@@ -68,14 +68,6 @@ const CreateArticle: NextPage = () => (
       </Form.Item>
 
       <Form.Item
-        name='remember'
-        valuePropName='checked'
-        wrapperCol={{ offset: 8, span: 16 }}
-      >
-        <Checkbox>Remember me</Checkbox>
-      </Form.Item>
-
-      <Form.Item
         label='Slug'
         name='slug'
         rules={[{ required: true, message: 'Введите slug' }]}
