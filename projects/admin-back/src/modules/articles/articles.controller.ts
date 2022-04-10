@@ -3,7 +3,6 @@ import {
   Controller,
   Delete,
   Get,
-  HttpStatus,
   Param,
   Patch,
   Post
@@ -11,15 +10,13 @@ import {
 
 import { ArticlesDto } from './dto/articles.dto';
 
-@Controller('article')
+@Controller('articles')
 export class ArticlesController {
-  @HttpStatus(200)
   @Get()
   static async getAll() {
 
   }
 
-  @HttpStatus(200)
   @Get(':id')
   static async getOne(@Param('id') id: string) {
 
