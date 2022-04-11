@@ -1,19 +1,29 @@
-export class ArticlesModel {
-  _id: string;
+import { prop } from '@typegoose/typegoose';
+import { Base, TimeStamps } from '@typegoose/typegoose/lib/defaultClasses';
 
-  title: string;
+export interface ArticlesModel extends Base {}
+export class ArticlesModel extends TimeStamps {
+  @prop()
+    title: string;
 
-  description: string;
+  @prop()
+    description: string;
 
-  image: string;
+  @prop()
+    image: string;
 
-  publishAt: Date;
+  @prop()
+    publishAt: Date;
 
-  slug: string;
+  @prop({ unique: true })
+    slug: string;
 
-  category: string;
+  @prop()
+    category: string;
 
-  tags: string[];
+  @prop({ type: () => [String]})
+    tags: string[];
 
-  body: string;
+  @prop()
+    body: string;
 }
