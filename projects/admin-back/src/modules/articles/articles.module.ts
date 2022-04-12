@@ -3,6 +3,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
 
 import { ArticlesController } from './articles.controller';
 import { ArticlesModel } from './articles.model';
+import { ArticlesService } from './articles.service';
 
 @Module({
   controllers: [ArticlesController],
@@ -13,6 +14,7 @@ import { ArticlesModel } from './articles.model';
         collection: 'Articles'
       }
     }])
-  ]
+  ],
+  providers: [ArticlesService]
 })
 export class ArticlesModule {}
