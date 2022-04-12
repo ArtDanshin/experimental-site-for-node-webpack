@@ -1,6 +1,4 @@
 export class ArticlesDto {
-  _id: string;
-
   title: string;
 
   description: string;

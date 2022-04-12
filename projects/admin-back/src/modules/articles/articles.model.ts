@@ -3,19 +3,19 @@ import { Base, TimeStamps } from '@typegoose/typegoose/lib/defaultClasses';
 
 export interface ArticlesModel extends Base {}
 export class ArticlesModel extends TimeStamps {
-  @prop()
+  @prop({ required: true })
     title: string;
 
-  @prop()
+  @prop({ required: true })
     description: string;
 
   @prop()
     image: string;
 
-  @prop()
+  @prop({ required: true })
     publishAt: Date;
 
-  @prop({ unique: true })
+  @prop({ required: true, unique: true })
     slug: string;
 
   @prop()
