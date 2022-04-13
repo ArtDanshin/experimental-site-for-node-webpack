@@ -1,18 +1,16 @@
 import { Module } from '@nestjs/common';
-import { TypegooseModule } from 'nestjs-typegoose';
+import { MongooseModule } from '@nestjs/mongoose';
 
+import { Article, ArticleSchema } from './schemas/article.schema';
 import { ArticlesController } from './articles.controller';
-import { ArticlesModel } from './articles.model';
 import { ArticlesService } from './articles.service';
 
 @Module({
   controllers: [ArticlesController],
   imports: [
-    TypegooseModule.forFeature([{
-      typegooseClass: ArticlesModel,
-      schemaOptions: {
-        collection: 'Articles'
-      }
+    MongooseModule.forFeature([{
+      name: Article.name,
+      schema: ArticleSchema
     }])
   ],
   providers: [ArticlesService]
