@@ -1,17 +1,17 @@
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 import { Injectable } from '@nestjs/common';
-import { DocumentType, ModelType } from '@typegoose/typegoose/lib/types';
-import { InjectModel } from 'nestjs-typegoose';
 
-import { ArticlesModel } from './articles.model';
 import { ArticlesDto } from './dto/articles.dto';
+import { Article, ArticleDocument } from './schemas/article.schema';
 
 @Injectable()
 export class ArticlesService {
-  constructor(@InjectModel(ArticlesModel) private readonly articlesModel: ModelType<ArticlesModel>) {}
+  constructor(@InjectModel(Article.name) private readonly articleModel: Model<ArticleDocument>) {}
 
-  async create(dto: ArticlesDto): Promise<DocumentType<ArticlesModel> | void> {
+  async create(dto: ArticlesDto): Promise<Article | void> {
     try {
-      const article = await this.articlesModel.create(dto);
+      const article = await this.articleModel.create(dto);
 
       return article;
     } catch (e) {
@@ -19,19 +19,19 @@ export class ArticlesService {
     }
   }
 
-  async deleteById(id: string): Promise<DocumentType<ArticlesModel> | null> {
-    return this.articlesModel.findByIdAndDelete(id).exec();
+  async deleteById(id: string): Promise<Article | null> {
+    return this.articleModel.findByIdAndDelete(id).exec();
   }
 
-  async updateById(id: string, dto: ArticlesDto): Promise<DocumentType<ArticlesModel> | null> {
-    return this.articlesModel.findByIdAndUpdate(id, dto, { new: true }).exec();
+  async updateById(id: string, dto: ArticlesDto): Promise<Article | null> {
+    return this.articleModel.findByIdAndUpdate(id, dto, { new: true }).exec();
   }
 
-  async getById(id: string): Promise<DocumentType<ArticlesModel> | null> {
-    return this.articlesModel.findById(id).exec();
+  async getById(id: string): Promise<Article | null> {
+    return this.articleModel.findById(id).exec();
   }
 
-  async getAll(): Promise<DocumentType<ArticlesModel>[]> {
-    return this.articlesModel.find().exec();
+  async getAll(): Promise<Article[]> {
+    return this.articleModel.find().exec();
   }
 }
