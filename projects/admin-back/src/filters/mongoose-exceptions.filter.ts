@@ -1,7 +1,8 @@
 import {
   ArgumentsHost,
   Catch,
-  ExceptionFilter
+  ExceptionFilter,
+  HttpStatus
 } from '@nestjs/common';
 import { Error } from 'mongoose';
 
@@ -14,8 +15,8 @@ export class MongoValidationExeptionFilter implements ExceptionFilter {
     const failedFields = Object.keys(exception.errors);
     const response = host.switchToHttp().getResponse();
 
-    return response.status(422).json({
-      statusCode: 422,
+    return response.status(HttpStatus.UNPROCESSABLE_ENTITY).json({
+      statusCode: HttpStatus.UNPROCESSABLE_ENTITY,
       message: `Неверно заполнены поля: ${failedFields.join(', ')}`,
       errors: exception.errors,
     });
