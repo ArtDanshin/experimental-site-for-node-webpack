@@ -21,7 +21,8 @@
     "paths": {
       "@/configs/*": ["configs/*"],
       "@/modules/*": ["src/modules/*"],
-      "@/filters/*": ["src/filters/*"]
+      "@/filters/*": ["src/filters/*"],
+      "@/pipes/*": ["src/pipes/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"]

@@ -1,17 +1,27 @@
+import { IsDate, IsString } from 'class-validator';
+
 export class ArticlesDto {
-  title: string;
+  @IsString()
+    title: string;
 
-  description: string;
+  @IsString()
+    description: string;
 
-  image: string;
+  @IsString()
+    image: string;
 
-  publishAt: Date;
+  @IsDate()
+    publishAt: Date;
 
-  slug: string;
+  @IsString()
+    slug: string;
 
-  category: string;
+  @IsString()
+    category: string;
 
-  tags: string[];
+  @IsString({ each: true })
+    tags: string[];
 
-  body: string;
+  @IsString()
+    body: string;
 }

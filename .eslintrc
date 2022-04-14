@@ -76,7 +76,7 @@
 
     /* Изменение/добавление стилей Import плагина */
     "import/order": [2, {
-      "groups": [["builtin", "external"], "type", "internal", "parent", ["sibling", "index"], "unknown"],
+      "groups": [["builtin", "external"], "type", "internal", "parent", "unknown", ["sibling", "index"]],
       "newlines-between": "always",
       "warnOnUnassignedImports": true
     }], // Порядок импортов модулей и объединение их в группы
