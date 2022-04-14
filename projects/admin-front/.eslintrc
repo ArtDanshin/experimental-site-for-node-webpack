@@ -12,6 +12,9 @@
       "jsx": true
     }
   },
+  "ignorePatterns": [
+    ".next/"
+  ],
   "rules": {
     "@next/next/no-html-link-for-pages": [2, "projects/admin-front/src/pages/"]
   }

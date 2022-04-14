@@ -25,5 +25,9 @@
       "@/pipes/*": ["src/pipes/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": [
+    "configs/**/*.ts",
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
 }

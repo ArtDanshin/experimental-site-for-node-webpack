@@ -2,7 +2,6 @@ import React from 'react';
 import { NextPage } from 'next';
 import {
   Button,
-  Checkbox,
   DatePicker,
   Form,
   Input,

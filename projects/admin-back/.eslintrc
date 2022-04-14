@@ -8,6 +8,9 @@
     "node": true,
     "jest": true
   },
+  "ignorePatterns": [
+    "dist/"
+  ],
   "overrides": [
     {
       "files": ["*.spec.ts", "*.e2e-spec.ts"],
