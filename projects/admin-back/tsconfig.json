@@ -20,7 +20,8 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
       "@/configs/*": ["configs/*"],
-      "@/modules/*": ["src/modules/*"]
+      "@/modules/*": ["src/modules/*"],
+      "@/filters/*": ["src/filters/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"]

@@ -9,14 +9,10 @@ import { Article, ArticleDocument } from './schemas/article.schema';
 export class ArticlesService {
   constructor(@InjectModel(Article.name) private readonly articleModel: Model<ArticleDocument>) {}
 
-  async create(dto: ArticlesDto): Promise<Article | void> {
-    try {
-      const article = await this.articleModel.create(dto);
-
-      return article;
-    } catch (e) {
-      return console.log('-- wow ---', Object.keys(e));
-    }
+  async create(dto: ArticlesDto): Promise<Article> {
+    // eslint-disable-next-line new-cap
+    const article = new this.articleModel(dto);
+    return article.save();
   }
 
   async deleteById(id: string): Promise<Article | null> {
