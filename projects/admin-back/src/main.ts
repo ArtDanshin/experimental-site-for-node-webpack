@@ -12,7 +12,6 @@ async function bootstrap() {
     .setTitle('ArtDanshin Blog')
     .setDescription('API админки блога')
     .setVersion('1.0')
-    .addTag('blog')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api-swagger', app, document);
