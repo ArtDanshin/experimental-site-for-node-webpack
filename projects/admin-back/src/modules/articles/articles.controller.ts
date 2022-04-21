@@ -27,7 +27,7 @@ export class ArticlesController {
     return this.articlesService.getAll();
   }
 
-  @Get(':id')
+  @Get('by-id/:id')
   async getOne(@Param('id', IdValidationPipe) id: string) {
     const article = this.articlesService.getById(id);
 
@@ -45,7 +45,7 @@ export class ArticlesController {
   }
 
   @UsePipes(new ValidationPipe())
-  @Patch(':id')
+  @Patch('by-id/:id')
   async update(@Param('id', IdValidationPipe) id: string, @Body() dto: ArticlesDto) {
     const article = this.articlesService.updateById(id, dto);
 
@@ -56,7 +56,7 @@ export class ArticlesController {
     return article;
   }
 
-  @Delete(':id')
+  @Delete('by-id/:id')
   async delete(@Param('id', IdValidationPipe) id: string) {
     const deletedArticle = await this.articlesService.deleteById(id);
 

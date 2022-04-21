@@ -9,20 +9,20 @@ export class Article {
   @Prop({ required: true })
     description: string;
 
-  @Prop()
-    image: string;
+  // @Prop()
+  //   image: string;
 
   @Prop({ required: true })
-    publishAt: Date;
+    publishedAt: Date;
 
   @Prop({ required: true, unique: true })
     slug: string;
 
-  @Prop()
-    category: string;
-
-  @Prop({ type: [String] })
-    tags: string[];
+  // @Prop()
+  //   category: string;
+  //
+  // @Prop({ type: [String] })
+  //   tags: string[];
 
   @Prop()
     body: string;
