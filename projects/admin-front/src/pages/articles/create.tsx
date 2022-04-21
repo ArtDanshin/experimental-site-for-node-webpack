@@ -5,18 +5,20 @@ import {
   DatePicker,
   Form,
   Input,
-  Select,
   Typography
 } from 'antd';
+import axios from 'axios';
 
 // eslint-disable-next-line import/extensions
 import { LayoutPage } from '@/components';
 
 const { Title } = Typography;
-const { Option } = Select;
 
 const onFinish = (values: any) => {
   console.log('Success:', values); // eslint-disable-line no-console
+  axios
+    .post('/api/articles/', values)
+    .then(() => console.log('--- Success')); // eslint-disable-line no-console
 };
 
 const onFinishFailed = (errorInfo: any) => {
@@ -52,14 +54,6 @@ const CreateArticle: NextPage = () => (
       </Form.Item>
 
       <Form.Item
-        label='Изображение'
-        name='image'
-        rules={[{ required: true, message: 'Введите ссылку на изображение' }]}
-      >
-        <Input />
-      </Form.Item>
-
-      <Form.Item
         label='Дата публикации'
         name='publishedAt'
       >
@@ -72,29 +66,6 @@ const CreateArticle: NextPage = () => (
         rules={[{ required: true, message: 'Введите slug' }]}
       >
         <Input addonBefore='https://site.com/articles/' placeholder='slug' />
-      </Form.Item>
-
-      <Form.Item
-        name='category'
-        label='Категория'
-        rules={[{ required: true, message: 'Введите категорию' }]}
-      >
-        <Select placeholder='Выберите категорию'>
-          <Option value='backend'>Backend</Option>
-          <Option value='design'>Дизайн</Option>
-          <Option value='career'>Карьера</Option>
-        </Select>
-      </Form.Item>
-
-      <Form.Item
-        name='tags'
-        label='Тэги'
-      >
-        <Select mode='multiple' placeholder='Выберите тэги'>
-          <Option value='html'>HTML</Option>
-          <Option value='Javascript'>Javascript</Option>
-          <Option value='career'>Карьера</Option>
-        </Select>
       </Form.Item>
 
       <Form.Item

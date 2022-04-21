@@ -1,4 +1,4 @@
-import { IsDate, IsString } from 'class-validator';
+import { IsDateString, IsString } from 'class-validator';
 
 export class ArticlesDto {
   @IsString()
@@ -7,20 +7,20 @@ export class ArticlesDto {
   @IsString()
     description: string;
 
-  @IsString()
-    image: string;
+  // @IsString()
+  //   image: string;
 
-  @IsDate()
-    publishAt: Date;
+  @IsDateString()
+    publishedAt: Date;
 
   @IsString()
     slug: string;
 
-  @IsString()
-    category: string;
-
-  @IsString({ each: true })
-    tags: string[];
+  // @IsString()
+  //   category: string;
+  //
+  // @IsString({ each: true })
+  //   tags: string[];
 
   @IsString()
     body: string;
