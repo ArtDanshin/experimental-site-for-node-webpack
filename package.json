@@ -3,7 +3,8 @@
   "description": "Repository for experiments (NodeJS, Webpack, Gulp...)",
   "private": true,
   "scripts": {
-    "lint": "node_modules/.bin/eslint projects/admin-front projects/admin-back --ext .js,.jsx,.ts,.tsx"
+    "lint": "node_modules/.bin/eslint projects/admin-front projects/admin-back tools/typings-generator --ext .js,.jsx,.ts,.tsx",
+    "typings:generate": "lerna run --scope typings-generator generate"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.17.0",

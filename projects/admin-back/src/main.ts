@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
@@ -16,6 +17,9 @@ async function bootstrap() {
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
+
+  await fs.promises.writeFile('../../schemas/admin-api.json', JSON.stringify(document));
+
   SwaggerModule.setup('api-swagger', app, document);
 
   await app.listen(7000);

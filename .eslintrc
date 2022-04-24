@@ -118,6 +118,7 @@
     "unicorn/prefer-dom-node-remove": [0],// Отключает - Вместо removeChild использовать remove. У remove еще недостаточная для нас поддержка
     "unicorn/prefer-module": [0], // Отключает - Контролирует подключение модулей в едином стиле. Отключено, потому срабатывает на переменную названную module
     "unicorn/prefer-array-find": [0], // Отключает - Вместо filter использовать find. У find еще недостаточная поддержка
+    "unicorn/prefer-node-protocol": [0], // Отключает - У модулей NodeJS должен быть указан протокол
     "unicorn/no-reduce": [0], // Отключает - Запрещает использовать Array#reduce
     "unicorn/no-fn-reference-in-iterator": [0], // Отключает - Запрещает записывать ссылки на функции в тело итераторов типа .map(), .forEach() и пр.
     "unicorn/no-array-for-each": [0], // Отключает - Нельзя использовать Array#forEach

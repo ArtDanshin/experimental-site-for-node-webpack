@@ -1,0 +1,10 @@
+{
+  "parserOptions": {
+    "tsconfigRootDir": "./tools/typings-generator/",
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true
+  }
+}
