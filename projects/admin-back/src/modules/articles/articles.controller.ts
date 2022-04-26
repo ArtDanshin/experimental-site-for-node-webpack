@@ -6,28 +6,36 @@ import {
   HttpException,
   HttpStatus,
   Param,
-  Patch,
   Post,
+  Put,
   UsePipes,
   ValidationPipe
 } from '@nestjs/common';
+import {
+  ApiResponse,
+  ApiTags
+} from '@nestjs/swagger';
 
 import { IdValidationPipe } from '@/pipes/id-validation.pipe';
 
 import { ARTICLE_NOT_FOUND } from './articles.constants';
 import { ArticlesService } from './articles.service';
-import { ArticlesDto } from './dto/articles.dto';
+import { ArticleDto } from './dto/article.dto';
 
+@ApiTags('articles')
 @Controller('articles')
 export class ArticlesController {
   constructor(private readonly articlesService: ArticlesService) {}
 
   @Get()
+  @ApiResponse({ status: 200, type: [ArticleDto] })
   async getAll() {
     return this.articlesService.getAll();
   }
 
   @Get('by-id/:id')
+  @ApiResponse({ status: 200, type: [ArticleDto] })
+  @ApiResponse({ status: 404 })
   async getOne(@Param('id', IdValidationPipe) id: string) {
     const article = this.articlesService.getById(id);
 
@@ -40,13 +48,16 @@ export class ArticlesController {
 
   @UsePipes(new ValidationPipe())
   @Post()
-  async create(@Body() dto: ArticlesDto) {
+  @ApiResponse({ status: 201, type: ArticleDto })
+  async create(@Body() dto: ArticleDto) {
     return this.articlesService.create(dto);
   }
 
   @UsePipes(new ValidationPipe())
-  @Patch('by-id/:id')
-  async update(@Param('id', IdValidationPipe) id: string, @Body() dto: ArticlesDto) {
+  @Put('by-id/:id')
+  @ApiResponse({ status: 200, type: ArticleDto })
+  @ApiResponse({ status: 404 })
+  async update(@Param('id', IdValidationPipe) id: string, @Body() dto: ArticleDto) {
     const article = this.articlesService.updateById(id, dto);
 
     if (!article) {
@@ -57,6 +68,8 @@ export class ArticlesController {
   }
 
   @Delete('by-id/:id')
+  @ApiResponse({ status: 204 })
+  @ApiResponse({ status: 404 })
   async delete(@Param('id', IdValidationPipe) id: string) {
     const deletedArticle = await this.articlesService.deleteById(id);
 
