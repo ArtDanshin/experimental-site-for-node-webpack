@@ -1,6 +1,6 @@
 import { IsDateString, IsString } from 'class-validator';
 
-export class ArticlesDto {
+export class ArticleDto {
   @IsString()
     title: string;
 
