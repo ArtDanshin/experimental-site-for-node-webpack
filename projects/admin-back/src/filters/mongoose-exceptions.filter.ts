@@ -4,9 +4,9 @@ import {
   ExceptionFilter,
   HttpStatus
 } from '@nestjs/common';
-import { Error } from 'mongoose';
+import { Error as MongooseError } from 'mongoose';
 
-import ValidationError = Error.ValidationError;
+import ValidationError = MongooseError.ValidationError;
 
 @Catch(ValidationError)
 export class MongoValidationExeptionFilter implements ExceptionFilter {

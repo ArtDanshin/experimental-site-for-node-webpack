@@ -10,15 +10,14 @@ export interface paths {
   };
   "/api/articles/by-id/{id}": {
     get: operations["ArticlesController_getOne"];
+    put: operations["ArticlesController_update"];
     delete: operations["ArticlesController_delete"];
-    patch: operations["ArticlesController_update"];
   };
 }
 
 export interface components {
   schemas: {
-    Article: { [key: string]: unknown };
-    ArticlesDto: {
+    ArticleDto: {
       title: string;
       description: string;
       /** Format: date-time */
@@ -35,7 +34,7 @@ export interface operations {
     responses: {
       200: {
         content: {
-          "application/json": components["schemas"]["Article"][];
+          "application/json": components["schemas"]["ArticleDto"][];
         };
       };
     };
@@ -45,13 +44,13 @@ export interface operations {
     responses: {
       201: {
         content: {
-          "application/json": components["schemas"]["Article"];
+          "application/json": components["schemas"]["ArticleDto"];
         };
       };
     };
     requestBody: {
       content: {
-        "application/json": components["schemas"]["ArticlesDto"];
+        "application/json": components["schemas"]["ArticleDto"];
       };
     };
   };
@@ -64,19 +63,10 @@ export interface operations {
     responses: {
       200: {
         content: {
-          "application/json": { [key: string]: unknown };
+          "application/json": components["schemas"]["ArticleDto"][];
         };
       };
-    };
-  };
-  ArticlesController_delete: {
-    parameters: {
-      path: {
-        id: string;
-      };
-    };
-    responses: {
-      200: unknown;
+      404: unknown;
     };
   };
   ArticlesController_update: {
@@ -88,14 +78,27 @@ export interface operations {
     responses: {
       200: {
         content: {
-          "application/json": { [key: string]: unknown };
+          "application/json": components["schemas"]["ArticleDto"];
         };
       };
+      404: unknown;
     };
     requestBody: {
       content: {
-        "application/json": components["schemas"]["ArticlesDto"];
+        "application/json": components["schemas"]["ArticleDto"];
       };
+    };
+  };
+  ArticlesController_delete: {
+    parameters: {
+      path: {
+        id: string;
+      };
+    };
+    responses: {
+      200: unknown;
+      204: never;
+      404: unknown;
     };
   };
 }

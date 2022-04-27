@@ -7,17 +7,16 @@ import {
   Input,
   Typography
 } from 'antd';
-import axios from 'axios';
 
-// eslint-disable-next-line import/extensions
-import { LayoutPage } from '@/components';
+import { LayoutPage } from '@/components'; // eslint-disable-line import/extensions
+import { AdminAPI } from '@/api/admin-back'; // eslint-disable-line import/extensions
 
 const { Title } = Typography;
 
 const onFinish = (values: any) => {
   console.log('Success:', values); // eslint-disable-line no-console
-  axios
-    .post('/api/articles/', values)
+
+  AdminAPI.createArticle(values)
     .then(() => console.log('--- Success')); // eslint-disable-line no-console
 };
 

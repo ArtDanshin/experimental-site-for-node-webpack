@@ -2,6 +2,9 @@ import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Injectable } from '@nestjs/common';
 
+// eslint-disable-next-line import/extensions
+import { SchemaDuplicateRecordException } from '@/filters/exceptions/schema-duplicate-record';
+
 import { ArticleDto } from './dto/article.dto';
 import { Article, ArticleDocument } from './schemas/article.schema';
 
@@ -12,7 +15,14 @@ export class ArticlesService {
   async create(dto: ArticleDto): Promise<Article> {
     // eslint-disable-next-line new-cap
     const article = new this.articleModel(dto);
-    return article.save();
+    try {
+      return await article.save();
+    } catch (error) {
+      if (error.code === 11000) {
+        throw new SchemaDuplicateRecordException(error);
+      }
+      throw error;
+    };
   }
 
   async deleteById(id: string): Promise<Article | null> {
