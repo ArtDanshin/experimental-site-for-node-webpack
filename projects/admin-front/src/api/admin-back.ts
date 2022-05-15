@@ -12,5 +12,17 @@ export const AdminAPI = {
 
   getArticles(): Promise<AxiosResponse<[Schemas['ArticleDto']]>> {
     return axios.get('/api/articles');
+  },
+
+  getArticle(slug: string): Promise<AxiosResponse<Schemas['ArticleDto']>> {
+    return axios.get(`/api/articles/${slug}`);
+  },
+
+  updateArticle(slug: string, body: Schemas['ArticleDto']): Promise<AxiosResponse<Schemas['ArticleDto']>> {
+    return axios.put(`/api/articles/${slug}`, body);
+  },
+
+  deleteArticle(slug: string): Promise<AxiosResponse<Schemas['ArticleDto']>> {
+    return axios.delete(`/api/articles/${slug}`);
   }
 };
