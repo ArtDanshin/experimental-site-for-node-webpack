@@ -1,12 +1,13 @@
 {
   "extends": [
+    "artdanshin",
     "plugin:@next/next/core-web-vitals"
   ],
   "plugins": [
     "@next/next"
   ],
   "parserOptions": {
-    "tsconfigRootDir": "./projects/admin-front",
+    "tsconfigRootDir": ".",
     "project": "./tsconfig.eslint.json",
     "ecmaFeatures": {
       "jsx": true
@@ -16,6 +17,6 @@
     ".next/"
   ],
   "rules": {
-    "@next/next/no-html-link-for-pages": [2, "projects/admin-front/src/pages/"]
+    "@next/next/no-html-link-for-pages": [2, "./src/pages/"]
   }
 }
