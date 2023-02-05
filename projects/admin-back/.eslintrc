@@ -1,6 +1,9 @@
 {
+  "extends": [
+    "artdanshin"
+  ],
   "parserOptions": {
-    "tsconfigRootDir": "./projects/admin-back/",
+    "tsconfigRootDir": ".",
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
@@ -9,7 +12,8 @@
     "jest": true
   },
   "ignorePatterns": [
-    "dist/"
+    "dist/",
+    "docker/"
   ],
   "overrides": [
     {

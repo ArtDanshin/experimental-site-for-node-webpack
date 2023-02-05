@@ -6,7 +6,8 @@
     "node": "~18"
   },
   "scripts": {
-    "lint": "node_modules/.bin/eslint projects/admin-front projects/admin-back tools/typings-generator --ext .js,.jsx,.ts,.tsx",
+    "lint": "lerna run lint",
+    "graph": "nx graph",
     "typings:generate": "lerna run --scope typings-generator generate"
   },
   "workspaces": [
@@ -15,17 +16,6 @@
     "tools/*"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.50.0",
-    "@typescript-eslint/parser": "5.50.0",
-    "eslint": "8.33.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-airbnb-typescript": "17.0.0",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsdoc": "39.8.0",
-    "eslint-plugin-jsx-a11y": "6.7.1",
-    "eslint-plugin-react": "7.32.2",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "eslint-plugin-unicorn": "45.0.2",
     "lerna": "6.4.1"
   }
 }
