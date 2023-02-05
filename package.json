@@ -2,22 +2,30 @@
   "name": "js-experiments",
   "description": "Repository for experiments (NodeJS, Webpack, Gulp...)",
   "private": true,
+  "engines": {
+    "node": "~18"
+  },
   "scripts": {
     "lint": "node_modules/.bin/eslint projects/admin-front projects/admin-back tools/typings-generator --ext .js,.jsx,.ts,.tsx",
     "typings:generate": "lerna run --scope typings-generator generate"
   },
+  "workspaces": [
+    "packages/*",
+    "projects/*",
+    "tools/*"
+  ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.17.0",
-    "@typescript-eslint/parser": "5.17.0",
-    "eslint": "8.12.0",
+    "@typescript-eslint/eslint-plugin": "5.50.0",
+    "@typescript-eslint/parser": "5.50.0",
+    "eslint": "8.33.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-airbnb-typescript": "16.2.0",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jsdoc": "38.1.6",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-react": "7.29.4",
-    "eslint-plugin-react-hooks": "4.4.0",
-    "eslint-plugin-unicorn": "42.0.0",
-    "lerna": "^4.0.0"
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsdoc": "39.8.0",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-unicorn": "45.0.2",
+    "lerna": "6.4.1"
   }
 }
