@@ -14,7 +14,8 @@
     }
   },
   "ignorePatterns": [
-    ".next/"
+    ".next/",
+    "src/specs/"
   ],
   "rules": {
     "@next/next/no-html-link-for-pages": [2, "./src/pages/"]

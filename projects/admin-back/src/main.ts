@@ -18,11 +18,13 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
 
-  await fs.promises.writeFile('../../schemas/admin-api.json', JSON.stringify(document));
+  // TODO: Нет обработки, что папка не создана
+  await fs.promises.writeFile('schemas/admin-api.json', JSON.stringify(document));
 
   SwaggerModule.setup('api-swagger', app, document);
 
   await app.listen(7000);
 }
 
+// eslint-disable-next-line unicorn/prefer-top-level-await
 bootstrap();

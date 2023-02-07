@@ -1,7 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-// eslint-disable-next-line import/no-relative-packages
-import { components } from '../../../../schemas/typings/admin-api';
+import { components } from '@/specs/admin-api'; // eslint-disable-line import/extensions
 
 type Schemas = components['schemas'];
 

@@ -16,8 +16,6 @@ import {
   ApiTags
 } from '@nestjs/swagger';
 
-import { IdValidationPipe } from '@/pipes/id-validation.pipe';
-
 import { ARTICLE_NOT_FOUND } from './articles.constants';
 import { ArticlesService } from './articles.service';
 import { ArticleDto } from './dto/article.dto';
@@ -33,11 +31,11 @@ export class ArticlesController {
     return this.articlesService.getAll();
   }
 
-  @Get('by-id/:id')
+  @Get(':slug')
   @ApiResponse({ status: 200, type: [ArticleDto] })
   @ApiResponse({ status: 404 })
-  async getOne(@Param('id', IdValidationPipe) id: string) {
-    const article = this.articlesService.getById(id);
+  async getOne(@Param('slug') slug: string) {
+    const article = this.articlesService.getBySlug(slug);
 
     if (!article) {
       throw new HttpException(ARTICLE_NOT_FOUND, HttpStatus.NOT_FOUND);
@@ -54,11 +52,11 @@ export class ArticlesController {
   }
 
   @UsePipes(new ValidationPipe())
-  @Put('by-id/:id')
+  @Put(':slug')
   @ApiResponse({ status: 200, type: ArticleDto })
   @ApiResponse({ status: 404 })
-  async update(@Param('id', IdValidationPipe) id: string, @Body() dto: ArticleDto) {
-    const article = this.articlesService.updateById(id, dto);
+  async update(@Param('slug') slug: string, @Body() dto: ArticleDto) {
+    const article = this.articlesService.updateBySlug(slug, dto);
 
     if (!article) {
       throw new HttpException(ARTICLE_NOT_FOUND, HttpStatus.NOT_FOUND);
@@ -67,11 +65,11 @@ export class ArticlesController {
     return article;
   }
 
-  @Delete('by-id/:id')
+  @Delete(':slug')
   @ApiResponse({ status: 204 })
   @ApiResponse({ status: 404 })
-  async delete(@Param('id', IdValidationPipe) id: string) {
-    const deletedArticle = await this.articlesService.deleteById(id);
+  async delete(@Param('slug') slug: string) {
+    const deletedArticle = await this.articlesService.deleteBySlug(slug);
 
     if (!deletedArticle) {
       throw new HttpException(ARTICLE_NOT_FOUND, HttpStatus.NOT_FOUND);
