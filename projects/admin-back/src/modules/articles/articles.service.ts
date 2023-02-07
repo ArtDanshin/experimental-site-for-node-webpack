@@ -22,19 +22,19 @@ export class ArticlesService {
         throw new SchemaDuplicateRecordException(error);
       }
       throw error;
-    };
+    }
   }
 
-  async deleteById(id: string): Promise<Article | null> {
-    return this.articleModel.findByIdAndDelete(id).exec();
+  async deleteBySlug(slug: string): Promise<Article | null> {
+    return this.articleModel.findOneAndDelete({ slug }).exec();
   }
 
-  async updateById(id: string, dto: ArticleDto): Promise<Article | null> {
-    return this.articleModel.findByIdAndUpdate(id, dto, { new: true }).exec();
+  async updateBySlug(slug: string, dto: ArticleDto): Promise<Article | null> {
+    return this.articleModel.findOneAndUpdate({ slug }, dto, { new: true }).exec();
   }
 
-  async getById(id: string): Promise<Article | null> {
-    return this.articleModel.findById(id).exec();
+  async getBySlug(slug: string): Promise<Article | null> {
+    return this.articleModel.findOne({ slug }).exec();
   }
 
   async getAll(): Promise<Article[]> {

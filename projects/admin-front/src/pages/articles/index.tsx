@@ -12,11 +12,9 @@ import {
   FormOutlined
 } from '@ant-design/icons';
 
-// eslint-disable-next-line import/no-relative-packages
-import { components } from '../../../../../schemas/typings/admin-api';
-
 import { LayoutPage } from '@/components'; // eslint-disable-line import/extensions
 import { AdminAPI } from '@/api/admin-back'; // eslint-disable-line import/extensions
+import { components } from '@/specs/admin-api'; // eslint-disable-line import/extensions
 
 type Schemas = components['schemas'];
 

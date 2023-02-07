@@ -3,17 +3,20 @@
  * Do not make direct changes to the file.
  */
 
+
 export interface paths {
   "/api/articles": {
     get: operations["ArticlesController_getAll"];
     post: operations["ArticlesController_create"];
   };
-  "/api/articles/by-id/{id}": {
+  "/api/articles/{slug}": {
     get: operations["ArticlesController_getOne"];
     put: operations["ArticlesController_update"];
     delete: operations["ArticlesController_delete"];
   };
 }
+
+export type webhooks = Record<string, never>;
 
 export interface components {
   schemas: {
@@ -26,21 +29,32 @@ export interface components {
       body: string;
     };
   };
+  responses: never;
+  parameters: never;
+  requestBodies: never;
+  headers: never;
+  pathItems: never;
 }
 
+export type external = Record<string, never>;
+
 export interface operations {
+
   ArticlesController_getAll: {
-    parameters: {};
     responses: {
       200: {
         content: {
-          "application/json": components["schemas"]["ArticleDto"][];
+          "application/json": (components["schemas"]["ArticleDto"])[];
         };
       };
     };
   };
   ArticlesController_create: {
-    parameters: {};
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["ArticleDto"];
+      };
+    };
     responses: {
       201: {
         content: {
@@ -48,31 +62,31 @@ export interface operations {
         };
       };
     };
-    requestBody: {
-      content: {
-        "application/json": components["schemas"]["ArticleDto"];
-      };
-    };
   };
   ArticlesController_getOne: {
     parameters: {
       path: {
-        id: string;
+        slug: string;
       };
     };
     responses: {
       200: {
         content: {
-          "application/json": components["schemas"]["ArticleDto"][];
+          "application/json": (components["schemas"]["ArticleDto"])[];
         };
       };
-      404: unknown;
+      404: never;
     };
   };
   ArticlesController_update: {
     parameters: {
       path: {
-        id: string;
+        slug: string;
+      };
+    };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["ArticleDto"];
       };
     };
     responses: {
@@ -81,26 +95,18 @@ export interface operations {
           "application/json": components["schemas"]["ArticleDto"];
         };
       };
-      404: unknown;
-    };
-    requestBody: {
-      content: {
-        "application/json": components["schemas"]["ArticleDto"];
-      };
+      404: never;
     };
   };
   ArticlesController_delete: {
     parameters: {
       path: {
-        id: string;
+        slug: string;
       };
     };
     responses: {
-      200: unknown;
       204: never;
-      404: unknown;
+      404: never;
     };
   };
 }
-
-export interface external {}

@@ -1,6 +1,9 @@
 {
+  "extends": [
+    "artdanshin"
+  ],
   "parserOptions": {
-    "tsconfigRootDir": "./tools/typings-generator/",
+    "tsconfigRootDir": ".",
     "project": "./tsconfig.json",
     "sourceType": "module"
   },

@@ -19,7 +19,7 @@
       "@/styles/*": ["src/assets/styles/*"],
       "@/components": ["src/components"],
       "@/api/*": ["src/api/*"],
-      "@/schemas": ["/../../schemas/typings/*"]
+      "@/specs/*": ["src/specs/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
