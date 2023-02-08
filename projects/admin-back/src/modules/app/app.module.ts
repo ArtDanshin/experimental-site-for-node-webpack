@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 
+import { FilesModule } from '@/modules/files/files.module';
 import { getMongoConfig } from '@/configs/mongo.config';
 import { ArticlesModule } from '@/modules/articles/articles.module';
 
@@ -13,7 +14,8 @@ import { ArticlesModule } from '@/modules/articles/articles.module';
       inject: [ConfigService],
       useFactory: getMongoConfig
     }),
-    ArticlesModule
+    ArticlesModule,
+    FilesModule
   ]
 })
 export class AppModule {}
