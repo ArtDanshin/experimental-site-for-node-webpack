@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC, PropsWithChildren, useCallback, useState } from 'react';
 import { Layout, Menu } from 'antd';
 import {
   DingtalkOutlined,
@@ -14,7 +14,7 @@ import styles from './Layout.module.scss';
 
 const { Header, Sider, Content } = Layout;
 
-export const LayoutPage: FC = ({ children }) => {
+export const LayoutPage: FC<PropsWithChildren> = ({ children }) => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false);
 
   const viewMenu = useCallback(() => {

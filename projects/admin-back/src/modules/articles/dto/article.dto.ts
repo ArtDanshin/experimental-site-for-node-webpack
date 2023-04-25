@@ -7,8 +7,8 @@ export class ArticleDto {
   @IsString()
     description: string;
 
-  // @IsString()
-  //   image: string;
+  @IsString()
+    image: string;
 
   @IsDateString()
     publishedAt: Date;

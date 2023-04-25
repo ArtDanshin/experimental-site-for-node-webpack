@@ -14,6 +14,9 @@ export interface paths {
     put: operations["ArticlesController_update"];
     delete: operations["ArticlesController_delete"];
   };
+  "/api/files/upload": {
+    post: operations["FilesController_uploadFile"];
+  };
 }
 
 export type webhooks = Record<string, never>;
@@ -23,11 +26,13 @@ export interface components {
     ArticleDto: {
       title: string;
       description: string;
+      image: string;
       /** Format: date-time */
       publishedAt: string;
       slug: string;
       body: string;
     };
+    FileElementResponse: Record<string, never>;
   };
   responses: never;
   parameters: never;
@@ -105,8 +110,18 @@ export interface operations {
       };
     };
     responses: {
+      200: never;
       204: never;
       404: never;
+    };
+  };
+  FilesController_uploadFile: {
+    responses: {
+      200: {
+        content: {
+          "application/json": (components["schemas"]["FileElementResponse"])[];
+        };
+      };
     };
   };
 }

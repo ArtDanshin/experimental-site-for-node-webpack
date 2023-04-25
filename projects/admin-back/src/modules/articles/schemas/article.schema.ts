@@ -9,8 +9,8 @@ export class Article {
   @Prop({ required: true })
     description: string;
 
-  // @Prop()
-  //   image: string;
+  @Prop()
+    image: string;
 
   @Prop({ required: true })
     publishedAt: Date;
