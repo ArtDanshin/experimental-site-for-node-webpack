@@ -84,7 +84,7 @@
     /* Изменение/добавление стилей касающихся реакта */
     "jsx-quotes": [2, "prefer-single"], // В JSX в атрибутах используются только одинарные кавычки
     "react/jsx-fragments": [2, "element"], // Fragment объявляются как <Fragment> или <></>
-    "react/jsx-indent-props": [2, "first"], // Если props'ов много, то они записываются в столбик под первым props'ом
+    "react/jsx-indent-props": [2, 2], // Если props'ов много, то они записываются в столбик под первым props'ом
     "react/jsx-max-props-per-line": [2, {
       "maximum": 2
     }],

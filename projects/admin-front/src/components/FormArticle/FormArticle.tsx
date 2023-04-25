@@ -1,11 +1,13 @@
-import { FormProps } from 'rc-field-form/lib/Form'; // eslint-disable-line import/no-extraneous-dependencies
+import { RcFile } from 'antd/lib/upload';
 import moment from 'moment'; // eslint-disable-line import/no-extraneous-dependencies
 import React, { FC } from 'react';
 import {
   Button,
   DatePicker,
   Form,
-  Input
+  FormProps,
+  Input,
+  Upload
 } from 'antd';
 
 // TODO: Форма не должна импортировать в себя типы API, она должна оперировать контрактом
@@ -15,12 +17,19 @@ type Schemas = components['schemas'];
 
 type Props = {
   initialValues?: Schemas['ArticleDto'];
+  actionForImageLoading: (file: RcFile) => Promise<string>;
   onFinish: FormProps<Schemas['ArticleDto']>['onFinish'];
   onFinishFailed: FormProps<Schemas['ArticleDto']>['onFinishFailed'];
   submitButtonText: string;
 };
 
-export const FormArticle: FC<Props> = ({ initialValues, onFinish, onFinishFailed, submitButtonText }) => {
+const beforeImageUpload = (file: RcFile) => {
+  // Валидация, что загружаем картинку
+}
+
+export const FormArticle: FC<Props> = ({
+  initialValues, actionForImageLoading, onFinish, onFinishFailed, submitButtonText
+}) => {
   const transformedInitialValue = initialValues
     ? {
       ...initialValues,
@@ -67,6 +76,21 @@ export const FormArticle: FC<Props> = ({ initialValues, onFinish, onFinishFailed
         rules={[{ required: true, message: 'Введите slug' }]}
       >
         <Input addonBefore='https://site.com/articles/' placeholder='slug' />
+      </Form.Item>
+
+      <Form.Item
+        label='Slug'
+        name='image'
+      >
+        <Upload
+          name='avatar'
+          listType='picture-card'
+          className='avatar-uploader'
+          showUploadList={false}
+          action={actionForImageLoading}
+          beforeUpload={beforeImageUpload}
+          onChange={handleChange}
+        />
       </Form.Item>
 
       <Form.Item
