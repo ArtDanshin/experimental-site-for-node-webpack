@@ -1,22 +1,21 @@
 {
   "name": "js-experiments",
+  "version": "1.0.0",
   "description": "Repository for experiments (NodeJS, Webpack, Gulp...)",
   "private": true,
   "engines": {
-    "node": "~18"
+    "node": "~22"
   },
   "scripts": {
-    "lint": "lerna run lint",
-    "graph": "nx graph",
     "typings:generate": "lerna run --scope typings-generator generate"
+  },
+  "devDependencies": {
+    "lerna": "9.0.0",
+    "typings-generator": "*"
   },
   "workspaces": [
     "packages/*",
-    "projects/*",
-    "tools/*"
+    "services/*"
   ],
-  "devDependencies": {
-    "lerna": "6.4.1",
-    "typings-generator": "*"
-  }
+  "dependencies": {}
 }

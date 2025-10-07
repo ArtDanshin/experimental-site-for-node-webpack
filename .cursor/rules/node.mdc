@@ -1,0 +1,5 @@
+---
+description: Node Settings
+alwaysApply: true
+---
+- Перед запуском команды в терминале выполняй `nvm use`

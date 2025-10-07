@@ -1,0 +1,55 @@
+<script setup lang="ts">
+  import type { ArticleCardProps, ArticleCardEmits } from './types'
+  import { Tag } from '../Tag'
+
+  defineProps<ArticleCardProps>()
+  const emit = defineEmits<ArticleCardEmits>()
+
+  const handleClick = () => {
+    emit('click')
+  }
+</script>
+
+<style scoped lang="css" src="./ArticleCard.css"></style>
+
+<template>
+  <article class="card" @click="handleClick">
+    <div class="card__image">
+      <img :src="image" :alt="title" loading="lazy">
+      <div class="card__category">{{ category }}</div>
+    </div>
+    
+    <div class="card__content">
+      <h3 class="card__title">
+        <a :href="href" @click.stop>{{ title }}</a>
+      </h3>
+      
+      <p class="card__excerpt">
+        {{ excerpt }}
+      </p>
+      
+      <div class="card__meta">
+        <span class="card__date">
+          <i class="fas fa-calendar"></i>
+          {{ date }}
+        </span>
+        
+        <span v-if="readingTime" class="card__reading-time">
+          <i class="fas fa-clock"></i>
+          {{ readingTime }}
+        </span>
+        
+        <div v-if="tags && tags.length" class="card__tags">
+          <Tag
+            v-for="tag in tags"
+            :key="tag"
+            size="sm"
+          >
+            {{ tag }}
+          </Tag>
+        </div>
+      </div>
+    </div>
+  </article>
+</template>
+

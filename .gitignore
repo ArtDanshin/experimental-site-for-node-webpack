@@ -23,6 +23,3 @@ node_modules
 # System and IDE's files
 .DS_Store
 .idea
-
-# Lerna
-lerna-debug.log

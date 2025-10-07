@@ -1,0 +1,29 @@
+.color-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.color-swatch {
+  width: 100%;
+  height: 80px;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--border-color);
+}
+
+.color-card h3 {
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+}
+
+.color-card p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: var(--text-sm);
+  font-family: var(--font-family-mono);
+}
