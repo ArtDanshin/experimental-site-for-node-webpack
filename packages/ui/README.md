@@ -1,14 +1,23 @@
 # @artdanshin/ui
 
-Библиотека компонентов монорепозитория.
+Библиотека компонентов монорепозитория
 
-## Установка
+## Используемые технологии и библиотеки
+
+- **Vue.js 3.5.3**
+- **TypeScript 5.8.3**
+- **Storybook 9.1.9** - документирование и разработка компонентов в изоляции
+- **Vite 7.1.4** - быстрая сборка и dev-сервер
+- **Vitest 3.2.4** - юнит-тесты
+- **PostCSS/SCSS** - препроцессинг стилей
+
+## Использование
+
+### Установка
 
 ```bash
 npm install @artdanshin/ui
 ```
-
-## Использование
 
 ### Импорт стилей
 
@@ -21,11 +30,10 @@ import '@artdanshin/ui/styles'
 ### Импорт компонентов
 
 ```typescript
-
 import { Button, Tag, ArticleCard } from '@artdanshin/ui'
 ```
 
-## Пример использования
+### Пример использования
 
 ```vue
 <template>
@@ -47,34 +55,24 @@ import { Button, Tag, ArticleCard } from '@artdanshin/ui'
 </template>
 
 <script setup lang="ts">
-import { Button, Tag, ArticleCard } from '@myproj/ui'
+  import { Button, Tag, ArticleCard } from '@myproj/ui'
 
-const article = {
-  title: 'Заголовок статьи',
-  excerpt: 'Краткое описание...',
-  date: '2024-01-01'
-}
+  const article = {
+    title: 'Заголовок статьи',
+    excerpt: 'Краткое описание...',
+    date: '2024-01-01'
+  }
 </script>
 ```
 
-## Разработка
+## Команды для разработки
 
-```bash
-# Установка зависимостей
-npm install
-
-# Запуск в режиме разработки
-npm run dev
-
-# Сборка библиотеки
-npm run build
-
-# Запуск тестов
-npm run test
-
-# Запуск Storybook
-npm run storybook
-```
+- `npm install` - Установка зависимостей
+- `npm run dev` - Запуск в режиме разработки
+- `npm run build` - Сборка библиотеки
+- `npm run test` - Запуск тестов
+- `npm run lint` - Запуск линтеров с возможным исправлением ошибок
+- `npm run storybook` - Запуск Storybook
 
 ## Структура проекта
 
@@ -82,11 +80,18 @@ npm run storybook
 src/
 ├── components/          # Компоненты
 │   ├── Button/
-│   │   ├── Button.vue   # Vue компонент
-│   │   ├── Button.css   # Стили компонента
-│   │   ├── index.ts     # Экспорт с импортом стилей
-│   │   └── types.ts     # TypeScript типы
+│   │   ├── Button.vue        # Vue компонент
+│   │   ├── Button.css        # Стили компонента
+│   │   ├── Button.ts         # Скрипты компонента
+│   │   ├── Button.stories.ts # История для отображения в Storybook
+│   │   ├── Button.test.ts    # Тесты
+│   │   ├── index.ts          # Общий экспорт
+│   │   └── types.ts          # Типы относящие к компоненту
 │   └── ...
-├── tokens/              # Дизайн-токены
-└── index.ts            # Главный экспорт
+├── styles/              # Общие стили для всех компонентов
+│   ├── tokens/          # CSS переменные 
+│   │   └── ...
+│   ├── fonts.css        # Подключение шрифтов   
+│   └── ...
+└── index.ts             # Главный экспорт
 ```
