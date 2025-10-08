@@ -11,7 +11,7 @@
   };
 </script>
 
-<style scoped lang="css" src="./ArticleCard.css"></style>
+<style scoped lang="scss" src="./ArticleCard.scss"></style>
 
 <template>
   <article

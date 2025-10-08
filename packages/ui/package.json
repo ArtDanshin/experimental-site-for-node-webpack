@@ -52,6 +52,7 @@
     "eslint": "^9.36.0",
     "eslint-config-artdanshin": "*",
     "playwright": "^1.55.1",
+    "sass": "^1.93.2",
     "storybook": "^9.1.9",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.45.0",

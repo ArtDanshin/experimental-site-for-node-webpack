@@ -1,0 +1,15 @@
+.tag {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-fast);
+
+  &:hover {
+    background: var(--primary-color);
+    color: var(--text-primary);
+  }
+}

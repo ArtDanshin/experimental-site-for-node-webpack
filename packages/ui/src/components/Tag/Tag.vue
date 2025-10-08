@@ -10,7 +10,7 @@
   };
 </script>
 
-<style scoped lang="css" src="./Tag.css"></style>
+<style scoped lang="scss" src="./Tag.scss"></style>
 
 <template>
   <span :class="tagClass">

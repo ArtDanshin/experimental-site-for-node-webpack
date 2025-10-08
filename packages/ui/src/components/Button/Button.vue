@@ -21,7 +21,7 @@
   };
 </script>
 
-<style scoped lang="css" src="./Button.css"></style>
+<style scoped lang="scss" src="./Button.scss"></style>
 
 <template>
   <button

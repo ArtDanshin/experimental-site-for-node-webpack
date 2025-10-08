@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import './stories.css';
+import './stories.scss';
 
 const meta: Meta = {
   title: 'Tokens/Colors',

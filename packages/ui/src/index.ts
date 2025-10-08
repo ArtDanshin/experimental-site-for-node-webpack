@@ -3,10 +3,10 @@
  * Main entry point
  */
 
-// Tokens
-export * from '@/styles/index.css';
+// Общие стили
+export * from '@/styles/index.scss';
 
-// Components - экспортируем компоненты с их стилями
+// Components - экспортируем компоненты
 export * from '@/components/Button';
 export * from '@/components/Tag';
 export * from '@/components/ArticleCard';
