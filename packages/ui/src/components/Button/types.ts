@@ -2,46 +2,45 @@
  * Button component types
  */
 
-export type ButtonVariant = 'primary' | 'secondary' | 'outlined' | 'text'
-export type ButtonSize = 'sm' | 'md' | 'lg'
-export type ButtonType = 'button' | 'submit' | 'reset'
+export type ButtonVariant = 'primary' | 'secondary' | 'outlined' | 'text';
+export type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonType = 'button' | 'submit' | 'reset';
 
 export interface ButtonProps {
   /**
    * Visual style variant
    * @default 'primary'
    */
-  variant?: ButtonVariant
-  
+  variant?: ButtonVariant;
+
   /**
    * Button size
    * @default 'md'
    */
-  size?: ButtonSize
-  
+  size?: ButtonSize;
+
   /**
    * Button HTML type
    * @default 'button'
    */
-  type?: ButtonType
-  
+  type?: ButtonType;
+
   /**
    * Disabled state
    */
-  disabled?: boolean
-  
+  disabled?: boolean;
+
   /**
    * Full width button
    */
-  fullWidth?: boolean
+  fullWidth?: boolean;
 
   /**
    * Если кнопка является ссылкой, то это ее значение
    */
-  href?: string
+  href?: string;
 }
 
 export interface ButtonEmits {
-  (e: 'click', event: MouseEvent): void
+  (e: 'click', event: MouseEvent): void;
 }
-

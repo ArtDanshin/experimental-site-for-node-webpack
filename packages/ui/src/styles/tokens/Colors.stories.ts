@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/vue3'
-import './stories.css'
+import type { Meta, StoryObj } from '@storybook/vue3';
+
+import './stories.css';
 
 const meta: Meta = {
   title: 'Tokens/Colors',
@@ -7,10 +8,10 @@ const meta: Meta = {
     layout: 'padded',
   },
   tags: ['autodocs'],
-}
+};
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const ColorPalette: Story = {
   render: () => ({
@@ -49,7 +50,7 @@ export const ColorPalette: Story = {
       </div>
     `,
   }),
-}
+};
 
 export const BackgroundColors: Story = {
   render: () => ({
@@ -78,7 +79,7 @@ export const BackgroundColors: Story = {
       </div>
     `,
   }),
-}
+};
 
 export const TextColors: Story = {
   render: () => ({
@@ -102,7 +103,7 @@ export const TextColors: Story = {
       </div>
     `,
   }),
-}
+};
 
 export const Gradients: Story = {
   render: () => ({
@@ -126,4 +127,4 @@ export const Gradients: Story = {
       </div>
     `,
   }),
-}
+};

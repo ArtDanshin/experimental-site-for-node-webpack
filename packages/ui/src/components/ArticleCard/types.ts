@@ -6,45 +6,44 @@ export interface ArticleCardProps {
   /**
    * Article title
    */
-  title: string
-  
+  title: string;
+
   /**
    * Article excerpt/description
    */
-  excerpt: string
-  
+  excerpt: string;
+
   /**
    * Article category
    */
-  category: string
-  
+  category: string;
+
   /**
    * Article image URL
    */
-  image: string
-  
+  image: string;
+
   /**
    * Article link URL
    */
-  href: string
-  
+  href: string;
+
   /**
    * Publication date
    */
-  date: string
-  
+  date: string;
+
   /**
    * Article tags
    */
-  tags?: string[]
-  
+  tags?: string[];
+
   /**
    * Reading time
    */
-  readingTime?: string
+  readingTime?: string;
 }
 
 export interface ArticleCardEmits {
-  (e: 'click'): void
+  (e: 'click'): void;
 }
-

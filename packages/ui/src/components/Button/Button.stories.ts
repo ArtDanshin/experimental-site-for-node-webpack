@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite'
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
-import Button from './Button.vue'
+import Button from './Button.vue';
 
 const meta = {
   title: 'Components/Button',
@@ -27,10 +27,10 @@ const meta = {
     type: 'button',
     fullWidth: false,
   },
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Button>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
@@ -39,11 +39,11 @@ export const Primary: Story = {
   render: (args) => ({
     components: { Button },
     setup() {
-      return { args }
+      return { args };
     },
     template: '<Button v-bind="args">Primary Button</Button>',
   }),
-}
+};
 
 export const Secondary: Story = {
   args: {
@@ -52,11 +52,11 @@ export const Secondary: Story = {
   render: (args) => ({
     components: { Button },
     setup() {
-      return { args }
+      return { args };
     },
     template: '<Button v-bind="args">Secondary Button</Button>',
   }),
-}
+};
 
 export const Outlined: Story = {
   args: {
@@ -65,11 +65,11 @@ export const Outlined: Story = {
   render: (args) => ({
     components: { Button },
     setup() {
-      return { args }
+      return { args };
     },
     template: '<Button v-bind="args">Outlined Button</Button>',
   }),
-}
+};
 
 export const Text: Story = {
   args: {
@@ -78,11 +78,11 @@ export const Text: Story = {
   render: (args) => ({
     components: { Button },
     setup() {
-      return { args }
+      return { args };
     },
     template: '<Button v-bind="args">Text Button</Button>',
   }),
-}
+};
 
 export const AllSizes: Story = {
   render: () => ({
@@ -95,7 +95,7 @@ export const AllSizes: Story = {
       </div>
     `,
   }),
-}
+};
 
 export const Disabled: Story = {
   args: {
@@ -104,11 +104,11 @@ export const Disabled: Story = {
   render: (args) => ({
     components: { Button },
     setup() {
-      return { args }
+      return { args };
     },
     template: '<Button v-bind="args">Disabled Button</Button>',
   }),
-}
+};
 
 export const FullWidth: Story = {
   args: {
@@ -117,11 +117,11 @@ export const FullWidth: Story = {
   render: (args) => ({
     components: { Button },
     setup() {
-      return { args }
+      return { args };
     },
     template: '<Button v-bind="args">Full Width Button</Button>',
   }),
-}
+};
 
 export const AllVariants: Story = {
   render: () => ({
@@ -135,4 +135,4 @@ export const AllVariants: Story = {
       </div>
     `,
   }),
-}
+};

@@ -4,6 +4,6 @@ import tseslint from 'typescript-eslint'
 
 export default tseslint.config({
   extends: [commonConfig, vueConfig],
-  ignores: ['dist/**', 'node_modules/**', '*.config.js'],
+  ignores: ['dist/**', 'node_modules/**', 'coverage/**', '*.config.js'],
   files: ['**/*.{js,ts,vue}'],
 })

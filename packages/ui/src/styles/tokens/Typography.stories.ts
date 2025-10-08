@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/vue3'
-import './stories.css'
+import type { Meta, StoryObj } from '@storybook/vue3';
+
+import './stories.css';
 
 const meta: Meta = {
   title: 'Tokens/Typography',
@@ -7,10 +8,10 @@ const meta: Meta = {
     layout: 'padded',
   },
   tags: ['autodocs'],
-}
+};
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const FontSizes: Story = {
   render: () => ({
@@ -47,7 +48,7 @@ export const FontSizes: Story = {
       </div>
     `,
   }),
-}
+};
 
 export const FontWeights: Story = {
   render: () => ({
@@ -71,7 +72,7 @@ export const FontWeights: Story = {
       </div>
     `,
   }),
-}
+};
 
 export const LineHeights: Story = {
   render: () => ({
@@ -105,4 +106,4 @@ export const LineHeights: Story = {
       </div>
     `,
   }),
-}
+};

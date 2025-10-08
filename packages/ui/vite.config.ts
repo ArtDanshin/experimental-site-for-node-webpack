@@ -1,5 +1,5 @@
 /// <reference types="vitest/config" />
-import { resolve } from 'path';
+import path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
@@ -9,25 +9,22 @@ export default defineConfig({
     vue(),
     dts({
       tsconfigPath: './tsconfig.app.json',
-      outDir: 'dist',
       include: ['src/**/*'],
       exclude: ['src/**/*.stories.ts', 'src/**/*.test.ts'],
-      entryRoot: 'src',
       compilerOptions: {
         declarationMap: false,
-      }
-    })
+      },
+    }),
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': path.resolve(import.meta.dirname, './src'),
     },
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(import.meta.dirname, 'src/index.ts'),
       name: 'UI',
-      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['vue'],
@@ -39,10 +36,11 @@ export default defineConfig({
           chunkFileNames: 'chunks/[name]-[hash].js',
           assetFileNames: (assetInfo) => {
             if (assetInfo.name?.endsWith('.css')) {
-              return '[name].css'
+              return '[name].css';
             }
-            return 'assets/[name].[ext]'
+            return 'assets/[name].[ext]';
           },
+          preserveModules: true,
         },
         {
           format: 'cjs',
@@ -51,14 +49,15 @@ export default defineConfig({
           chunkFileNames: 'chunks/[name]-[hash].cjs',
           assetFileNames: (assetInfo) => {
             if (assetInfo.name?.endsWith('.css')) {
-              return '[name].css'
+              return '[name].css';
             }
-            return 'assets/[name].[ext]'
-          }
-        }
-      ]
+            return 'assets/[name].[ext]';
+          },
+          preserveModules: true,
+        },
+      ],
     },
-    sourcemap: true
+    sourcemap: true,
   },
   test: {
     globals: true,
@@ -67,8 +66,8 @@ export default defineConfig({
       headless: true,
       provider: 'playwright',
       instances: [{
-        browser: 'chromium'
-      }]
+        browser: 'chromium',
+      }],
     },
     coverage: {
       provider: 'v8',

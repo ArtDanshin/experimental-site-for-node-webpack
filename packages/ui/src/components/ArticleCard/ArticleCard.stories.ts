@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite'
-import ArticleCard from './ArticleCard.vue'
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
+
+import ArticleCard from './ArticleCard.vue';
 
 const meta = {
   title: 'Components/ArticleCard',
@@ -8,10 +9,10 @@ const meta = {
   argTypes: {
     onClick: { action: 'clicked' },
   },
-} satisfies Meta<typeof ArticleCard>
+} satisfies Meta<typeof ArticleCard>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
@@ -24,7 +25,7 @@ export const Default: Story = {
     readingTime: '8 мин',
     tags: ['React', 'Performance', 'JavaScript'],
   },
-}
+};
 
 export const WithoutReadingTime: Story = {
   args: {
@@ -36,7 +37,7 @@ export const WithoutReadingTime: Story = {
     date: '10 декабря 2024',
     tags: ['CSS', 'Grid', 'Flexbox'],
   },
-}
+};
 
 export const BackendArticle: Story = {
   args: {
@@ -49,7 +50,7 @@ export const BackendArticle: Story = {
     readingTime: '12 мин',
     tags: ['Node.js', 'Express', 'API'],
   },
-}
+};
 
 export const StreamingArticle: Story = {
   args: {
@@ -62,7 +63,7 @@ export const StreamingArticle: Story = {
     readingTime: '15 мин',
     tags: ['OBS', 'Streaming', 'Setup'],
   },
-}
+};
 
 export const Grid: Omit<Story, 'args'> = {
   render: () => ({
@@ -96,8 +97,8 @@ export const Grid: Omit<Story, 'args'> = {
           date: '5 декабря 2024',
           tags: ['TypeScript', 'JavaScript'],
         },
-      ]
-      return { articles }
+      ];
+      return { articles };
     },
     template: `
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem;">
@@ -109,5 +110,4 @@ export const Grid: Omit<Story, 'args'> = {
       </div>
     `,
   }),
-}
-
+};

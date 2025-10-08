@@ -47,26 +47,6 @@ dist/
 └── *.d.ts                                # TypeScript определения
 ```
 
-### Tree Shaking
-
-Благодаря `preserveModules: true` и правильной настройке `sideEffects` в `package.json`:
-
-```json
-{
-  "sideEffects": [
-    "**/*.css",
-    "dist/es/components/*/index.js",
-    "dist/cjs/components/*/index.cjs",
-    "dist/es/tokens/index.js",
-    "dist/cjs/tokens/index.cjs"
-  ]
-}
-```
-
-**Tree Shaking работает корректно:**
-- При импорте только Button: `import { Button } from '@myproj/ui'` → в бандл попадёт только Button + его стили
-- При импорте конкретного компонента: `import { Button } from '@myproj/ui/components/Button'` → в бандл попадёт только Button + его стили
-
 ### Команда сборки
 
 ```bash

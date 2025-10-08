@@ -1,22 +1,22 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite'
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
-import Tag from './Tag.vue'
+import Tag from './Tag.vue';
 
 const meta = {
   title: 'Components/Tag',
   component: Tag,
   tags: ['autodocs'],
-} satisfies Meta<typeof Tag>
+} satisfies Meta<typeof Tag>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => ({
     components: { Tag },
     setup() {
-      return { args }
+      return { args };
     },
     template: '<Tag v-bind="args">Default Tag</Tag>',
   }),
-}
+};

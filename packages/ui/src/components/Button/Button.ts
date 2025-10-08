@@ -1,10 +1,10 @@
-import { computed } from 'vue'
+import { computed } from 'vue';
 
-import type { ButtonProps, ButtonEmits } from './types'
+import type { ButtonProps, ButtonEmits } from './types';
 
 export function setupButton(
   props: ButtonProps,
-  emit: ButtonEmits
+  emit: ButtonEmits,
 ) {
   // Computed classes for button
   const buttonClasses = computed(() => [
@@ -14,21 +14,20 @@ export function setupButton(
     {
       'btn-disabled': props.disabled,
       'btn-full-width': props.fullWidth,
-    }
-  ])
+    },
+  ]);
 
   // Handle click event
   const handleClick = (event: MouseEvent) => {
     if (props.disabled) {
-      event.preventDefault()
-      return
+      event.preventDefault();
+      return;
     }
-    emit('click', event)
-  }
+    emit('click', event);
+  };
 
   return {
     buttonClasses,
     handleClick,
-  }
+  };
 }
-

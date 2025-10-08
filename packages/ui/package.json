@@ -11,22 +11,16 @@
       "import": "./dist/es/index.js",
       "require": "./dist/cjs/index.cjs"
     },
-    "./components/*": {
-      "types": "./dist/components/*/index.d.ts",
-      "import": "./dist/es/components/*/index.js",
-      "require": "./dist/cjs/components/*/index.cjs"
-    },
     "./styles": {
       "import": "./dist/es/ui.css",
       "require": "./dist/cjs/ui.css"
     }
   },
   "sideEffects": [
-    "**/*.css",
-    "dist/es/components/*/index.js",
-    "dist/cjs/components/*/index.cjs",
-    "dist/es/tokens/index.js",
-    "dist/cjs/tokens/index.cjs"
+    "dist/es/index.js",
+    "dist/es/ui.css",
+    "dist/cjs/index.cjs",
+    "dist/cjs/ui.css"
   ],
   "files": [
     "dist"
@@ -34,7 +28,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint --fix .",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
