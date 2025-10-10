@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - ArtDanshin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ArtDanshin</span>
+                        <span class="logo-subtitle">Frontend Developer</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="articles.html" class="nav-link">
+                                <i class="fas fa-blog"></i>
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="projects.html" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="music.html" class="nav-link">
+                                <i class="fas fa-music"></i>
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">Проекты</h1>
+                    <p class="page-subtitle">
+                        Коллекция моих работ: веб-приложения, дизайн-проекты и творческие эксперименты
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Filters -->
+        <section class="project-filters">
+            <div class="container">
+                <div class="filters-content">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">
+                            <i class="fas fa-th"></i>
+                            Все проекты
+                        </button>
+                        <button class="filter-tab" data-filter="web">
+                            <i class="fas fa-globe"></i>
+                            Веб-приложения
+                        </button>
+                        <button class="filter-tab" data-filter="design">
+                            <i class="fas fa-palette"></i>
+                            Дизайн
+                        </button>
+                        <button class="filter-tab" data-filter="gaming">
+                            <i class="fas fa-gamepad"></i>
+                            Игры
+                        </button>
+                        <button class="filter-tab" data-filter="streaming">
+                            <i class="fas fa-video"></i>
+                            Стриминг
+                        </button>
+                    </div>
+                    
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Content -->
+        <section class="projects-content">
+            <div class="container">
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Web Applications -->
+                    <div class="project-card" data-category="web" data-featured="true">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop" alt="Персональный сайт">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="project.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/portfolio" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-badge featured">Избранное</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Персональный сайт</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Завершен</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Современный портфолио сайт с адаптивным дизайном, интерактивными элементами 
+                                и оптимизированной производительностью. Включает блог, галерею проектов и контакты.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Декабрь 2024
+                                </span>
+                                <span class="project-type">Веб-сайт</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?w=400&h=250&fit=crop" alt="Game Tracker">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/game-tracker.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/game-tracker" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                    <a href="https://game-tracker-demo.vercel.app" class="project-link" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Демо
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Game Tracker</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Завершен</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Приложение для отслеживания игрового прогресса и достижений. 
+                                Позволяет добавлять игры, отмечать пройденные уровни и делиться достижениями.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Ноябрь 2024
+                                </span>
+                                <span class="project-type">Веб-приложение</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop" alt="Task Manager">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/task-manager.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/task-manager" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Task Manager</h3>
+                                <div class="project-status">
+                                    <span class="status-badge in-progress">В разработке</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Современный менеджер задач с drag-and-drop интерфейсом, 
+                                уведомлениями и командной работой.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">PWA</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Октябрь 2024
+                                </span>
+                                <span class="project-type">Веб-приложение</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Projects -->
+                    <div class="project-card" data-category="design">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop" alt="Stream Overlay">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/stream-overlay.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/stream-overlay" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Stream Overlay</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Завершен</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Кастомные оверлеи для стриминга с анимациями и интерактивными элементами. 
+                                Включает алерты, чат-виджеты и информационные панели.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">OBS</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Сентябрь 2024
+                                </span>
+                                <span class="project-type">Дизайн</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="design">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop" alt="Logo Design">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/logo-design.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Логотипы и брендинг</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Завершен</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Коллекция логотипов и элементов брендинга для различных проектов. 
+                                Создано в Adobe Illustrator и Photoshop.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Illustrator</span>
+                                <span class="tech-tag">Photoshop</span>
+                                <span class="tech-tag">Branding</span>
+                                <span class="tech-tag">Logo Design</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Август 2024
+                                </span>
+                                <span class="project-type">Дизайн</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Projects -->
+                    <div class="project-card" data-category="gaming">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?w=400&h=250&fit=crop" alt="Snake Game">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/snake-game.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/snake-game" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                    <a href="https://snake-game-demo.vercel.app" class="project-link" target="_blank">
+                                        <i class="fas fa-play"></i>
+                                        Играть
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Snake Game</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Завершен</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Классическая игра "Змейка" с современным дизайном и улучшенной механикой. 
+                                Включает систему очков и сохранение рекордов.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">Canvas</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Game Dev</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Июль 2024
+                                </span>
+                                <span class="project-type">Игра</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="gaming">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?w=400&h=250&fit=crop" alt="Tic Tac Toe">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/tic-tac-toe.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/tic-tac-toe" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                    <a href="https://tic-tac-toe-demo.vercel.app" class="project-link" target="_blank">
+                                        <i class="fas fa-play"></i>
+                                        Играть
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Tic Tac Toe</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Завершен</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Игра "Крестики-нолики" с ИИ противником и красивым интерфейсом. 
+                                Поддерживает игру против компьютера и другого игрока.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Game Logic</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Июнь 2024
+                                </span>
+                                <span class="project-type">Игра</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Streaming Projects -->
+                    <div class="project-card" data-category="streaming">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop" alt="Stream Dashboard">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/stream-dashboard.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/stream-dashboard" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Stream Dashboard</h3>
+                                <div class="project-status">
+                                    <span class="status-badge in-progress">В разработке</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Панель управления для стримера с интеграцией Twitch API, 
+                                статистикой зрителей и управлением чатом.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Twitch API</span>
+                                <span class="tech-tag">WebSocket</span>
+                                <span class="tech-tag">Dashboard</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Ноябрь 2024
+                                </span>
+                                <span class="project-type">Стриминг</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="streaming">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop" alt="Chat Bot">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="projects/chat-bot.html" class="project-link">
+                                        <i class="fas fa-eye"></i>
+                                        Подробнее
+                                    </a>
+                                    <a href="https://github.com/artdanshin/chat-bot" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Twitch Chat Bot</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Завершен</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Бот для чата Twitch с командами, модерацией и интерактивными функциями. 
+                                Поддерживает кастомные команды и интеграции.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Twitch API</span>
+                                <span class="tech-tag">Bot</span>
+                                <span class="tech-tag">Commands</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    Октябрь 2024
+                                </span>
+                                <span class="project-type">Стриминг</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="btn btn-secondary load-more-btn">
+                        <i class="fas fa-plus"></i>
+                        Показать еще
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">ArtDanshin</h3>
+                    <p class="footer-description">
+                        Frontend разработчик, геймер и стример. Создаю современные веб-приложения.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="music.html">Музыка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitch.tv/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                        <a href="https://youtube.com/@artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://vk.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtDanshin. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/projects.js"></script>
+</body>
+</html>

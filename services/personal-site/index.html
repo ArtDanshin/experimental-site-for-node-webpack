@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtDanshin - Frontend Developer</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ArtDanshin</span>
+                        <span class="logo-subtitle">Frontend Developer</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="articles.html" class="nav-link">
+                                <i class="fas fa-blog"></i>
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="music.html" class="nav-link">
+                                <i class="fas fa-music"></i>
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Привет! Я <span class="highlight">ArtDanshin</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Frontend разработчик, геймер и стример. Создаю современные веб-приложения 
+                            и делюсь опытом в статьях.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="projects.html" class="btn btn-primary">
+                                <i class="fas fa-code"></i>
+                                Мои проекты
+                            </a>
+                            <a href="articles.html" class="btn btn-secondary">
+                                <i class="fas fa-blog"></i>
+                                Читать статьи
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="ArtDanshin" class="avatar-img">
+                            <div class="status-indicator online"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Проектов</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">25+</h3>
+                            <p class="stat-label">Статей</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">1000+</h3>
+                            <p class="stat-label">Часов стримов</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">15+</h3>
+                            <p class="stat-label">Плейлистов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Articles -->
+        <section class="recent-articles">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Последние статьи</h2>
+                    <a href="articles.html" class="section-link">
+                        Все статьи
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop" alt="Оптимизация React">
+                            <div class="article-category">Frontend</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">
+                                <a href="articles/react-performance.html">Оптимизация производительности React приложений</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                Разбираем основные техники оптимизации React компонентов и приложений для улучшения производительности.
+                            </p>
+                            <div class="article-meta">
+                                <span class="article-date">
+                                    <i class="fas fa-calendar"></i>
+                                    15 декабря 2024
+                                </span>
+                                <div class="article-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Performance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Настройка стрима">
+                            <div class="article-category">Стриминг</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">
+                                <a href="articles/streaming-setup.html">Настройка стриминга для разработчиков</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                Полное руководство по настройке стриминга кода и разработки для начинающих стримеров.
+                            </p>
+                            <div class="article-meta">
+                                <span class="article-date">
+                                    <i class="fas fa-calendar"></i>
+                                    8 декабря 2024
+                                </span>
+                                <div class="article-tags">
+                                    <span class="tag">OBS</span>
+                                    <span class="tag">Streaming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=250&fit=crop" alt="Игровой ПК">
+                            <div class="article-category">Железо</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">
+                                <a href="articles/gaming-rig.html">Сборка игрового ПК для разработки</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                Как выбрать компоненты для ПК, который подойдет как для игр, так и для разработки.
+                            </p>
+                            <div class="article-meta">
+                                <span class="article-date">
+                                    <i class="fas fa-calendar"></i>
+                                    1 декабря 2024
+                                </span>
+                                <div class="article-tags">
+                                    <span class="tag">Hardware</span>
+                                    <span class="tag">Gaming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Избранные проекты</h2>
+                    <a href="projects.html" class="section-link">
+                        Все проекты
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop" alt="Портфолио сайт">
+                            <div class="project-overlay">
+                                <a href="projects/portfolio.html" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Персональный сайт</h3>
+                            <p class="project-description">
+                                Современный портфолио сайт с адаптивным дизайном и интерактивными элементами.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?w=400&h=250&fit=crop" alt="Game Tracker">
+                            <div class="project-overlay">
+                                <a href="projects/game-tracker.html" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Game Tracker</h3>
+                            <p class="project-description">
+                                Приложение для отслеживания игрового прогресса и достижений.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop" alt="Stream Overlay">
+                            <div class="project-overlay">
+                                <a href="projects/stream-overlay.html" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Stream Overlay</h3>
+                            <p class="project-description">
+                                Кастомные оверлеи для стриминга с анимациями и интерактивными элементами.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">WebSocket</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section class="music-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Музыкальные плейлисты</h2>
+                    <a href="music.html" class="section-link">
+                        Все плейлисты
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="playlists-grid">
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Coding Vibes">
+                            <div class="playlist-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Coding Vibes</h3>
+                            <p class="playlist-tracks">25 треков</p>
+                        </div>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Gaming Sessions">
+                            <div class="playlist-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Gaming Sessions</h3>
+                            <p class="playlist-tracks">18 треков</p>
+                        </div>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Streaming Mix">
+                            <div class="playlist-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Streaming Mix</h3>
+                            <p class="playlist-tracks">32 трека</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">ArtDanshin</h3>
+                    <p class="footer-description">
+                        Frontend разработчик, геймер и стример. Создаю современные веб-приложения.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="music.html">Музыка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitch.tv/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                        <a href="https://youtube.com/@artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://vk.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtDanshin. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

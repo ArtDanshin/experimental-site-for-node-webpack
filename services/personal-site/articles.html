@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статьи - ArtDanshin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/articles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ArtDanshin</span>
+                        <span class="logo-subtitle">Frontend Developer</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="articles.html" class="nav-link">
+                                <i class="fas fa-blog"></i>
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="music.html" class="nav-link">
+                                <i class="fas fa-music"></i>
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">Статьи</h1>
+                    <p class="page-subtitle">
+                        Технические статьи, руководства и размышления о разработке, стриминге и технологиях
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="articles-filters">
+            <div class="container">
+                <div class="filters-content">
+                    <div class="search-section">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" class="search-input" placeholder="Поиск статей...">
+                        </div>
+                    </div>
+                    
+                    <div class="filters-section">
+                        <div class="filter-group">
+                            <label class="filter-label">Категория:</label>
+                            <select class="filter-select" id="categoryFilter">
+                                <option value="">Все категории</option>
+                                <option value="frontend">Frontend</option>
+                                <option value="backend">Backend</option>
+                                <option value="streaming">Стриминг</option>
+                                <option value="hardware">Железо</option>
+                                <option value="gaming">Игры</option>
+                                <option value="music">Музыка</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label class="filter-label">Сортировка:</label>
+                            <select class="filter-select" id="sortFilter">
+                                <option value="newest">Сначала новые</option>
+                                <option value="oldest">Сначала старые</option>
+                                <option value="popular">Популярные</option>
+                                <option value="title">По названию</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Content -->
+        <section class="articles-content">
+            <div class="container">
+                <div class="articles-layout">
+                    <!-- Articles Grid -->
+                    <div class="articles-main">
+                        <div class="articles-grid" id="articlesGrid">
+                            <!-- Frontend Articles -->
+                            <article class="article-card" data-category="frontend" data-date="2024-12-15">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop" alt="Оптимизация React">
+                                    <div class="article-category">Frontend</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="article.html">Оптимизация производительности React приложений</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Разбираем основные техники оптимизации React компонентов и приложений для улучшения производительности. 
+                                        Memo, useMemo, useCallback и другие инструменты.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            15 декабря 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">React</span>
+                                            <span class="tag">Performance</span>
+                                            <span class="tag">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="article-card" data-category="frontend" data-date="2024-12-10">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="CSS Grid">
+                                    <div class="article-category">Frontend</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/css-grid.html">Современные техники CSS Grid и Flexbox</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Полное руководство по использованию CSS Grid и Flexbox для создания адаптивных и красивых макетов.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            10 декабря 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">CSS</span>
+                                            <span class="tag">Grid</span>
+                                            <span class="tag">Flexbox</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="article-card" data-category="frontend" data-date="2024-12-05">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="TypeScript">
+                                    <div class="article-category">Frontend</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/typescript.html">TypeScript для начинающих: типизация в JavaScript</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Введение в TypeScript: основные типы, интерфейсы, дженерики и лучшие практики для фронтенд разработки.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            5 декабря 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">TypeScript</span>
+                                            <span class="tag">JavaScript</span>
+                                            <span class="tag">Tutorial</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Backend Articles -->
+                            <article class="article-card" data-category="backend" data-date="2024-11-28">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-node-api.jpg" alt="Node.js API">
+                                    <div class="article-category">Backend</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/node-api.html">Создание REST API с Node.js и Express</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Пошаговое руководство по созданию RESTful API с использованием Node.js, Express и MongoDB.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            28 ноября 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">Node.js</span>
+                                            <span class="tag">Express</span>
+                                            <span class="tag">API</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="article-card" data-category="backend" data-date="2024-11-20">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-database.jpg" alt="База данных">
+                                    <div class="article-category">Backend</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/database.html">Выбор базы данных для веб-приложения</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Сравнение SQL и NoSQL баз данных, их преимущества и недостатки для разных типов проектов.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            20 ноября 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">Database</span>
+                                            <span class="tag">SQL</span>
+                                            <span class="tag">NoSQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Streaming Articles -->
+                            <article class="article-card" data-category="streaming" data-date="2024-12-08">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-streaming-setup.jpg" alt="Настройка стрима">
+                                    <div class="article-category">Стриминг</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/streaming-setup.html">Настройка стриминга для разработчиков</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Полное руководство по настройке стриминга кода и разработки для начинающих стримеров.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            8 декабря 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">OBS</span>
+                                            <span class="tag">Streaming</span>
+                                            <span class="tag">Setup</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="article-card" data-category="streaming" data-date="2024-11-15">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-stream-overlay.jpg" alt="Оверлеи для стрима">
+                                    <div class="article-category">Стриминг</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/stream-overlay.html">Создание кастомных оверлеев для стрима</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Как создать красивые и функциональные оверлеи для стриминга с использованием HTML, CSS и JavaScript.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            15 ноября 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">Overlay</span>
+                                            <span class="tag">Design</span>
+                                            <span class="tag">Web</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Hardware Articles -->
+                            <article class="article-card" data-category="hardware" data-date="2024-12-01">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-gaming-rig.jpg" alt="Игровой ПК">
+                                    <div class="article-category">Железо</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/gaming-rig.html">Сборка игрового ПК для разработки</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Как выбрать компоненты для ПК, который подойдет как для игр, так и для разработки.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            1 декабря 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">Hardware</span>
+                                            <span class="tag">Gaming</span>
+                                            <span class="tag">PC Build</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="article-card" data-category="hardware" data-date="2024-11-10">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-monitor-setup.jpg" alt="Настройка мониторов">
+                                    <div class="article-category">Железо</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/monitor-setup.html">Оптимальная настройка мониторов для разработки</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Выбор и настройка мониторов для комфортной работы с кодом и дизайном.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            10 ноября 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">Monitor</span>
+                                            <span class="tag">Setup</span>
+                                            <span class="tag">Productivity</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Gaming Articles -->
+                            <article class="article-card" data-category="gaming" data-date="2024-11-25">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-game-dev.jpg" alt="Разработка игр">
+                                    <div class="article-category">Игры</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/game-dev.html">Веб-технологии в разработке игр</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Как использовать HTML5, CSS3 и JavaScript для создания браузерных игр.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            25 ноября 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">Game Dev</span>
+                                            <span class="tag">HTML5</span>
+                                            <span class="tag">Canvas</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Music Articles -->
+                            <article class="article-card" data-category="music" data-date="2024-11-05">
+                                <div class="article-image">
+                                    <img src="https://images.unsplash.com/photo-music-coding.jpg" alt="Музыка для кодинга">
+                                    <div class="article-category">Музыка</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3 class="article-title">
+                                        <a href="articles/music-coding.html">Лучшая музыка для программирования</a>
+                                    </h3>
+                                    <p class="article-excerpt">
+                                        Подборка музыкальных жанров и плейлистов, которые помогают сосредоточиться на коде.
+                                    </p>
+                                    <div class="article-meta">
+                                        <span class="article-date">
+                                            <i class="fas fa-calendar"></i>
+                                            5 ноября 2024
+                                        </span>
+                                        <div class="article-tags">
+                                            <span class="tag">Music</span>
+                                            <span class="tag">Productivity</span>
+                                            <span class="tag">Focus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination-btn" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                                Предыдущая
+                            </button>
+                            <div class="pagination-numbers">
+                                <button class="pagination-number active">1</button>
+                                <button class="pagination-number">2</button>
+                                <button class="pagination-number">3</button>
+                                <span class="pagination-dots">...</span>
+                                <button class="pagination-number">10</button>
+                            </div>
+                            <button class="pagination-btn">
+                                Следующая
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="articles-sidebar">
+                        <!-- Popular Tags -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Популярные теги</h3>
+                            <div class="tags-cloud">
+                                <a href="articles/tag/react.html" class="tag-link">React</a>
+                                <a href="articles/tag/javascript.html" class="tag-link">JavaScript</a>
+                                <a href="articles/tag/css.html" class="tag-link">CSS</a>
+                                <a href="articles/tag/nodejs.html" class="tag-link">Node.js</a>
+                                <a href="articles/tag/streaming.html" class="tag-link">Streaming</a>
+                                <a href="articles/tag/gaming.html" class="tag-link">Gaming</a>
+                                <a href="articles/tag/hardware.html" class="tag-link">Hardware</a>
+                                <a href="articles/tag/typescript.html" class="tag-link">TypeScript</a>
+                                <a href="articles/tag/api.html" class="tag-link">API</a>
+                                <a href="articles/tag/design.html" class="tag-link">Design</a>
+                            </div>
+                        </div>
+
+                        <!-- Recent Articles -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Недавние статьи</h3>
+                            <div class="recent-articles-list">
+                                <div class="recent-article-item">
+                                    <div class="recent-article-image">
+                                        <img src="https://images.unsplash.com/photo-react-performance.jpg" alt="React Performance">
+                                    </div>
+                                    <div class="recent-article-content">
+                                        <h4><a href="articles/react-performance.html">Оптимизация React</a></h4>
+                                        <span class="recent-article-date">15 дек 2024</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="recent-article-item">
+                                    <div class="recent-article-image">
+                                        <img src="https://images.unsplash.com/photo-css-grid.jpg" alt="CSS Grid">
+                                    </div>
+                                    <div class="recent-article-content">
+                                        <h4><a href="articles/css-grid.html">CSS Grid и Flexbox</a></h4>
+                                        <span class="recent-article-date">10 дек 2024</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="recent-article-item">
+                                    <div class="recent-article-image">
+                                        <img src="https://images.unsplash.com/photo-streaming-setup.jpg" alt="Streaming Setup">
+                                    </div>
+                                    <div class="recent-article-content">
+                                        <h4><a href="articles/streaming-setup.html">Настройка стриминга</a></h4>
+                                        <span class="recent-article-date">8 дек 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Категории</h3>
+                            <div class="categories-list">
+                                <a href="articles/category/frontend.html" class="category-item">
+                                    <span class="category-name">Frontend</span>
+                                    <span class="category-count">8</span>
+                                </a>
+                                <a href="articles/category/backend.html" class="category-item">
+                                    <span class="category-name">Backend</span>
+                                    <span class="category-count">5</span>
+                                </a>
+                                <a href="articles/category/streaming.html" class="category-item">
+                                    <span class="category-name">Стриминг</span>
+                                    <span class="category-count">3</span>
+                                </a>
+                                <a href="articles/category/hardware.html" class="category-item">
+                                    <span class="category-name">Железо</span>
+                                    <span class="category-count">4</span>
+                                </a>
+                                <a href="articles/category/gaming.html" class="category-item">
+                                    <span class="category-name">Игры</span>
+                                    <span class="category-count">2</span>
+                                </a>
+                                <a href="articles/category/music.html" class="category-item">
+                                    <span class="category-name">Музыка</span>
+                                    <span class="category-count">1</span>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">ArtDanshin</h3>
+                    <p class="footer-description">
+                        Frontend разработчик, геймер и стример. Создаю современные веб-приложения.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="music.html">Музыка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitch.tv/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                        <a href="https://youtube.com/@artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://vk.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtDanshin. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/articles.js"></script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне - ArtDanshin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ArtDanshin</span>
+                        <span class="logo-subtitle">Frontend Developer</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="articles.html" class="nav-link">
+                                <i class="fas fa-blog"></i>
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="music.html" class="nav-link">
+                                <i class="fas fa-music"></i>
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">Обо мне</h1>
+                    <p class="page-subtitle">
+                        Познакомьтесь с моей историей, увлечениями и профессиональным путем
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Photo and Basic Info -->
+                    <div class="about-photo">
+                        <div class="photo-container">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="ArtDanshin" class="about-image">
+                            <div class="photo-overlay">
+                                <div class="status-info">
+                                    <div class="status-indicator online"></div>
+                                    <span>В сети</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-info">
+                            <h3>Даньшин Артём</h3>
+                            <p class="role">Frontend Developer</p>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Россия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Story -->
+                    <div class="about-story">
+                        <h2>Моя история</h2>
+                        <div class="story-content">
+                            <p>
+                                Привет! Меня зовут Артём, и я фронтенд разработчик с страстью к созданию 
+                                красивых и функциональных веб-приложений. Мой путь в программировании начался 
+                                несколько лет назад, когда я впервые столкнулся с HTML и CSS.
+                            </p>
+                            <p>
+                                С тех пор я постоянно изучаю новые технологии и подходы к разработке. 
+                                Особенно меня привлекает создание пользовательских интерфейсов, которые 
+                                не только выглядят современно, но и обеспечивают отличный пользовательский опыт.
+                            </p>
+                            <p>
+                                Помимо разработки, я увлекаюсь играми и стримингом. Это помогает мне 
+                                оставаться в курсе современных трендов в UI/UX дизайне и понимать, 
+                                что действительно важно для пользователей.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <section class="skills-section">
+                    <h2 class="section-title">Технологии и навыки</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fab fa-html5"></i>
+                                Frontend
+                            </h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">HTML5</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">CSS3</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">JavaScript</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">React</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Vue.js</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="75"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">TypeScript</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="70"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-server"></i>
+                                Backend & Tools
+                            </h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">Node.js</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="70"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Express</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="65"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">MongoDB</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="60"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Git</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Webpack</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="75"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Docker</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="50"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-palette"></i>
+                                Design & Creative
+                            </h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">Figma</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Adobe Photoshop</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="70"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Adobe Illustrator</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="65"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">OBS Studio</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Streamlabs</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Video Editing</span>
+                                    <div class="skill-level">
+                                        <div class="skill-bar" data-level="60"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Interests Section -->
+                <section class="interests-section">
+                    <h2 class="section-title">Мои увлечения</h2>
+                    <div class="interests-grid">
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3>Игры</h3>
+                            <p>
+                                Увлекаюсь различными жанрами игр - от инди-проектов до AAA-тайтлов. 
+                                Особенно люблю стратегии и RPG.
+                            </p>
+                            <div class="interest-tags">
+                                <span class="tag">Strategy</span>
+                                <span class="tag">RPG</span>
+                                <span class="tag">Indie</span>
+                            </div>
+                        </div>
+
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Стриминг</h3>
+                            <p>
+                                Регулярно стримлю процесс разработки, игры и обсуждения технологий. 
+                                Люблю делиться знаниями с сообществом.
+                            </p>
+                            <div class="interest-tags">
+                                <span class="tag">Coding</span>
+                                <span class="tag">Gaming</span>
+                                <span class="tag">Tech Talk</span>
+                            </div>
+                        </div>
+
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <h3>Музыка</h3>
+                            <p>
+                                Создаю плейлисты для разных настроений и активностей. 
+                                От электронной музыки до рока и джаза.
+                            </p>
+                            <div class="interest-tags">
+                                <span class="tag">Electronic</span>
+                                <span class="tag">Rock</span>
+                                <span class="tag">Jazz</span>
+                            </div>
+                        </div>
+
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Обучение</h3>
+                            <p>
+                                Постоянно изучаю новые технологии и подходы. 
+                                Читаю техническую литературу и слежу за трендами.
+                            </p>
+                            <div class="interest-tags">
+                                <span class="tag">Tech Books</span>
+                                <span class="tag">Courses</span>
+                                <span class="tag">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Timeline Section -->
+                <section class="timeline-section">
+                    <h2 class="section-title">Мой путь</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Начало изучения веб-разработки</h3>
+                                <p class="timeline-date">2020</p>
+                                <p>
+                                    Первые шаги в HTML, CSS и JavaScript. Создание простых статических сайтов 
+                                    и изучение основ программирования.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Изучение фреймворков</h3>
+                                <p class="timeline-date">2021</p>
+                                <p>
+                                    Погружение в React и Vue.js. Создание первых SPA приложений 
+                                    и изучение современных подходов к разработке.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Backend разработка</h3>
+                                <p class="timeline-date">2022</p>
+                                <p>
+                                    Изучение Node.js, Express и баз данных. Создание полноценных 
+                                    веб-приложений с серверной частью.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Стриминг и контент</h3>
+                                <p class="timeline-date">2023</p>
+                                <p>
+                                    Начало стриминга процесса разработки. Создание технического контента 
+                                    и участие в IT-сообществе.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker active"></div>
+                            <div class="timeline-content">
+                                <h3>Современные технологии</h3>
+                                <p class="timeline-date">2024</p>
+                                <p>
+                                    Изучение TypeScript, современных инструментов сборки и DevOps практик. 
+                                    Создание этого персонального сайта.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact CTA -->
+                <section class="contact-cta">
+                    <div class="cta-content">
+                        <h2>Давайте работать вместе!</h2>
+                        <p>
+                            Если у вас есть интересные проекты или вы хотите обсудить возможности сотрудничества, 
+                            я всегда открыт для новых предложений.
+                        </p>
+                        <div class="cta-actions">
+                            <a href="contacts.html" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                Связаться со мной
+                            </a>
+                            <a href="projects.html" class="btn btn-secondary">
+                                <i class="fas fa-code"></i>
+                                Посмотреть проекты
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">ArtDanshin</h3>
+                    <p class="footer-description">
+                        Frontend разработчик, геймер и стример. Создаю современные веб-приложения.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="music.html">Музыка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitch.tv/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                        <a href="https://youtube.com/@artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://vk.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtDanshin. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/about.js"></script>
+</body>
+</html>

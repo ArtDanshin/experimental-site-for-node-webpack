@@ -10,12 +10,11 @@
     "typings:generate": "lerna run --scope typings-generator generate"
   },
   "devDependencies": {
-    "lerna": "9.0.0",
-    "typings-generator": "*"
+    "@artdanshin/typing-generator": "*",
+    "lerna": "9.0.0"
   },
   "workspaces": [
     "packages/*",
     "services/*"
-  ],
-  "dependencies": {}
+  ]
 }

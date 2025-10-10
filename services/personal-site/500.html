@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Ошибка сервера | ArtDanshin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/error-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ArtDanshin</span>
+                        <span class="logo-subtitle">Frontend Developer</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="articles.html" class="nav-link">
+                                <i class="fas fa-blog"></i>
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="music.html" class="nav-link">
+                                <i class="fas fa-music"></i>
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="error-page">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-animation">
+                        <div class="error-number">500</div>
+                        <div class="error-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="error-text">
+                        <h1 class="error-title">Ошибка сервера</h1>
+                        <p class="error-description">
+                            Произошла внутренняя ошибка сервера. Мы уже работаем над её устранением. 
+                            Пожалуйста, попробуйте обновить страницу через несколько минут.
+                        </p>
+                    </div>
+                    
+                    <div class="error-actions">
+                        <button class="btn btn-primary" onclick="location.reload()">
+                            <i class="fas fa-redo"></i>
+                            Обновить страницу
+                        </button>
+                        <a href="index.html" class="btn btn-secondary">
+                            <i class="fas fa-home"></i>
+                            На главную
+                        </a>
+                    </div>
+                    
+                    <div class="error-info">
+                        <h3>Что можно сделать:</h3>
+                        <ul class="info-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Обновите страницу через несколько минут
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Проверьте подключение к интернету
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Очистите кэш браузера
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Попробуйте зайти позже
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="error-contact">
+                        <p>
+                            Если проблема повторяется, пожалуйста, 
+                            <a href="contacts.html">свяжитесь со мной</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">ArtDanshin</h3>
+                    <p class="footer-description">
+                        Frontend разработчик, геймер и стример. Создаю современные веб-приложения.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="music.html">Музыка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitch.tv/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                        <a href="https://youtube.com/@artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://vk.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtDanshin. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/error-pages.js"></script>
+</body>
+</html>

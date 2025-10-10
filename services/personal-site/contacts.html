@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - ArtDanshin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ArtDanshin</span>
+                        <span class="logo-subtitle">Frontend Developer</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="articles.html" class="nav-link">
+                                <i class="fas fa-blog"></i>
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="music.html" class="nav-link">
+                                <i class="fas fa-music"></i>
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="contacts.html" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">Контакты</h1>
+                    <p class="page-subtitle">
+                        Свяжитесь со мной для обсуждения проектов, сотрудничества или просто для общения
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Social Media -->
+                    <div class="contact-category">
+                        <h2 class="category-title">
+                            <i class="fas fa-share-alt"></i>
+                            Социальные сети
+                        </h2>
+                        <div class="contact-cards">
+                            <a href="https://github.com/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">GitHub</h3>
+                                    <p class="contact-description">Мои проекты и код</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://twitch.tv/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fab fa-twitch"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">Twitch</h3>
+                                    <p class="contact-description">Стримы разработки и игр</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://youtube.com/@artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">YouTube</h3>
+                                    <p class="contact-description">Видео о разработке и технологиях</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://t.me/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fab fa-telegram"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">Telegram</h3>
+                                    <p class="contact-description">Быстрое общение и новости</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://vk.com/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fab fa-vk"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">VKontakte</h3>
+                                    <p class="contact-description">Посты и обновления</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com/in/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">LinkedIn</h3>
+                                    <p class="contact-description">Профессиональная сеть</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Communication -->
+                    <div class="contact-category">
+                        <h2 class="category-title">
+                            <i class="fas fa-comments"></i>
+                            Общение
+                        </h2>
+                        <div class="contact-cards">
+                            <a href="mailto:artdanshin@example.com" class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">Email</h3>
+                                    <p class="contact-description">Для деловых предложений</p>
+                                    <span class="contact-handle">artdanshin@example.com</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://discord.gg/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">Discord</h3>
+                                    <p class="contact-description">Сообщество разработчиков</p>
+                                    <span class="contact-handle">ArtDanshin#1234</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://t.me/artdanshin_chat" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">Telegram Chat</h3>
+                                    <p class="contact-description">Групповое общение</p>
+                                    <span class="contact-handle">@artdanshin_chat</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Professional -->
+                    <div class="contact-category">
+                        <h2 class="category-title">
+                            <i class="fas fa-briefcase"></i>
+                            Профессиональные
+                        </h2>
+                        <div class="contact-cards">
+                            <a href="https://freelance.ru/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">Freelance.ru</h3>
+                                    <p class="contact-description">Фриланс проекты</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://hh.ru/resume/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">HeadHunter</h3>
+                                    <p class="contact-description">Резюме и вакансии</p>
+                                    <span class="contact-handle">ArtDanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+
+                            <a href="https://habr.com/users/artdanshin" class="contact-card" target="_blank">
+                                <div class="contact-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3 class="contact-name">Habr</h3>
+                                    <p class="contact-description">Технические статьи</p>
+                                    <span class="contact-handle">@artdanshin</span>
+                                </div>
+                                <div class="contact-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2 class="form-title">Написать мне</h2>
+                        <p class="form-description">
+                            Есть интересный проект или просто хотите пообщаться? 
+                            Заполните форму ниже, и я обязательно отвечу!
+                        </p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Имя *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Тема</label>
+                            <select id="subject" name="subject" class="form-select">
+                                <option value="">Выберите тему</option>
+                                <option value="project">Обсуждение проекта</option>
+                                <option value="collaboration">Сотрудничество</option>
+                                <option value="question">Вопрос по разработке</option>
+                                <option value="streaming">Стриминг</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Сообщение *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Расскажите подробнее о вашем предложении или вопросе..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" name="newsletter" class="form-checkbox-input">
+                                <span class="form-checkbox-text">
+                                    Подписаться на обновления и новости
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Отправить сообщение
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                <i class="fas fa-undo"></i>
+                                Очистить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact -->
+        <section class="quick-contact">
+            <div class="container">
+                <div class="quick-contact-content">
+                    <h2 class="section-title">Быстрая связь</h2>
+                    <p class="section-subtitle">
+                        Нужен быстрый ответ? Выберите удобный способ связи
+                    </p>
+                    
+                    <div class="quick-actions">
+                        <a href="https://t.me/artdanshin" class="quick-action telegram" target="_blank">
+                            <div class="quick-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="quick-info">
+                                <h3>Telegram</h3>
+                                <p>Быстрые сообщения</p>
+                            </div>
+                        </a>
+
+                        <a href="https://discord.gg/artdanshin" class="quick-action discord" target="_blank">
+                            <div class="quick-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="quick-info">
+                                <h3>Discord</h3>
+                                <p>Голосовые сообщения</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:artdanshin@example.com" class="quick-action email">
+                            <div class="quick-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="quick-info">
+                                <h3>Email</h3>
+                                <p>Деловые предложения</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Часто задаваемые вопросы</h2>
+                    <p class="section-subtitle">Ответы на популярные вопросы</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Сколько времени занимает разработка проекта?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Время разработки зависит от сложности проекта. Простой лендинг может быть готов за 1-2 недели, 
+                                а сложное веб-приложение может потребовать 2-6 месяцев. Всегда обсуждаем сроки на этапе планирования.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Какие технологии вы используете?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Основные технологии: HTML5, CSS3, JavaScript, React, Vue.js, Node.js, TypeScript. 
+                                Также работаю с базами данных (MongoDB, PostgreSQL), системами контроля версий (Git) 
+                                и современными инструментами разработки.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Работаете ли вы с зарубежными клиентами?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Да, работаю с клиентами из разных стран. Владею английским языком на уровне, 
+                                достаточном для технического общения. Готов к работе в разных часовых поясах.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Предоставляете ли вы поддержку после завершения проекта?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Да, предоставляю техническую поддержку и сопровождение проектов. 
+                                Сроки и условия поддержки обсуждаются индивидуально для каждого проекта.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Можно ли посмотреть ваши стримы разработки?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Конечно! Регулярно стримлю процесс разработки на Twitch. 
+                                Также выкладываю записи стримов на YouTube. Ссылки на все платформы есть в разделе контактов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">ArtDanshin</h3>
+                    <p class="footer-description">
+                        Frontend разработчик, геймер и стример. Создаю современные веб-приложения.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="music.html">Музыка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitch.tv/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                        <a href="https://youtube.com/@artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://vk.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtDanshin. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/contacts.js"></script>
+</body>
+</html>

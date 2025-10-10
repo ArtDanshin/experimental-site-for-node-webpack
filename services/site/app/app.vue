@@ -1,14 +1,9 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <Button variant="primary" size="lg" >
-      Основная кнопка
-    </Button>
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-  import '@artdanshin/ui/styles'
-  import { Button } from '@artdanshin/ui'
+import '@artdanshin/ui/styles'
 </script>

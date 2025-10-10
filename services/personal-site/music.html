@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыка - ArtDanshin</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/music.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ArtDanshin</span>
+                        <span class="logo-subtitle">Frontend Developer</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="articles.html" class="nav-link">
+                                <i class="fas fa-blog"></i>
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="projects.html" class="nav-link">
+                                <i class="fas fa-code"></i>
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="music.html" class="nav-link">
+                                <i class="fas fa-music"></i>
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">Музыка</h1>
+                    <p class="page-subtitle">
+                        Мои музыкальные плейлисты для разных настроений и активностей
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Stats -->
+        <section class="music-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">15+</h3>
+                            <p class="stat-label">Плейлистов</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">500+</h3>
+                            <p class="stat-label">Треков</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">35+</h3>
+                            <p class="stat-label">Часов музыки</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Любимых исполнителей</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Playlists Section -->
+        <section class="playlists-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Плейлисты</h2>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="playlists-grid" id="playlistsGrid">
+                    <!-- Coding Vibes -->
+                    <div class="playlist-card" data-category="coding">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Coding Vibes">
+                            <div class="playlist-overlay">
+                                <button class="play-btn" data-playlist="coding-vibes">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="playlist-badge featured">Популярный</div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">
+                                <a href="playlist.html">Coding Vibes</a>
+                            </h3>
+                            <p class="playlist-description">
+                                Электронная музыка и лофи-хип-хоп для концентрации и продуктивной работы с кодом.
+                            </p>
+                            <div class="playlist-meta">
+                                <span class="playlist-tracks">
+                                    <i class="fas fa-music"></i>
+                                    25 треков
+                                </span>
+                                <span class="playlist-duration">
+                                    <i class="fas fa-clock"></i>
+                                    1ч 45м
+                                </span>
+                            </div>
+                            <div class="playlist-tags">
+                                <span class="tag">Electronic</span>
+                                <span class="tag">Lo-fi</span>
+                                <span class="tag">Focus</span>
+                            </div>
+                            <div class="playlist-actions">
+                                <a href="music/playlist/coding-vibes.html" class="btn btn-primary">
+                                    <i class="fas fa-list"></i>
+                                    Открыть
+                                </a>
+                                <div class="playlist-links">
+                                    <a href="https://open.spotify.com/playlist/coding-vibes" class="playlist-link" target="_blank" title="Spotify">
+                                        <i class="fab fa-spotify"></i>
+                                    </a>
+                                    <a href="https://music.youtube.com/playlist/coding-vibes" class="playlist-link" target="_blank" title="YouTube Music">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <button class="more-services-btn" data-playlist="coding-vibes">
+                                        <span class="more-count">+4</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Sessions -->
+                    <div class="playlist-card" data-category="gaming">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Gaming Sessions">
+                            <div class="playlist-overlay">
+                                <button class="play-btn" data-playlist="gaming-sessions">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Gaming Sessions</h3>
+                            <p class="playlist-description">
+                                Энергичная музыка для игровых сессий. От электроники до рока - всё для адреналина.
+                            </p>
+                            <div class="playlist-meta">
+                                <span class="playlist-tracks">
+                                    <i class="fas fa-music"></i>
+                                    18 треков
+                                </span>
+                                <span class="playlist-duration">
+                                    <i class="fas fa-clock"></i>
+                                    1ч 20м
+                                </span>
+                            </div>
+                            <div class="playlist-tags">
+                                <span class="tag">Electronic</span>
+                                <span class="tag">Rock</span>
+                                <span class="tag">Gaming</span>
+                            </div>
+                            <div class="playlist-actions">
+                                <a href="music/playlist/gaming-sessions.html" class="btn btn-primary">
+                                    <i class="fas fa-list"></i>
+                                    Открыть
+                                </a>
+                                <div class="playlist-links">
+                                    <a href="https://open.spotify.com/playlist/gaming-sessions" class="playlist-link" target="_blank" title="Spotify">
+                                        <i class="fab fa-spotify"></i>
+                                    </a>
+                                    <a href="https://music.youtube.com/playlist/gaming-sessions" class="playlist-link" target="_blank" title="YouTube Music">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <button class="more-services-btn" data-playlist="gaming-sessions">
+                                        <span class="more-count">+2</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Streaming Mix -->
+                    <div class="playlist-card" data-category="streaming">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Streaming Mix">
+                            <div class="playlist-overlay">
+                                <button class="play-btn" data-playlist="streaming-mix">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Streaming Mix</h3>
+                            <p class="playlist-description">
+                                Разнообразная музыка для стримов. От спокойных мелодий до энергичных треков.
+                            </p>
+                            <div class="playlist-meta">
+                                <span class="playlist-tracks">
+                                    <i class="fas fa-music"></i>
+                                    32 трека
+                                </span>
+                                <span class="playlist-duration">
+                                    <i class="fas fa-clock"></i>
+                                    2ч 15м
+                                </span>
+                            </div>
+                            <div class="playlist-tags">
+                                <span class="tag">Mixed</span>
+                                <span class="tag">Streaming</span>
+                                <span class="tag">Variety</span>
+                            </div>
+                            <div class="playlist-actions">
+                                <a href="music/playlist/streaming-mix.html" class="btn btn-primary">
+                                    <i class="fas fa-list"></i>
+                                    Открыть
+                                </a>
+                                <div class="playlist-links">
+                                    <a href="https://open.spotify.com/playlist/streaming-mix" class="playlist-link" target="_blank" title="Spotify">
+                                        <i class="fab fa-spotify"></i>
+                                    </a>
+                                    <a href="https://music.youtube.com/playlist/streaming-mix" class="playlist-link" target="_blank" title="YouTube Music">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <button class="more-services-btn" data-playlist="streaming-mix">
+                                        <span class="more-count">+5</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chill Out -->
+                    <div class="playlist-card" data-category="chill">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Chill Out">
+                            <div class="playlist-overlay">
+                                <button class="play-btn" data-playlist="chill-out">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Chill Out</h3>
+                            <p class="playlist-description">
+                                Спокойная музыка для отдыха и расслабления. Джаз, соул и атмосферная электроника.
+                            </p>
+                            <div class="playlist-meta">
+                                <span class="playlist-tracks">
+                                    <i class="fas fa-music"></i>
+                                    22 трека
+                                </span>
+                                <span class="playlist-duration">
+                                    <i class="fas fa-clock"></i>
+                                    1ч 30м
+                                </span>
+                            </div>
+                            <div class="playlist-tags">
+                                <span class="tag">Jazz</span>
+                                <span class="tag">Soul</span>
+                                <span class="tag">Chill</span>
+                            </div>
+                            <div class="playlist-actions">
+                                <a href="music/playlist/chill-out.html" class="btn btn-primary">
+                                    <i class="fas fa-list"></i>
+                                    Открыть
+                                </a>
+                                <div class="playlist-links">
+                                    <a href="https://open.spotify.com/playlist/chill-out" class="playlist-link" target="_blank">
+                                        <i class="fab fa-spotify"></i>
+                                    </a>
+                                    <a href="https://music.youtube.com/playlist/chill-out" class="playlist-link" target="_blank">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Workout Energy -->
+                    <div class="playlist-card" data-category="workout">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Workout Energy">
+                            <div class="playlist-overlay">
+                                <button class="play-btn" data-playlist="workout-energy">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Workout Energy</h3>
+                            <p class="playlist-description">
+                                Высокоэнергетичная музыка для тренировок и спорта. Электроника, рок и хип-хоп.
+                            </p>
+                            <div class="playlist-meta">
+                                <span class="playlist-tracks">
+                                    <i class="fas fa-music"></i>
+                                    20 треков
+                                </span>
+                                <span class="playlist-duration">
+                                    <i class="fas fa-clock"></i>
+                                    1ч 25м
+                                </span>
+                            </div>
+                            <div class="playlist-tags">
+                                <span class="tag">Electronic</span>
+                                <span class="tag">Rock</span>
+                                <span class="tag">Hip-hop</span>
+                            </div>
+                            <div class="playlist-actions">
+                                <a href="music/playlist/workout-energy.html" class="btn btn-primary">
+                                    <i class="fas fa-list"></i>
+                                    Открыть
+                                </a>
+                                <div class="playlist-links">
+                                    <a href="https://open.spotify.com/playlist/workout-energy" class="playlist-link" target="_blank">
+                                        <i class="fab fa-spotify"></i>
+                                    </a>
+                                    <a href="https://music.youtube.com/playlist/workout-energy" class="playlist-link" target="_blank">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Night Drive -->
+                    <div class="playlist-card" data-category="night">
+                        <div class="playlist-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Night Drive">
+                            <div class="playlist-overlay">
+                                <button class="play-btn" data-playlist="night-drive">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="playlist-content">
+                            <h3 class="playlist-title">Night Drive</h3>
+                            <p class="playlist-description">
+                                Атмосферная музыка для ночных поездок. Синтвейв, дарк-электроника и неоновая эстетика.
+                            </p>
+                            <div class="playlist-meta">
+                                <span class="playlist-tracks">
+                                    <i class="fas fa-music"></i>
+                                    28 треков
+                                </span>
+                                <span class="playlist-duration">
+                                    <i class="fas fa-clock"></i>
+                                    2ч 05м
+                                </span>
+                            </div>
+                            <div class="playlist-tags">
+                                <span class="tag">Synthwave</span>
+                                <span class="tag">Dark</span>
+                                <span class="tag">Atmospheric</span>
+                            </div>
+                            <div class="playlist-actions">
+                                <a href="music/playlist/night-drive.html" class="btn btn-primary">
+                                    <i class="fas fa-list"></i>
+                                    Открыть
+                                </a>
+                                <div class="playlist-links">
+                                    <a href="https://open.spotify.com/playlist/night-drive" class="playlist-link" target="_blank">
+                                        <i class="fab fa-spotify"></i>
+                                    </a>
+                                    <a href="https://music.youtube.com/playlist/night-drive" class="playlist-link" target="_blank">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recently Played -->
+        <section class="recently-played">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Недавно прослушанное</h2>
+                    <a href="music/history.html" class="section-link">
+                        Вся история
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="recent-tracks">
+                    <div class="track-item">
+                        <div class="track-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop" alt="Track">
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Midnight City</h4>
+                            <p class="track-artist">M83</p>
+                        </div>
+                        <div class="track-meta">
+                            <span class="track-duration">4:03</span>
+                            <div class="track-actions">
+                                <button class="track-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="track-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <div class="track-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=100&fit=crop" alt="Track">
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Blinding Lights</h4>
+                            <p class="track-artist">The Weeknd</p>
+                        </div>
+                        <div class="track-meta">
+                            <span class="track-duration">3:20</span>
+                            <div class="track-actions">
+                                <button class="track-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="track-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <div class="track-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop" alt="Track">
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Sunflower</h4>
+                            <p class="track-artist">Post Malone, Swae Lee</p>
+                        </div>
+                        <div class="track-meta">
+                            <span class="track-duration">2:38</span>
+                            <div class="track-actions">
+                                <button class="track-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="track-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <div class="track-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=100&fit=crop" alt="Track">
+                        </div>
+                        <div class="track-info">
+                            <h4 class="track-title">Levitating</h4>
+                            <p class="track-artist">Dua Lipa</p>
+                        </div>
+                        <div class="track-meta">
+                            <span class="track-duration">3:23</span>
+                            <div class="track-actions">
+                                <button class="track-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="track-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Services -->
+        <section class="music-services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Музыкальные сервисы</h2>
+                    <p class="section-subtitle">Где меня можно найти</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <h3 class="service-title">Spotify</h3>
+                        <p class="service-description">
+                            Основная платформа для моих плейлистов и музыкальных открытий
+                        </p>
+                        <a href="https://open.spotify.com/user/artdanshin" class="service-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Открыть профиль
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3 class="service-title">YouTube Music</h3>
+                        <p class="service-description">
+                            Альтернативная платформа с расширенной библиотекой треков
+                        </p>
+                        <a href="https://music.youtube.com/channel/artdanshin" class="service-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Открыть профиль
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-soundcloud"></i>
+                        </div>
+                        <h3 class="service-title">SoundCloud</h3>
+                        <p class="service-description">
+                            Для открытия новых исполнителей и независимой музыки
+                        </p>
+                        <a href="https://soundcloud.com/artdanshin" class="service-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Открыть профиль
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-bandcamp"></i>
+                        </div>
+                        <h3 class="service-title">Bandcamp</h3>
+                        <p class="service-description">
+                            Поддержка независимых музыкантов и покупка альбомов
+                        </p>
+                        <a href="https://bandcamp.com/artdanshin" class="service-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Открыть профиль
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Services Popup -->
+    <div id="services-popup" class="services-popup">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Доступные сервисы</h3>
+                <button class="popup-close" id="popup-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <div class="services-list" id="services-list">
+                    <!-- Services will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">ArtDanshin</h3>
+                    <p class="footer-description">
+                        Frontend разработчик, геймер и стример. Создаю современные веб-приложения.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="music.html">Музыка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitch.tv/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-twitch"></i>
+                        </a>
+                        <a href="https://youtube.com/@artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://vk.com/artdanshin" class="social-link" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtDanshin. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/music.js"></script>
+</body>
+</html>

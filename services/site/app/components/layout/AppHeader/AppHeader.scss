@@ -1,0 +1,14 @@
+.header {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-background);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
