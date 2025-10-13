@@ -1,24 +1,24 @@
 export interface ApiResponse<T> {
-  data: T
-  success: boolean
-  message?: string
-  error?: string
+  data: T;
+  success: boolean;
+  message?: string;
+  error?: string;
 }
 
 export interface PaginationParams {
-  page?: number
-  limit?: number
-  sortBy?: string
-  sortOrder?: 'asc' | 'desc'
+  page?: number;
+  limit?: number;
+  sortBy?: string;
+  sortOrder?: 'asc' | 'desc';
 }
 
 export interface SearchParams extends PaginationParams {
-  search?: string
-  filters?: Record<string, any>
+  search?: string;
+  filters?: Record<string, any>;
 }
 
 export interface ApiError {
-  code: string
-  message: string
-  details?: Record<string, any>
+  code: string;
+  message: string;
+  details?: Record<string, any>;
 }

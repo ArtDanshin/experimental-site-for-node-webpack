@@ -1,4 +1,4 @@
-import type { ListSectionProps } from './types'
+import type { ListSectionProps } from './types';
 
 export const setupListSection = (props: ListSectionProps) => {
   const sectionClasses = computed(() => [
@@ -7,6 +7,6 @@ export const setupListSection = (props: ListSectionProps) => {
   ]);
 
   return {
-    sectionClasses
-  }
-}
+    sectionClasses,
+  };
+};

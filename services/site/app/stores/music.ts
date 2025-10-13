@@ -1,57 +1,57 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
-import type { Playlist, PlaylistFilters } from '@/types/music'
+import type { Playlist, PlaylistFilters } from '@/types/music';
 
 export const useMusicStore = defineStore('music', () => {
-  const playlists = ref<Playlist[]>([])
-  const currentPlaylist = ref<Playlist | null>(null)
-  const loading = ref(false)
-  const error = ref<string | null>(null)
-  
-  const { getPlaylists, getPlaylist, getFeaturedPlaylists } = useMusic()
-  
+  const playlists = ref<Playlist[]>([]);
+  const currentPlaylist = ref<Playlist | null>(null);
+  const loading = ref(false);
+  const error = ref<string | null>(null);
+
+  const { getPlaylists, getPlaylist, getFeaturedPlaylists } = useMusic();
+
   const fetchPlaylists = async (filters?: PlaylistFilters) => {
-    loading.value = true
-    error.value = null
-    
+    loading.value = true;
+    error.value = null;
+
     try {
-      const result = await getPlaylists(filters)
-      playlists.value = result.playlists
-    } catch (err) {
-      error.value = err instanceof Error ? err.message : 'Failed to fetch playlists'
+      const result = await getPlaylists(filters);
+      playlists.value = result.playlists;
+    } catch (error_) {
+      error.value = error_ instanceof Error ? error_.message : 'Failed to fetch playlists';
     } finally {
-      loading.value = false
+      loading.value = false;
     }
-  }
-  
+  };
+
   const fetchPlaylist = async (id: string) => {
-    loading.value = true
-    error.value = null
-    
+    loading.value = true;
+    error.value = null;
+
     try {
-      const playlist = await getPlaylist(id)
-      currentPlaylist.value = playlist
-    } catch (err) {
-      error.value = err instanceof Error ? err.message : 'Failed to fetch playlist'
+      const playlist = await getPlaylist(id);
+      currentPlaylist.value = playlist;
+    } catch (error_) {
+      error.value = error_ instanceof Error ? error_.message : 'Failed to fetch playlist';
     } finally {
-      loading.value = false
+      loading.value = false;
     }
-  }
-  
+  };
+
   const fetchFeaturedPlaylists = async (limit = 3) => {
-    loading.value = true
-    error.value = null
-    
+    loading.value = true;
+    error.value = null;
+
     try {
-      const featured = await getFeaturedPlaylists(limit)
-      playlists.value = featured
-    } catch (err) {
-      error.value = err instanceof Error ? err.message : 'Failed to fetch featured playlists'
+      const featured = await getFeaturedPlaylists(limit);
+      playlists.value = featured;
+    } catch (error_) {
+      error.value = error_ instanceof Error ? error_.message : 'Failed to fetch featured playlists';
     } finally {
-      loading.value = false
+      loading.value = false;
     }
-  }
-  
+  };
+
   return {
     playlists: readonly(playlists),
     currentPlaylist: readonly(currentPlaylist),
@@ -59,6 +59,6 @@ export const useMusicStore = defineStore('music', () => {
     error: readonly(error),
     fetchPlaylists,
     fetchPlaylist,
-    fetchFeaturedPlaylists
-  }
-})
+    fetchFeaturedPlaylists,
+  };
+});

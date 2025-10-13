@@ -8,10 +8,13 @@
   <header class="header">
     <div class="header__content">
       <!-- Logo -->
-      <NuxtLink to="/" class="header__logo-link">
+      <NuxtLink
+        to="/"
+        class="header__logo-link"
+      >
         <Logo />
       </NuxtLink>
-      
+
       <!-- Navigation -->
       <div class="header__nav">
         <NavMain />

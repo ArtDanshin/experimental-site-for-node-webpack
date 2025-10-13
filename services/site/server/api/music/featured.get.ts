@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
       duration: '1:45:30',
       createdAt: '2024-11-01T00:00:00Z',
       updatedAt: '2024-12-01T00:00:00Z',
-      featured: true
+      featured: true,
     },
     {
       id: '2',
@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
       duration: '1:12:45',
       createdAt: '2024-10-15T00:00:00Z',
       updatedAt: '2024-11-15T00:00:00Z',
-      featured: true
+      featured: true,
     },
     {
       id: '3',
@@ -38,14 +38,14 @@ export default defineEventHandler(async (event) => {
       duration: '2:15:20',
       createdAt: '2024-09-20T00:00:00Z',
       updatedAt: '2024-10-20T00:00:00Z',
-      featured: true
-    }
-  ]
+      featured: true,
+    },
+  ];
 
-  const limit = getQuery(event).limit ? parseInt(getQuery(event).limit as string) : 3
+  const limit = getQuery(event).limit ? Number.parseInt(getQuery(event).limit as string, 10) : 3;
 
   return {
     data: featuredPlaylists.slice(0, limit),
-    success: true
-  }
-})
+    success: true,
+  };
+});

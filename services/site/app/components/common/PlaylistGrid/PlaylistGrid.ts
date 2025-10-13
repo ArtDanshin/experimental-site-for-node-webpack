@@ -1,12 +1,10 @@
-import type { PlaylistGridProps } from './types'
+const handlePlaylistClick = (playlistId: string) => {
+  // Логика перехода к плейлисту
+  console.log('Navigate to playlist:', playlistId);
+};
 
-export function setupPlaylistGrid(props: PlaylistGridProps) {
-  const handlePlaylistClick = (playlistId: string) => {
-    // Логика перехода к плейлисту
-    console.log('Navigate to playlist:', playlistId)
-  }
-
+export function setupPlaylistGrid() {
   return {
-    handlePlaylistClick
-  }
+    handlePlaylistClick,
+  };
 }

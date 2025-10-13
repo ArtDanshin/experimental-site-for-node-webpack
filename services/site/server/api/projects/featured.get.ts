@@ -11,13 +11,13 @@ export default defineEventHandler(async (event) => {
       technologies: ['HTML5', 'CSS3', 'JavaScript'],
       links: {
         github: 'https://github.com/artdanshin/portfolio',
-        demo: 'https://artdanshin.ru'
+        demo: 'https://artdanshin.ru',
       },
       status: 'completed',
       featured: true,
       createdAt: '2024-11-01T00:00:00Z',
       updatedAt: '2024-12-01T00:00:00Z',
-      screenshots: []
+      screenshots: [],
     },
     {
       id: '2',
@@ -29,13 +29,13 @@ export default defineEventHandler(async (event) => {
       technologies: ['React', 'Node.js', 'MongoDB'],
       links: {
         github: 'https://github.com/artdanshin/game-tracker',
-        demo: 'https://game-tracker.artdanshin.ru'
+        demo: 'https://game-tracker.artdanshin.ru',
       },
       status: 'completed',
       featured: true,
       createdAt: '2024-10-15T00:00:00Z',
       updatedAt: '2024-11-15T00:00:00Z',
-      screenshots: []
+      screenshots: [],
     },
     {
       id: '3',
@@ -47,20 +47,20 @@ export default defineEventHandler(async (event) => {
       technologies: ['Vue.js', 'CSS3', 'WebSocket'],
       links: {
         github: 'https://github.com/artdanshin/stream-overlay',
-        demo: 'https://overlay.artdanshin.ru'
+        demo: 'https://overlay.artdanshin.ru',
       },
       status: 'completed',
       featured: true,
       createdAt: '2024-09-20T00:00:00Z',
       updatedAt: '2024-10-20T00:00:00Z',
-      screenshots: []
-    }
-  ]
+      screenshots: [],
+    },
+  ];
 
-  const limit = getQuery(event).limit ? parseInt(getQuery(event).limit as string) : 3
+  const limit = getQuery(event).limit ? Number.parseInt(getQuery(event).limit as string, 10) : 3;
 
   return {
     data: featuredProjects.slice(0, limit),
-    success: true
-  }
-})
+    success: true,
+  };
+});

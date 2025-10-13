@@ -2,12 +2,12 @@
   <div class="app-layout">
     <!-- Header -->
     <AppHeader />
-    
+
     <!-- Main Content -->
     <main class="main-content">
       <slot />
     </main>
-    
+
     <!-- Footer -->
     <AppFooter />
   </div>
@@ -20,8 +20,8 @@
     description: 'Frontend разработчик, геймер и стример. Создаю современные веб-приложения и делюсь опытом в статьях.',
     image: '/images/og-image.jpg',
     url: 'https://artdanshin.ru',
-    type: 'website'
-  })
+    type: 'website',
+  });
 </script>
 
 <style scoped>

@@ -14,10 +14,10 @@ export default defineEventHandler(async (event) => {
       updatedAt: '2024-12-15T00:00:00Z',
       author: {
         name: 'ArtDanshin',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face'
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face',
       },
       readingTime: 8,
-      views: 1250
+      views: 1250,
     },
     {
       id: '2',
@@ -32,10 +32,10 @@ export default defineEventHandler(async (event) => {
       updatedAt: '2024-12-08T00:00:00Z',
       author: {
         name: 'ArtDanshin',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face'
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face',
       },
       readingTime: 12,
-      views: 890
+      views: 890,
     },
     {
       id: '3',
@@ -50,17 +50,17 @@ export default defineEventHandler(async (event) => {
       updatedAt: '2024-12-01T00:00:00Z',
       author: {
         name: 'ArtDanshin',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face'
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face',
       },
       readingTime: 15,
-      views: 2100
-    }
-  ]
+      views: 2100,
+    },
+  ];
 
-  const limit = getQuery(event).limit ? parseInt(getQuery(event).limit as string) : 3
+  const limit = getQuery(event).limit ? Number.parseInt(getQuery(event).limit as string, 10) : 3;
 
   return {
     data: featuredArticles.slice(0, limit),
-    success: true
-  }
-})
+    success: true,
+  };
+});

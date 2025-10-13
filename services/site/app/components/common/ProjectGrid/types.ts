@@ -1,5 +1,5 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project';
 
 export interface ProjectGridProps {
-  projects: Project[]
+  projects: Project[];
 }

@@ -1,9 +1,9 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { describe, it, expect } from 'vitest';
+import { mount } from '@vue/test-utils';
 
-import type { Playlist } from '@/types/music'
+import type { Playlist } from '@/types/music';
 
-import PlaylistGrid from './PlaylistGrid.vue'
+import PlaylistGrid from './PlaylistGrid.vue';
 
 const mockPlaylists: Playlist[] = [
   {
@@ -14,7 +14,7 @@ const mockPlaylists: Playlist[] = [
     tracks: 10,
     duration: '45:30',
     createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-01T00:00:00Z'
+    updatedAt: '2024-01-01T00:00:00Z',
   },
   {
     id: '2',
@@ -24,30 +24,30 @@ const mockPlaylists: Playlist[] = [
     tracks: 15,
     duration: '60:45',
     createdAt: '2024-01-02T00:00:00Z',
-    updatedAt: '2024-01-02T00:00:00Z'
-  }
-]
+    updatedAt: '2024-01-02T00:00:00Z',
+  },
+];
 
 describe('PlaylistGrid', () => {
   it('renders playlists correctly', () => {
     const wrapper = mount(PlaylistGrid, {
       props: {
-        playlists: mockPlaylists
-      }
-    })
+        playlists: mockPlaylists,
+      },
+    });
 
-    expect(wrapper.findAll('.playlist-card')).toHaveLength(2)
-    expect(wrapper.text()).toContain('Test Playlist 1')
-    expect(wrapper.text()).toContain('Test Playlist 2')
-  })
+    expect(wrapper.findAll('.playlist-card')).toHaveLength(2);
+    expect(wrapper.text()).toContain('Test Playlist 1');
+    expect(wrapper.text()).toContain('Test Playlist 2');
+  });
 
   it('renders empty state when no playlists', () => {
     const wrapper = mount(PlaylistGrid, {
       props: {
-        playlists: []
-      }
-    })
+        playlists: [],
+      },
+    });
 
-    expect(wrapper.findAll('.playlist-card')).toHaveLength(0)
-  })
-})
+    expect(wrapper.findAll('.playlist-card')).toHaveLength(0);
+  });
+});

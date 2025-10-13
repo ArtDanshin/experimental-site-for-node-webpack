@@ -1,4 +1,4 @@
-import type { SEO } from '~/types/common'
+import type { SEO } from '~/types/common';
 
 export const useSeo = (meta: SEO) => {
   useHead({
@@ -13,42 +13,42 @@ export const useSeo = (meta: SEO) => {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: meta.title },
       { name: 'twitter:description', content: meta.description },
-      { name: 'twitter:image', content: meta.image }
+      { name: 'twitter:image', content: meta.image },
     ],
     link: [
-      { rel: 'canonical', href: meta.url }
-    ]
-  })
-  
+      { rel: 'canonical', href: meta.url },
+    ],
+  });
+
   if (meta.publishedAt) {
     useHead({
       meta: [
-        { property: 'article:published_time', content: meta.publishedAt }
-      ]
-    })
+        { property: 'article:published_time', content: meta.publishedAt },
+      ],
+    });
   }
-  
+
   if (meta.updatedAt) {
     useHead({
       meta: [
-        { property: 'article:modified_time', content: meta.updatedAt }
-      ]
-    })
+        { property: 'article:modified_time', content: meta.updatedAt },
+      ],
+    });
   }
-  
+
   if (meta.author) {
     useHead({
       meta: [
-        { property: 'article:author', content: meta.author }
-      ]
-    })
+        { property: 'article:author', content: meta.author },
+      ],
+    });
   }
-  
+
   if (meta.tags && meta.tags.length > 0) {
     useHead({
       meta: [
-        { property: 'article:tag', content: meta.tags.join(', ') }
-      ]
-    })
+        { property: 'article:tag', content: meta.tags.join(', ') },
+      ],
+    });
   }
-}
+};

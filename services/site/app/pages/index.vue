@@ -2,16 +2,16 @@
   <div class="home-page">
     <!-- Hero Section -->
     <HeroSection />
-    
+
     <!-- Recent Articles -->
-    <ListSection 
+    <ListSection
       title="Последние статьи"
       view-all-href="/articles"
       view-all-text="Все статьи"
     >
       <ArticleGrid :articles="articles" />
     </ListSection>
-    
+
     <!-- Featured Projects -->
     <ListSection
       title="Избранные проекты"
@@ -21,7 +21,7 @@
     >
       <ProjectGrid :projects="projects" />
     </ListSection>
-    
+
     <!-- Music Section -->
     <ListSection
       title="Музыкальные плейлисты"
@@ -36,18 +36,18 @@
 <script setup lang="ts">
 
 // SEO для главной страницы
-useSeo({
-  title: 'ArtDanshin - Frontend Developer',
-  description: 'Frontend разработчик, геймер и стример. Создаю современные веб-приложения и делюсь опытом в статьях.',
-  image: '/images/og-image.jpg',
-  url: 'https://artdanshin.ru',
-  type: 'website'
-})
+  useSeo({
+    title: 'ArtDanshin - Frontend Developer',
+    description: 'Frontend разработчик, геймер и стример. Создаю современные веб-приложения и делюсь опытом в статьях.',
+    image: '/images/og-image.jpg',
+    url: 'https://artdanshin.ru',
+    type: 'website',
+  });
 
-// Fetch data from API
-const { data: articles } = await $fetch('/api/articles/featured')
-const { data: projects } = await $fetch('/api/projects/featured')
-const { data: playlists } = await $fetch('/api/music/featured')
+  // Fetch data from API
+  const { data: articles } = await $fetch('/api/articles/featured');
+  const { data: projects } = await $fetch('/api/projects/featured');
+  const { data: playlists } = await $fetch('/api/music/featured');
 </script>
 
 <style scoped>
