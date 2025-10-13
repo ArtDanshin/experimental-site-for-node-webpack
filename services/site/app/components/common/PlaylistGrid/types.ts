@@ -1,5 +1,5 @@
-import type { Playlist } from '~/types/music'
+import type { Playlist } from '~/types/music';
 
 export interface PlaylistGridProps {
-  playlists: Playlist[]
+  playlists: Playlist[];
 }

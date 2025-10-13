@@ -12,26 +12,32 @@
           Привет! Я <span class="hero-section__highlight">ArtDanshin</span>
         </h1>
         <p class="hero-section__subtitle">
-          Frontend разработчик, геймер и стример. Создаю современные веб-приложения 
+          Frontend разработчик, геймер и стример. Создаю современные веб-приложения
           и делюсь опытом в статьях.
         </p>
         <div class="hero-section__actions">
-          <NuxtLink to="/projects" class="btn btn-primary">
+          <NuxtLink
+            to="/projects"
+            class="btn btn-primary"
+          >
             <Button>
-              <i class="fas fa-code"></i>
+              <i class="fas fa-code" />
               Мои проекты
             </Button>
           </NuxtLink>
-          <NuxtLink to="/articles" class="btn btn-secondary">
+          <NuxtLink
+            to="/articles"
+            class="btn btn-secondary"
+          >
             <Button variant="secondary">
-              <i class="fas fa-blog"></i>
+              <i class="fas fa-blog" />
               Читать статьи
             </Button>
           </NuxtLink>
         </div>
       </div>
       <div class="hero-section__image">
-        <HeroAvatar 
+        <HeroAvatar
           image-url="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
           title="ArtDanshin"
         />

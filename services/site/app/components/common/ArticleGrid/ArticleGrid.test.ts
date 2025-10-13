@@ -1,9 +1,9 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { describe, it, expect } from 'vitest';
+import { mount } from '@vue/test-utils';
 
-import type { Article } from '@/types/article'
+import type { Article } from '@/types/article';
 
-import ArticleGrid from './ArticleGrid.vue'
+import ArticleGrid from './ArticleGrid.vue';
 
 const mockArticles: Article[] = [
   {
@@ -19,10 +19,10 @@ const mockArticles: Article[] = [
     updatedAt: '2024-01-01T00:00:00Z',
     author: {
       name: 'Test Author',
-      avatar: 'test-avatar.jpg'
+      avatar: 'test-avatar.jpg',
     },
     readingTime: 5,
-    views: 100
+    views: 100,
   },
   {
     id: '2',
@@ -37,25 +37,25 @@ const mockArticles: Article[] = [
     updatedAt: '2024-01-02T00:00:00Z',
     author: {
       name: 'Test Author',
-      avatar: 'test-avatar.jpg'
+      avatar: 'test-avatar.jpg',
     },
     readingTime: 5,
-    views: 100
-  }
-]
+    views: 100,
+  },
+];
 
 describe('ArticleGrid', () => {
   it('renders articles', () => {
     const wrapper = mount(ArticleGrid, {
-      props: { articles: mockArticles }
-    })
-    expect(wrapper.findAll('.article-card')).toHaveLength(2)
-  })
+      props: { articles: mockArticles },
+    });
+    expect(wrapper.findAll('.article-card')).toHaveLength(2);
+  });
 
   it('limits articles when limit prop is provided', () => {
     const wrapper = mount(ArticleGrid, {
-      props: { articles: mockArticles, limit: 1 }
-    })
-    expect(wrapper.findAll('.article-card')).toHaveLength(1)
-  })
-})
+      props: { articles: mockArticles, limit: 1 },
+    });
+    expect(wrapper.findAll('.article-card')).toHaveLength(1);
+  });
+});

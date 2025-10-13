@@ -5,7 +5,7 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
   {
-    ignores: ['dist/**', 'node_modules/**', 'coverage/**', '*.config.js'],
+    ignores: ['dist/**', '.nuxt', 'node_modules/**', 'coverage/**', '*.config.js'],
   },
   {
     files: ['**/*.{js,ts,vue}'],
