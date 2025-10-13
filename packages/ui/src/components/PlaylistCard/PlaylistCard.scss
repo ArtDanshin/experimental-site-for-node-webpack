@@ -1,0 +1,69 @@
+.playlist-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  font-family: var(--font-family-base);
+  line-height: var(--leading-tight);
+  transition: var(--transition-normal);
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-xl);
+  }
+
+  &__image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-normal);
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-normal);
+  }
+
+  &:hover &__overlay {
+    opacity: 1;
+  }
+
+  &__overlay i {
+    font-size: var(--font-size-3xl);
+    color: var(--text-primary-color);
+  }
+
+  &__content {
+    padding: var(--spacing-lg);
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary-color);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__tracks {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary-color);
+  }
+}

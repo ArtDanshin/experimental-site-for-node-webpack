@@ -7,9 +7,8 @@ import typescript from './typescript.js';
 import stylistic from './stylistic.js';
 import unicorn from './unicorn.js';
 
-export default tseslint.config(
+export default tseslint.config([
   {
-    extends: [importConfig, javascript, stylistic, typescript, unicorn],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -18,4 +17,9 @@ export default tseslint.config(
       },
     },
   },
-);
+  javascript,
+  typescript,
+  stylistic,
+  importConfig,
+  unicorn,
+]);

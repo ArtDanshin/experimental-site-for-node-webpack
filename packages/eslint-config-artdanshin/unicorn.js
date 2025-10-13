@@ -3,7 +3,6 @@ import unicornPlugin from 'eslint-plugin-unicorn';
 
 export default tseslint.config(
   {
-    files: ['**/*.{js,ts,tsx}'],
     plugins: {
       unicorn: unicornPlugin,
     },

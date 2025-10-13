@@ -11,7 +11,7 @@ export interface ArticleCardProps {
   /**
    * Article excerpt/description
    */
-  excerpt: string;
+  description: string;
 
   /**
    * Article category
@@ -29,7 +29,7 @@ export interface ArticleCardProps {
   href: string;
 
   /**
-   * Publication date
+   * Publication date in ISO format
    */
   date: string;
 
@@ -39,11 +39,9 @@ export interface ArticleCardProps {
   tags?: string[];
 
   /**
-   * Reading time
+   * Reading time in minute
    */
-  readingTime?: string;
+  readingTime?: number;
 }
 
-export interface ArticleCardEmits {
-  (e: 'click'): void;
-}
+export type ArticleCardEmits = (e: 'click') => void;

@@ -9,7 +9,6 @@ import renameRules from './utils/rename-rules.js';
 const pluginReactInstances = pluginReactNew.configs.all.plugins;
 
 export default tseslint.config({
-  files: ['**/*.tsx'],
   languageOptions: {
     parser: tseslint.parser,
     parserOptions: {

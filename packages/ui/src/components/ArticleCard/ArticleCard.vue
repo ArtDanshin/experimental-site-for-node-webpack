@@ -1,14 +1,13 @@
 <script setup lang="ts">
   import { Tag } from '../Tag';
 
+  import { setupArticleCard } from './ArticleCard';
   import type { ArticleCardProps, ArticleCardEmits } from './types';
 
-  defineProps<ArticleCardProps>();
+  const props = defineProps<ArticleCardProps>();
   const emit = defineEmits<ArticleCardEmits>();
 
-  const handleClick = () => {
-    emit('click');
-  };
+  const { formatedDate, handleClick } = setupArticleCard(props, emit);
 </script>
 
 <style scoped lang="scss" src="./ArticleCard.scss"></style>
@@ -37,14 +36,14 @@
         >{{ title }}</a>
       </h3>
 
-      <p class="card__excerpt">
-        {{ excerpt }}
+      <p class="card__description">
+        {{ description }}
       </p>
 
       <div class="card__meta">
         <span class="card__date">
           <i class="fas fa-calendar" />
-          {{ date }}
+          {{ formatedDate }}
         </span>
 
         <span
@@ -52,7 +51,7 @@
           class="card__reading-time"
         >
           <i class="fas fa-clock" />
-          {{ readingTime }}
+          {{ `${readingTime } мин` }}
         </span>
 
         <div

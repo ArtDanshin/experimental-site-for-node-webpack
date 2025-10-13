@@ -1,16 +1,17 @@
 .card {
-  background: var(--bg-card);
+  cursor: pointer;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  border: 1px solid var(--border-color);
-  transition: var(--transition-normal);
-  cursor: pointer;
   font-family: var(--font-family-base);
+  line-height: 1;
+  background: var(--bg-card);
+  transition: var(--transition-normal);
 
   &:hover {
-    transform: translateY(-5px);
     border-color: var(--primary-color);
     box-shadow: var(--shadow-xl);
+    transform: translateY(-5px);
   }
 
   &__image {
@@ -35,14 +36,14 @@
     position: absolute;
     top: var(--spacing-md);
     left: var(--spacing-md);
-    background: var(--gradient-primary);
-    color: var(--text-primary);
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--radius-md);
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-semibold);
-    text-transform: uppercase;
     letter-spacing: 0.5px;
+    color: var(--text-primary-color);
+    text-transform: uppercase;
+    background: var(--gradient-primary);
   }
 
   &__content {
@@ -54,10 +55,11 @@
     margin-bottom: var(--spacing-md);
 
     a {
-      color: var(--text-primary);
+      color: var(--text-primary-color);
       text-decoration: none;
       font-size: var(--font-size-xl);
       font-weight: var(--font-weight-semibold);
+      line-height: var(--leading-relaxed);
       transition: var(--transition-fast);
 
       &:hover {
@@ -66,8 +68,8 @@
     }
   }
 
-  &__excerpt {
-    color: var(--text-secondary);
+  &__description {
+    color: var(--text-secondary-color);
     margin-bottom: var(--spacing-lg);
     line-height: 1.6;
     display: -webkit-box;
@@ -89,7 +91,7 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
-    color: var(--text-muted);
+    color: var(--text-muted-color);
     font-size: var(--font-size-sm);
 
     i {
