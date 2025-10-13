@@ -41,6 +41,4 @@ export interface ButtonProps {
   href?: string;
 }
 
-export interface ButtonEmits {
-  (e: 'click', event: MouseEvent): void;
-}
+export type ButtonEmits = (e: 'click', event: MouseEvent) => void;

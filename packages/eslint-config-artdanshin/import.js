@@ -3,8 +3,8 @@ import importPlugin from 'eslint-plugin-import';
 
 export default tseslint.config(
   {
-    extends: [importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript],
-    files: ['**/*.{js,ts,tsx}'],
+    ...importPlugin.flatConfigs.recommended,
+    ...importPlugin.flatConfigs.typescript,
     settings: {
       'import/resolver': {
         typescript: true,

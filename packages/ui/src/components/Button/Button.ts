@@ -9,11 +9,11 @@ export function setupButton(
   // Computed classes for button
   const buttonClasses = computed(() => [
     'btn',
-    `btn__${props.variant}`,
-    `btn__${props.size}`,
+    `_${props.variant}`,
+    `_${props.size}`,
     {
-      'btn__disabled': props.disabled,
-      'btn__full-width': props.fullWidth,
+      _disabled: props.disabled,
+      '_full-width': props.fullWidth,
     },
   ]);
 

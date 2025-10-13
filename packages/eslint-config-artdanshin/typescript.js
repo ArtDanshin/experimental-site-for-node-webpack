@@ -1,11 +1,9 @@
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
+  tseslint.configs.recommended,
+  tseslint.configs.stylistic,
   {
-    extends: [
-      tseslint.configs.recommended,
-    ],
-    files: ['**/*.{ts,tsx}'],
     rules: {
       '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
       '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],

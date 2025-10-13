@@ -3,7 +3,6 @@ import stylistic from '@stylistic/eslint-plugin';
 
 export default tseslint.config(
   {
-    files: ['**/*.{js,ts,tsx}'],
     plugins: {
       '@stylistic': stylistic,
     },

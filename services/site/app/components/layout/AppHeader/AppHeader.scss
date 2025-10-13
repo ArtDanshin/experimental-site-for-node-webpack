@@ -1,0 +1,28 @@
+.header {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  
+  &__content {
+    @include layout-container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--layout-xl-width);
+    width: 100%;
+    gap: var(--spacing-md);
+  }
+
+  &__logo-link {
+    text-decoration: none;
+  }
+
+  &__nav {
+    max-width: 850px;
+    width: 100%;
+  }
+}

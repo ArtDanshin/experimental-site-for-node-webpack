@@ -3,10 +3,7 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    extends: [
-      js.configs.recommended,
-    ],
-    files: ['**/*.{js,ts,tsx}'],
+    ...js.configs.recommended,
     rules: {
       // Airbnb Best Practices rules
       'array-callback-return': ['error', { allowImplicit: true }],
